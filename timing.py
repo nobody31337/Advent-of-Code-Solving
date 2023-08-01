@@ -9,4 +9,4 @@ if len(sys.argv) > 1:
     subprocess.run(process)
     done = timer() - start
     
-    print(f'\nDone! Elapsed time: {round(done, 6)} seconds')
+    print(f'\nElapsed time: {round(done, 6)} seconds')
