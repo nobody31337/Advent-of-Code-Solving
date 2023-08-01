@@ -28,3 +28,9 @@ Given the list of blocked IPs you retrieved from the firewall (your puzzle input
 
 
 
+--- Part Two ---
+
+How many IPs are allowed by the blacklist?
+
+
+
