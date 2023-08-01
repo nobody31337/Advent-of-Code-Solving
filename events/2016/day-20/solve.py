@@ -64,22 +64,3 @@ print('The answer:', whitelist[0][0])
 
 print('\nPart Two: How many IPs are allowed by the blacklist?')
 print('The answer:', sum(j - i + 1 for i, j in whitelist))
-
-'''
-for i in range(2 ** 32):
-    isBlacked = False
-
-    for black in blacklist:
-        splited = list(map(int, black.decode().split('-')))
-        low = splited[0]
-        high = splited[1]
-
-        if i >= low and i <= high:
-            isBlacked = True
-            break
-    
-    print(i, ('is blacked' if isBlacked else 'is the one!'))
-
-    if not isBlacked:
-        break
-'''
