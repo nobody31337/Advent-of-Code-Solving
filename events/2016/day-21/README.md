@@ -4,11 +4,7 @@
 
 The computer system you're breaking into uses a weird scrambling function to store its passwords. It shouldn't be much trouble to create your own scrambled password so you can add it to the system; you just have to implement the scrambler.
 
-
-
 The scrambling function is a series of operations (the exact list is provided in your puzzle input). Starting with the password to be scrambled, apply each operation in succession to the string. The individual operations behave as follows:
-
-
 
 swap position X with position Y means that the letters at indexes X and Y (counting from 0) should be swapped.\
 swap letter X with letter Y means that the letters X and Y should be swapped (regardless of where they appear in the string).\
@@ -17,11 +13,7 @@ rotate based on position of letter X means that the whole string should be rotat
 reverse positions X through Y means that the span of letters at indexes X through Y (including the letters at X and Y) should be reversed in order.\
 move position X to position Y means that the letter which is at index X should be removed from the string, then inserted such that it ends up at index Y.
 
-
-
 For example, suppose you start with abcde and perform the following operations:
-
-
 
 swap position 4 with position 0 swaps the first and last letters, producing the input for the next step, ebcda.\
 swap letter d with letter b swaps the positions of d and b: edcba.\
@@ -32,13 +24,6 @@ move position 3 to position 0 removes the letter at position 3 (a), then inserts
 rotate based on position of letter b finds the index of letter b (1), then rotates the string right once plus a number of times equal to that index (2): ecabd.\
 rotate based on position of letter d finds the index of letter d (4), then rotates the string right once, plus a number of times equal to that index, plus an additional time because the index was at least 4, for a total of 6 right rotations: decab.
 
-
-
 After these steps, the resulting scrambled password is decab.
 
-
-
 Now, you just need to generate a new scrambled password and you can access the system. Given the list of scrambling operations in your puzzle input, what is the result of scrambling abcdefgh?
-
-
-

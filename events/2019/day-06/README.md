@@ -4,11 +4,7 @@
 
 You've landed at the Universal Orbit Map facility on Mercury.  Because navigation in space often involves transferring between orbits, the orbit maps here are useful for finding efficient routes between, for example, you and Santa. You download a map of the local orbits (your puzzle input).
 
-
-
 Except for the universal Center of Mass (COM), every object in space is in orbit around exactly one other object.  An orbit looks roughly like this:
-
-
 
 \\
                    \\
@@ -20,15 +16,9 @@ AAA--> o            o <--BBB\
                    /\
                   /
 
-
-
 In this diagram, the object BBB is in orbit around AAA. The path that BBB takes around AAA (drawn with lines) is only partly shown. In the map data, this orbital relationship is written AAA)BBB, which means "BBB is in orbit around AAA".
 
-
-
 Before you use your map data to plot a course, you need to make sure it wasn't corrupted during the download.  To verify maps, the Universal Orbit Map facility uses orbit count checksums - the total number of direct orbits (like the one shown above) and indirect orbits.
-
-
 
 Whenever A orbits B and B orbits C, then A indirectly orbits C.  This chain can be any number of objects long: if A orbits B, B orbits C, and C orbits D, then A indirectly orbits D.\
 For example, suppose you have the following map:\
@@ -60,4 +50,3 @@ COM orbits nothing.\
 \
 The total number of direct and indirect orbits in this example is 42.\
 What is the total number of direct and indirect orbits in your map data?
-

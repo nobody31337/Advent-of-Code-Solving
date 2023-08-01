@@ -81,4 +81,3 @@ After a total of 70, the grid looks like this, with the virus carrier facing up:
 By this time, 41 bursts of activity caused an infection (though most of those nodes have since been cleaned).\
 After a total of 10000 bursts of activity, 5587 bursts will have caused an infection.\
 Given your actual map, after 10000 bursts of activity, how many bursts cause a node to become infected? (Do not count nodes that begin infected.)
-
