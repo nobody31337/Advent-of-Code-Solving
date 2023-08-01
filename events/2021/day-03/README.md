@@ -1,4 +1,4 @@
-# 2021 day 03
+# [2021 day 03](https://adventofcode.com/2021/day/3)
 
 --- Day 3: Binary Diagnostic ---
 

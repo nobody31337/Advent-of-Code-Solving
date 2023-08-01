@@ -1,4 +1,4 @@
-# 2018 day 11
+# [2018 day 11](https://adventofcode.com/2018/day/11)
 
 --- Day 11: Chronal Charge ---
 

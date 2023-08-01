@@ -1,4 +1,4 @@
-# 2020 day 04
+# [2020 day 04](https://adventofcode.com/2020/day/4)
 
 --- Day 4: Passport Processing ---
 

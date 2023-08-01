@@ -1,4 +1,4 @@
-# 2015 day 02
+# [2015 day 02](https://adventofcode.com/2015/day/2)
 
 --- Day 2: I Was Told There Would Be No Math ---
 

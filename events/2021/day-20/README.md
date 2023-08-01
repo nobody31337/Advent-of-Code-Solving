@@ -1,4 +1,4 @@
-# 2021 day 20
+# [2021 day 20](https://adventofcode.com/2021/day/20)
 
 --- Day 20: Trench Map ---
 

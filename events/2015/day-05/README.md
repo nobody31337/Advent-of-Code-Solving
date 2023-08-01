@@ -1,4 +1,4 @@
-# 2015 day 05
+# [2015 day 05](https://adventofcode.com/2015/day/5)
 
 --- Day 5: Doesn't He Have Intern-Elves For This? ---
 

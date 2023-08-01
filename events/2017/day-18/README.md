@@ -1,4 +1,4 @@
-# 2017 day 18
+# [2017 day 18](https://adventofcode.com/2017/day/18)
 
 --- Day 18: Duet ---
 

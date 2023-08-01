@@ -1,4 +1,4 @@
-# 2016 day 21
+# [2016 day 21](https://adventofcode.com/2016/day/21)
 
 --- Day 21: Scrambled Letters and Hash ---
 

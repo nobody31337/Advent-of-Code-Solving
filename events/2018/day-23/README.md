@@ -1,4 +1,4 @@
-# 2018 day 23
+# [2018 day 23](https://adventofcode.com/2018/day/23)
 
 --- Day 23: Experimental Emergency Teleportation ---
 

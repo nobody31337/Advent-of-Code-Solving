@@ -1,4 +1,4 @@
-# 2017 day 15
+# [2017 day 15](https://adventofcode.com/2017/day/15)
 
 --- Day 15: Dueling Generators ---
 

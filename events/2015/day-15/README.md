@@ -1,4 +1,4 @@
-# 2015 day 15
+# [2015 day 15](https://adventofcode.com/2015/day/15)
 
 --- Day 15: Science for Hungry People ---
 

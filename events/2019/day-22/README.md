@@ -1,4 +1,4 @@
-# 2019 day 22
+# [2019 day 22](https://adventofcode.com/2019/day/22)
 
 --- Day 22: Slam Shuffle ---
 

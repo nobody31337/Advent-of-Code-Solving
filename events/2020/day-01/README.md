@@ -1,4 +1,4 @@
-# 2020 day 01
+# [2020 day 01](https://adventofcode.com/2020/day/1)
 
 --- Day 1: Report Repair ---
 

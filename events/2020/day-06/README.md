@@ -1,4 +1,4 @@
-# 2020 day 06
+# [2020 day 06](https://adventofcode.com/2020/day/6)
 
 --- Day 6: Custom Customs ---
 

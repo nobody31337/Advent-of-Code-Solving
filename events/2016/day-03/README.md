@@ -1,4 +1,4 @@
-# 2016 day 03
+# [2016 day 03](https://adventofcode.com/2016/day/3)
 
 --- Day 3: Squares With Three Sides ---
 

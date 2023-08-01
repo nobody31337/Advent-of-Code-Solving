@@ -1,4 +1,4 @@
-# 2020 day 08
+# [2020 day 08](https://adventofcode.com/2020/day/8)
 
 --- Day 8: Handheld Halting ---
 

@@ -1,4 +1,4 @@
-# 2017 day 10
+# [2017 day 10](https://adventofcode.com/2017/day/10)
 
 --- Day 10: Knot Hash ---
 

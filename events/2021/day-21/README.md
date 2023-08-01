@@ -1,4 +1,4 @@
-# 2021 day 21
+# [2021 day 21](https://adventofcode.com/2021/day/21)
 
 --- Day 21: Dirac Dice ---
 

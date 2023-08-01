@@ -1,4 +1,4 @@
-# 2019 day 07
+# [2019 day 07](https://adventofcode.com/2019/day/7)
 
 --- Day 7: Amplification Circuit ---
 

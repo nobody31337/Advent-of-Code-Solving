@@ -1,4 +1,4 @@
-# 2018 day 18
+# [2018 day 18](https://adventofcode.com/2018/day/18)
 
 --- Day 18: Settlers of The North Pole ---
 

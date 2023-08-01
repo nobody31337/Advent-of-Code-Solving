@@ -1,4 +1,4 @@
-# 2017 day 08
+# [2017 day 08](https://adventofcode.com/2017/day/8)
 
 --- Day 8: I Heard You Like Registers ---
 

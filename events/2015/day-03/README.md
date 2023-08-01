@@ -1,4 +1,4 @@
-# 2015 day 03
+# [2015 day 03](https://adventofcode.com/2015/day/3)
 
 --- Day 3: Perfectly Spherical Houses in a Vacuum ---
 

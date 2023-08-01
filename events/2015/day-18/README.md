@@ -1,4 +1,4 @@
-# 2015 day 18
+# [2015 day 18](https://adventofcode.com/2015/day/18)
 
 --- Day 18: Like a GIF For Your Yard ---
 

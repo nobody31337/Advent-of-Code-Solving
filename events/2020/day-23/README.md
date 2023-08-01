@@ -1,4 +1,4 @@
-# 2020 day 23
+# [2020 day 23](https://adventofcode.com/2020/day/23)
 
 --- Day 23: Crab Cups ---
 

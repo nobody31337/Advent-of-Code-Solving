@@ -1,4 +1,4 @@
-# 2017 day 20
+# [2017 day 20](https://adventofcode.com/2017/day/20)
 
 --- Day 20: Particle Swarm ---
 

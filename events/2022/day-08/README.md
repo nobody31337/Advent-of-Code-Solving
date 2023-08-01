@@ -1,4 +1,4 @@
-# 2022 day 08
+# [2022 day 08](https://adventofcode.com/2022/day/8)
 
 --- Day 8: Treetop Tree House ---
 

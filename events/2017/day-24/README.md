@@ -1,4 +1,4 @@
-# 2017 day 24
+# [2017 day 24](https://adventofcode.com/2017/day/24)
 
 --- Day 24: Electromagnetic Moat ---
 

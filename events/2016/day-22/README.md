@@ -1,4 +1,4 @@
-# 2016 day 22
+# [2016 day 22](https://adventofcode.com/2016/day/22)
 
 --- Day 22: Grid Computing ---
 

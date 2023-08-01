@@ -1,4 +1,4 @@
-# 2015 day 09
+# [2015 day 09](https://adventofcode.com/2015/day/9)
 
 --- Day 9: All in a Single Night ---
 

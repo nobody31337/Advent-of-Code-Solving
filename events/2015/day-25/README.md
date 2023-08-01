@@ -1,4 +1,4 @@
-# 2015 day 25
+# [2015 day 25](https://adventofcode.com/2015/day/25)
 
 --- Day 25: Let It Snow ---
 

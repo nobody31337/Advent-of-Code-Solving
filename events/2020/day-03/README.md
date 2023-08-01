@@ -1,4 +1,4 @@
-# 2020 day 03
+# [2020 day 03](https://adventofcode.com/2020/day/3)
 
 --- Day 3: Toboggan Trajectory ---
 

@@ -1,4 +1,4 @@
-# 2021 day 04
+# [2021 day 04](https://adventofcode.com/2021/day/4)
 
 --- Day 4: Giant Squid ---
 

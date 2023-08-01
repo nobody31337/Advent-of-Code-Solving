@@ -1,4 +1,4 @@
-# 2020 day 02
+# [2020 day 02](https://adventofcode.com/2020/day/2)
 
 --- Day 2: Password Philosophy ---
 

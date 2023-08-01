@@ -1,4 +1,4 @@
-# 2018 day 24
+# [2018 day 24](https://adventofcode.com/2018/day/24)
 
 --- Day 24: Immune System Simulator 20XX ---
 

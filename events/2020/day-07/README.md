@@ -1,4 +1,4 @@
-# 2020 day 07
+# [2020 day 07](https://adventofcode.com/2020/day/7)
 
 --- Day 7: Handy Haversacks ---
 

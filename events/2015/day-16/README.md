@@ -1,4 +1,4 @@
-# 2015 day 16
+# [2015 day 16](https://adventofcode.com/2015/day/16)
 
 --- Day 16: Aunt Sue ---
 

@@ -1,4 +1,4 @@
-# 2016 day 08
+# [2016 day 08](https://adventofcode.com/2016/day/8)
 
 --- Day 8: Two-Factor Authentication ---
 

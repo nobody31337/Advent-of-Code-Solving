@@ -1,4 +1,4 @@
-# 2020 day 21
+# [2020 day 21](https://adventofcode.com/2020/day/21)
 
 --- Day 21: Allergen Assessment ---
 

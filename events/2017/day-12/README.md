@@ -1,4 +1,4 @@
-# 2017 day 12
+# [2017 day 12](https://adventofcode.com/2017/day/12)
 
 --- Day 12: Digital Plumber ---
 

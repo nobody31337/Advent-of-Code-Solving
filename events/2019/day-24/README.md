@@ -1,4 +1,4 @@
-# 2019 day 24
+# [2019 day 24](https://adventofcode.com/2019/day/24)
 
 --- Day 24: Planet of Discord ---
 

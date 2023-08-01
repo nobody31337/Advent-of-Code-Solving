@@ -1,4 +1,4 @@
-# 2017 day 23
+# [2017 day 23](https://adventofcode.com/2017/day/23)
 
 --- Day 23: Coprocessor Conflagration ---
 

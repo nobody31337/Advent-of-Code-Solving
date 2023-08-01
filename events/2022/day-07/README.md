@@ -1,4 +1,4 @@
-# 2022 day 07
+# [2022 day 07](https://adventofcode.com/2022/day/7)
 
 --- Day 7: No Space Left On Device ---
 

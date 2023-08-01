@@ -1,4 +1,4 @@
-# 2021 day 12
+# [2021 day 12](https://adventofcode.com/2021/day/12)
 
 --- Day 12: Passage Pathing ---
 

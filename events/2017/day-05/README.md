@@ -1,4 +1,4 @@
-# 2017 day 05
+# [2017 day 05](https://adventofcode.com/2017/day/5)
 
 --- Day 5: A Maze of Twisty Trampolines, All Alike ---
 

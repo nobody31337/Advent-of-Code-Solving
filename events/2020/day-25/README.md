@@ -1,4 +1,4 @@
-# 2020 day 25
+# [2020 day 25](https://adventofcode.com/2020/day/25)
 
 --- Day 25: Combo Breaker ---
 

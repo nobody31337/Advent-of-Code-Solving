@@ -1,4 +1,4 @@
-# 2017 day 14
+# [2017 day 14](https://adventofcode.com/2017/day/14)
 
 --- Day 14: Disk Defragmentation ---
 

@@ -1,4 +1,4 @@
-# 2019 day 06
+# [2019 day 06](https://adventofcode.com/2019/day/6)
 
 --- Day 6: Universal Orbit Map ---
 

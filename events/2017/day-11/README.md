@@ -1,4 +1,4 @@
-# 2017 day 11
+# [2017 day 11](https://adventofcode.com/2017/day/11)
 
 --- Day 11: Hex Ed ---
 

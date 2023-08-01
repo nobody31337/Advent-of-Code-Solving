@@ -1,4 +1,4 @@
-# 2015 day 10
+# [2015 day 10](https://adventofcode.com/2015/day/10)
 
 --- Day 10: Elves Look, Elves Say ---
 

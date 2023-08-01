@@ -1,4 +1,4 @@
-# 2016 day 17
+# [2016 day 17](https://adventofcode.com/2016/day/17)
 
 --- Day 17: Two Steps Forward ---
 

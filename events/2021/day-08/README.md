@@ -1,4 +1,4 @@
-# 2021 day 08
+# [2021 day 08](https://adventofcode.com/2021/day/8)
 
 --- Day 8: Seven Segment Search ---
 

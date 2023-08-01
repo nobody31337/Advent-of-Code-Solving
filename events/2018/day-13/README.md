@@ -1,4 +1,4 @@
-# 2018 day 13
+# [2018 day 13](https://adventofcode.com/2018/day/13)
 
 --- Day 13: Mine Cart Madness ---
 

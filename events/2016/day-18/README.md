@@ -1,4 +1,4 @@
-# 2016 day 18
+# [2016 day 18](https://adventofcode.com/2016/day/18)
 
 --- Day 18: Like a Rogue ---
 

@@ -1,4 +1,4 @@
-# 2015 day 07
+# [2015 day 07](https://adventofcode.com/2015/day/7)
 
 --- Day 7: Some Assembly Required ---
 

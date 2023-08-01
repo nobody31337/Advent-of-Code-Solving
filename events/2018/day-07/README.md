@@ -1,4 +1,4 @@
-# 2018 day 07
+# [2018 day 07](https://adventofcode.com/2018/day/7)
 
 --- Day 7: The Sum of Its Parts ---
 

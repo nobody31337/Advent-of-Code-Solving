@@ -1,4 +1,4 @@
-# 2016 day 07
+# [2016 day 07](https://adventofcode.com/2016/day/7)
 
 --- Day 7: Internet Protocol Version 7 ---
 

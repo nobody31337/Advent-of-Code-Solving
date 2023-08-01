@@ -1,4 +1,4 @@
-# 2017 day 21
+# [2017 day 21](https://adventofcode.com/2017/day/21)
 
 --- Day 21: Fractal Art ---
 

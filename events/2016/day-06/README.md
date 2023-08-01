@@ -1,4 +1,4 @@
-# 2016 day 06
+# [2016 day 06](https://adventofcode.com/2016/day/6)
 
 --- Day 6: Signals and Noise ---
 

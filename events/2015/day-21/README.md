@@ -1,4 +1,4 @@
-# 2015 day 21
+# [2015 day 21](https://adventofcode.com/2015/day/21)
 
 --- Day 21: RPG Simulator 20XX ---
 

@@ -1,4 +1,4 @@
-# 2016 day 01
+# [2016 day 01](https://adventofcode.com/2016/day/1)
 
 --- Day 1: No Time for a Taxicab ---
 

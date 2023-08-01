@@ -1,4 +1,4 @@
-# 2021 day 23
+# [2021 day 23](https://adventofcode.com/2021/day/23)
 
 --- Day 23: Amphipod ---
 

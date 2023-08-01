@@ -1,4 +1,4 @@
-# 2017 day 22
+# [2017 day 22](https://adventofcode.com/2017/day/22)
 
 --- Day 22: Sporifica Virus ---
 

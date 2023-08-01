@@ -1,4 +1,4 @@
-# 2022 day 13
+# [2022 day 13](https://adventofcode.com/2022/day/13)
 
 --- Day 13: Distress Signal ---
 

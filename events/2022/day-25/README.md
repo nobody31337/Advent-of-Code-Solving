@@ -1,4 +1,4 @@
-# 2022 day 25
+# [2022 day 25](https://adventofcode.com/2022/day/25)
 
 --- Day 25: Full of Hot Air ---
 

@@ -1,4 +1,4 @@
-# 2018 day 06
+# [2018 day 06](https://adventofcode.com/2018/day/6)
 
 --- Day 6: Chronal Coordinates ---
 

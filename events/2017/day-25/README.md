@@ -1,4 +1,4 @@
-# 2017 day 25
+# [2017 day 25](https://adventofcode.com/2017/day/25)
 
 --- Day 25: The Halting Problem ---
 

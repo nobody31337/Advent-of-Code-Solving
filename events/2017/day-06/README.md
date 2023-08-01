@@ -1,4 +1,4 @@
-# 2017 day 06
+# [2017 day 06](https://adventofcode.com/2017/day/6)
 
 --- Day 6: Memory Reallocation ---
 

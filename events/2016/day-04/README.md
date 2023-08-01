@@ -1,4 +1,4 @@
-# 2016 day 04
+# [2016 day 04](https://adventofcode.com/2016/day/4)
 
 --- Day 4: Security Through Obscurity ---
 

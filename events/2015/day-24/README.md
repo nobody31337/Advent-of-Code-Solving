@@ -1,4 +1,4 @@
-# 2015 day 24
+# [2015 day 24](https://adventofcode.com/2015/day/24)
 
 --- Day 24: It Hangs in the Balance ---
 

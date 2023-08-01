@@ -1,4 +1,4 @@
-# 2020 day 20
+# [2020 day 20](https://adventofcode.com/2020/day/20)
 
 --- Day 20: Jurassic Jigsaw ---
 

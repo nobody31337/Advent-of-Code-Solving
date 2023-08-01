@@ -1,4 +1,4 @@
-# 2018 day 25
+# [2018 day 25](https://adventofcode.com/2018/day/25)
 
 --- Day 25: Four-Dimensional Adventure ---
 

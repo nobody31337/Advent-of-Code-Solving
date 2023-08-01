@@ -1,4 +1,4 @@
-# 2016 day 12
+# [2016 day 12](https://adventofcode.com/2016/day/12)
 
 --- Day 12: Leonardo's Monorail ---
 
