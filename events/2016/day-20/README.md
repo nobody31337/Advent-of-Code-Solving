@@ -30,14 +30,14 @@ Let's say the IP is not 32-bit, but 4-bit.\
 Then the IP range would be 0 through 15.\
 And let's say the blacklist look like this:
 
-> 14-15\
+14-15\
 0-3\
 8-12\
 7-9
 
 Then the allowed IPs would be
 
-> 4\
+4\
 5\
 6\
 13
@@ -46,17 +46,19 @@ So, how can I make my code figure this out?\
 I made my code to make the whitelist, which is the inverse form of the blacklist.
 So the whitelist would look like this:
 
-> 4-6\
+4-6\
 13-13
 
 Let me show you how it's done.
 
 I will use this blacklist for an example:
 
-> 14-15\
-0-3\
-8-12\
+```
+14-15
+0-3
+8-12
 7-9
+```
 
 Each row of the blacklist is formed with the lowest number of the range, and the highest number of the range.\
 Let's call each of those `left` and `right`.
@@ -85,7 +87,7 @@ then `high` will be the `left` value of a whitelist range row.
 Thus 13 is the `right` value of a whitelist range row.
 
 ```
-**WHITELIST**
+WHITELIST
 13 - right
 ```
 
@@ -97,7 +99,7 @@ Thus 13 is the `right` value of a whitelist range row.
 Thus 4 is the `left` value of a whitelist range row.
 
 ```
-**WHITELIST**
+WHITELIST
 13 - right
 4 - left
 ```
@@ -112,7 +114,7 @@ But wait, 13 is already the `right` value of a whitelist range row!\
 Then 13 is `both`, because it's the only one in the range.
 
 ```
-**WHITELIST**
+WHITELIST
 13 - both
 4 - left
 ```
@@ -125,7 +127,7 @@ Then 13 is `both`, because it's the only one in the range.
 Thus 6 is the `right` value of a whitelist range row.
 
 ```
-**WHITELIST**
+WHITELIST
 13 - both
 4 - left
 6 - right
@@ -134,7 +136,7 @@ Thus 6 is the `right` value of a whitelist range row.
 All done! Now sort them.
 
 ```
-**WHITELIST**
+WHITELIST
 4 - left
 6 - right
 13 - both
@@ -143,7 +145,7 @@ All done! Now sort them.
 You can reform this whitelist as:
 
 ```
-**WHITELIST**
+WHITELIST
 4-6
 13-13
 ```
