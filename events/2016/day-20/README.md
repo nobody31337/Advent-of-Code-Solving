@@ -30,24 +30,30 @@ Let's say the IP is not 32-bit, but 4-bit.\
 Then the IP range would be 0 through 15.\
 And let's say the blacklist look like this:
 
-14-15\
-0-3\
-8-12\
+```
+14-15
+0-3
+8-12
 7-9
+```
 
 Then the allowed IPs would be
 
-4\
-5\
-6\
+```
+4
+5
+6
 13
+```
 
 So, how can I make my code figure this out?\
 I made my code to make the whitelist, which is the inverse form of the blacklist.
 So the whitelist would look like this:
 
-4-6\
+```
+4-6
 13-13
+```
 
 Let me show you how it's done.
 
