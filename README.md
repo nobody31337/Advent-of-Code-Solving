@@ -4,4 +4,4 @@ Solving the puzzles from https://adventofcode.com/
 
 ## Solved
 
-[2016 day-20](events/2016/day-20/)
+[day 20 of 2016](events/2016/day-20/)
