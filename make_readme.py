@@ -33,5 +33,11 @@ for year in range(2015, 2023):
                     text = content.text.strip().replace('\xa0', ' ').replace('\n', '\\\n')
                     if len(text) > 0:
                         readme.write('\n\n' + text)
+        
+        with open(path + '/backup/input.txt', 'wb') as inp_text:
+            response = requests.get(url + '/input', cookies=cookies)
+            inp_text.write(response.content)
+        
+        with open(path + '/solve.py', 'a'): pass
     
         print(f'{year} day {day:02} done')
