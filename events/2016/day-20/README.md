@@ -142,9 +142,9 @@ This is how it's done.
 Let's solve the problem with this example!
 
 ```
-Part One: What is the lowest-valued IP that is not blocked?\
+Part One: What is the lowest-valued IP that is not blocked?
 The answer: 4 it is. Obviously.
 
-Part Two: How many IPs are allowed by the blacklist?\
+Part Two: How many IPs are allowed by the blacklist?
 The answer: 4 it is. You can count them off using the for statement.
 ```
