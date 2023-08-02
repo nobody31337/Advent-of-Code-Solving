@@ -1,3 +1,4 @@
+import os
 import json
 import requests
 from bs4 import BeautifulSoup
@@ -19,7 +20,13 @@ for year in range(2015, 2023):
         articles = soup.main.find_all('article')
 
         with open(path + '/README.md', 'w') as readme:
-            readme.write(f'# [{year} day {day:02}]({url})')
+            readme.write(f'# Solving [{year} day {day:02}]({url})\n')
+
+        if not os.path.exists(path + '/backup'):
+            os.mkdir(path + '/backup')
+
+        with open(path + '/backup/README.md', 'w') as readme:
+            readme.write(f'# The puzzle of [{year} day {day:02}]({url})')
 
             for article in articles:
                 for content in article.contents:
