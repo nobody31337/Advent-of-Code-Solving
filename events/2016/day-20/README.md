@@ -84,8 +84,10 @@ then `high` will be the `left` value of a whitelist range row.
 `high` is 16 but that's out of IP range.\
 Thus 13 is the `right` value of a whitelist range row.
 
->**WHITELIST**\
+```
+**WHITELIST**
 13 - right
+```
 
 #### For example: row 0-3
 
@@ -94,9 +96,11 @@ Thus 13 is the `right` value of a whitelist range row.
 `high` is 4 and this doesn't belong to any blacklist range row.\
 Thus 4 is the `left` value of a whitelist range row.
 
->**WHITELIST**\
-13 - right\
+```
+**WHITELIST**
+13 - right
 4 - left
+```
 
 #### For example: row 8-12
 
@@ -107,9 +111,11 @@ Thus 13 is the `left` value of a whitelist range row.\
 But wait, 13 is already the `right` value of a whitelist range row!\
 Then 13 is `both`, because it's the only one in the range.
 
->**WHITELIST**\
-13 - both\
+```
+**WHITELIST**
+13 - both
 4 - left
+```
 
 #### For example: row 7-9
 
@@ -118,24 +124,29 @@ Then 13 is `both`, because it's the only one in the range.
 `high` is 10 but that's one of the blocked IPs.\
 Thus 6 is the `right` value of a whitelist range row.
 
->**WHITELIST**\
-13 - both\
-4 - left\
+```
+**WHITELIST**
+13 - both
+4 - left
 6 - right
+```
 
 All done! Now sort them.
 
->**WHITELIST**\
-4 - left\
-6 - right\
+```
+**WHITELIST**
+4 - left
+6 - right
 13 - both
+```
 
 You can reform this whitelist as:
 
-
->**WHITELIST**\
-4-6\
+```
+**WHITELIST**
+4-6
 13-13
+```
 
 This is how it's done.
 
