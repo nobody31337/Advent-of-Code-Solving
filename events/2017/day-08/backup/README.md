@@ -1,4 +1,4 @@
-# The puzzle of [2017 day 08](https://adventofcode.com/2017/day/8)
+# The Advent of Code on [2017 day 08](https://adventofcode.com/2017/day/8)
 
 --- Day 8: I Heard You Like Registers ---
 
