@@ -14,7 +14,7 @@ if response.status_code != 200:
     print('wrong cookies')
     exit(0)
 
-inst = response.text.split('\n')
+inst = response.text.splitlines()
 
 partone = [False for _ in range(999*999)]
 parttwo = [0 for _ in range(999*999)]
