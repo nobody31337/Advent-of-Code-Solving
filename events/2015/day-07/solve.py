@@ -16,37 +16,47 @@ if response.status_code != 200:
     exit(0)
 
 circuit = response.text.split('\n')[:-1]
+memo = {}
 
 def get(x: str):
-    print(x)
-    time.sleep(0.2)
-    match len(x.split()):
-        case 1:
-            try:
-                return int(x)
-            except:
-                for gate in circuit:
-                    lop, rop = gate.split(' -> ')
-                    if rop == x:
-                        return get(lop)
+    print(f'Getting {x}')
+    ret = 0
 
-        case 2:
-            return ~int(get(x.split()[1])) & 0xffff
+    if x not in memo:
+        match len(x.split()):
+            case 1:
+                try:
+                    ret = int(x)
+                except:
+                    for gate in circuit:
+                        lop, rop = gate.split(' -> ')
+                        if rop == x:
+                            ret = get(lop)
 
-        case 3:
-            lop, op, rop = x.split()
-            match op:
-                case 'AND':
-                    return get(lop) & get(rop)
-                case 'OR':
-                    return get(lop) | get(rop)
-                case 'RSHIFT':
-                    return get(lop) >> get(rop)
-                case 'LSHIFT':
-                    return get(lop) << get(rop)
+            case 2:
+                ret = ~int(get(x.split()[1])) & 0xffff
+
+            case 3:
+                lop, op, rop = x.split()
+                match op:
+                    case 'AND':
+                        ret = get(lop) & get(rop)
+                    case 'OR':
+                        ret = get(lop) | get(rop)
+                    case 'RSHIFT':
+                        ret = get(lop) >> get(rop)
+                    case 'LSHIFT':
+                        ret = get(lop) << get(rop)
+            
+            case _:
+                ret = None
         
-        case _:
-            return None
+        memo[x] = ret
+    else:
+        ret = memo[x]
     
+    print(f'{x} == {ret}')
+    
+    return ret
 
 print(get('a'))
