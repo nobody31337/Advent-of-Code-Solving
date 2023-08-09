@@ -27,7 +27,7 @@ for size in sizes.split():
     tmp = [*dim]
     tmp.remove(max(tmp))
     partone += tmp[0] * tmp[1]
-    parttwo += 2 * (dim[0] + dim[1]) + dim[0] * dim[1] * dim[2]
+    parttwo += 2 * (tmp[0] + tmp[1]) + dim[0] * dim[1] * dim[2]
 
 
 print(partone)
