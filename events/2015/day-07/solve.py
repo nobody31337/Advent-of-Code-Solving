@@ -73,4 +73,6 @@ for i in range(len(circuit)):
         circuit[i] = a + ' -> b'
         break
 
+memo = {}
+
 get('a')
