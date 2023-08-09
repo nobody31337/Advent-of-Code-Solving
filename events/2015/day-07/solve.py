@@ -34,6 +34,7 @@ def get(wire: str):
             case _:
                 memo[wire] = 0
         memo[wire] &= 0xffff
+        
     return memo[wire]
 
 
