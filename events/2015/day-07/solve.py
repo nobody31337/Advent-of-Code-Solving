@@ -30,7 +30,7 @@ def get(wire: str):
             case ["NOT", a]:
                 memo[wire] = ~int(get(a))
             case [lop, op, rop]:
-                exec('memo[wire] = get(lop) ' + ops[op] + ' get(rop)')
+                exec(f'memo[wire] = get(lop) {ops[op]} get(rop)')
             case _:
                 memo[wire] = 0
         memo[wire] &= 0xffff
