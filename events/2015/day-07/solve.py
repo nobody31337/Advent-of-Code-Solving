@@ -59,18 +59,10 @@ def get(x: str):
 
 print(get('a'))
 
-a = ''
-
-for i in range(len(circuit)):
-    left, right = circuit[i].split(' -> ')
-    if right == 'a':
-        a = left
-        break
-
 for i in range(len(circuit)):
     left, right = circuit[i].split(' -> ')
     if right == 'b':
-        circuit[i] = a + ' -> b'
+        circuit[i] = '3176 -> b'
         break
 
 memo = {}
