@@ -16,12 +16,11 @@ if response.status_code != 200:
 
 inst = response.text.split('\n')
 
-grid = [[False for j in range(999)] for i in range(999)]
+grid = [[True for j in range(999)] for i in range(999)]
 
 def print_grid():
     for line in grid:
         print(*['#' if lamp else ' ' for lamp in line], sep='')
-        print('')
 
 
 print_grid()
