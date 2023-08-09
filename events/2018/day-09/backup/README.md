@@ -1,4 +1,4 @@
-# The puzzle of [2018 day 09](https://adventofcode.com/2018/day/9)
+# The Advent of Code on [2018 day 09](https://adventofcode.com/2018/day/9)
 
 --- Day 9: Marble Mania ---
 
