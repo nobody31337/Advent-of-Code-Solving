@@ -1,4 +1,4 @@
-# The puzzle of [2015 day 03](https://adventofcode.com/2015/day/3)
+# The Advent of Code on [2015 day 03](https://adventofcode.com/2015/day/3)
 
 --- Day 3: Perfectly Spherical Houses in a Vacuum ---
 
