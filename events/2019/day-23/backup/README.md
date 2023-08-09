@@ -1,4 +1,4 @@
-# The puzzle of [2019 day 23](https://adventofcode.com/2019/day/23)
+# The Advent of Code on [2019 day 23](https://adventofcode.com/2019/day/23)
 
 --- Day 23: Category Six ---
 
