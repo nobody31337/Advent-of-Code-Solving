@@ -1,4 +1,4 @@
-# The puzzle of [2022 day 19](https://adventofcode.com/2022/day/19)
+# The Advent of Code on [2022 day 19](https://adventofcode.com/2022/day/19)
 
 --- Day 19: Not Enough Minerals ---
 
