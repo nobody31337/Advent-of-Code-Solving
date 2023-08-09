@@ -15,6 +15,6 @@ if response.status_code != 200:
     print('wrong cookies')
     exit(0)
 
-text = response.content.strip()
+content = response.content.strip()
 
-print(text)
+print(hashlib.md5(b'abcdef609043').hexdigest())
