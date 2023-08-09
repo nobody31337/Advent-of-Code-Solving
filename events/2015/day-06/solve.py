@@ -16,6 +16,9 @@ if response.status_code != 200:
 
 inst = response.text.split('\n')
 
+print(inst[-1])
+exit()
+
 for step in inst:
     fx, fy = map(int, step.split()[-3].split(','))
     
