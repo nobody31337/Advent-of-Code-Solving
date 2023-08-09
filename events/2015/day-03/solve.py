@@ -17,7 +17,7 @@ if response.status_code != 200:
 directions = response.text
 
 cur = [0, 0]
-path = [cur]
+path = [[*cur]]
 
 for d in directions:
     match d:
@@ -30,6 +30,6 @@ for d in directions:
         case 'v':
             cur[1] -= 1
     if cur not in path:
-        path.append(cur)
+        path.append([*cur])
 
-print(path)
+print(len(path))
