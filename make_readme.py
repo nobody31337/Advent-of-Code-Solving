@@ -34,12 +34,18 @@ for year in range(2015, 2023):
         soup = BeautifulSoup(response.text, 'html.parser')
 
         articles = soup.main.find_all('article')
-        
+
+        '''
         with open(path + '/solve.py', 'w') as solvepy:
             solvepy.write(solvepy_template.format(year, day))
 
         with open(path + '/README.md', 'w') as readme:
             readme.write(f'# Solving [{year} day {day:02}]({url})\n')
+        
+        with open(path + '/backup/input.txt', 'wb') as inp_text:
+            response = requests.get(url + '/input', cookies=cookies)
+            inp_text.write(response.content)
+        '''
 
         if not os.path.exists(path + '/backup'):
             os.mkdir(path + '/backup')
@@ -52,9 +58,5 @@ for year in range(2015, 2023):
                     text = content.text.strip().replace('\xa0', ' ').replace('\n', '\\\n')
                     if len(text) > 0:
                         readme.write('\n\n' + text)
-        
-        with open(path + '/backup/input.txt', 'wb') as inp_text:
-            response = requests.get(url + '/input', cookies=cookies)
-            inp_text.write(response.content)
     
         print(f'{year} day {day:02} done')
