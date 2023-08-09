@@ -1,4 +1,4 @@
-# The puzzle of [2019 day 17](https://adventofcode.com/2019/day/17)
+# The Advent of Code on [2019 day 17](https://adventofcode.com/2019/day/17)
 
 --- Day 17: Set and Forget ---
 
