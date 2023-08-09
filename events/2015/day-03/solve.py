@@ -34,5 +34,5 @@ for d in directions:
 
 print(len(santa))
 
-for d,b in directions:
-    print(d,b)
+for i in range(0, len(directions), 2):
+    print(directions[i], directions[i+1])
