@@ -1,4 +1,4 @@
-# The puzzle of [2015 day 14](https://adventofcode.com/2015/day/14)
+# The Advent of Code on [2015 day 14](https://adventofcode.com/2015/day/14)
 
 --- Day 14: Reindeer Olympics ---
 
