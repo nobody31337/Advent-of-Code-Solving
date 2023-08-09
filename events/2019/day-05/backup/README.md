@@ -1,4 +1,4 @@
-# The puzzle of [2019 day 05](https://adventofcode.com/2019/day/5)
+# The Advent of Code on [2019 day 05](https://adventofcode.com/2019/day/5)
 
 --- Day 5: Sunny with a Chance of Asteroids ---
 
