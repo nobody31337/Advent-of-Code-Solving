@@ -1,4 +1,4 @@
-# The puzzle of [2017 day 06](https://adventofcode.com/2017/day/6)
+# The Advent of Code on [2017 day 06](https://adventofcode.com/2017/day/6)
 
 --- Day 6: Memory Reallocation ---
 
