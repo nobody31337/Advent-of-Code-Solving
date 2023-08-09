@@ -1,4 +1,4 @@
-# The puzzle of [2015 day 01](https://adventofcode.com/2015/day/1)
+# The Advent of Code on [2015 day 01](https://adventofcode.com/2015/day/1)
 
 --- Day 1: Not Quite Lisp ---
 
