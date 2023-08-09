@@ -23,12 +23,7 @@ def get(x: str):
     elif x in memo:
         return memo[x]
     
-    for gate in circuit:
-        left, right = gate.split(' -> ')
-        if right == x:
-            break
-    
-    match left.split():
+    match circuit[x].split():
         case [a]:
             memo[x] = get(a)
 
