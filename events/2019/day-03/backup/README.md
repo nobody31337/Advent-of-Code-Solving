@@ -1,4 +1,4 @@
-# The puzzle of [2019 day 03](https://adventofcode.com/2019/day/3)
+# The Advent of Code on [2019 day 03](https://adventofcode.com/2019/day/3)
 
 --- Day 3: Crossed Wires ---
 
