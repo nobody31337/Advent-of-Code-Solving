@@ -26,18 +26,20 @@ for step in inst[:-1]:
     if step.startswith('turn on'):
         for i in range(fx, tx+1):
             for j in range(fy, ty+1):
-                parttwo[i*999 + j] = partone[i*999 + j] = True
+                partone[i*999 + j] = True
+                parttwo[i*999 + j] += 1
     
     if step.startswith('turn off'):
         for i in range(fx, tx+1):
             for j in range(fy, ty+1):
-                parttwo[i*999 + j] = partone[i*999 + j] = False
+                partone[i*999 + j] = False
+                if parttwo[i*999 + j] > 0: parttwo[i*999 + j] -= 1
     
     if step.startswith('toggle'):
         for i in range(fx, tx+1):
             for j in range(fy, ty+1):
                 partone[i*999 + j] = not partone[i*999 + j]
-                parttwo[i*999 + j] = 2
+                parttwo[i*999 + j] += 2
 
 print(sum(partone))
 print(sum(parttwo))
