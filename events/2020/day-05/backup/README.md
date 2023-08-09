@@ -1,4 +1,4 @@
-# The puzzle of [2020 day 05](https://adventofcode.com/2020/day/5)
+# The Advent of Code on [2020 day 05](https://adventofcode.com/2020/day/5)
 
 --- Day 5: Binary Boarding ---
 
