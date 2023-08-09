@@ -1,4 +1,4 @@
-# The puzzle of [2016 day 05](https://adventofcode.com/2016/day/5)
+# The Advent of Code on [2016 day 05](https://adventofcode.com/2016/day/5)
 
 --- Day 5: How About a Nice Game of Chess? ---
 
