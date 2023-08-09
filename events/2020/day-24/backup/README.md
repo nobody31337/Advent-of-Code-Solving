@@ -1,4 +1,4 @@
-# The puzzle of [2020 day 24](https://adventofcode.com/2020/day/24)
+# The Advent of Code on [2020 day 24](https://adventofcode.com/2020/day/24)
 
 --- Day 24: Lobby Layout ---
 
