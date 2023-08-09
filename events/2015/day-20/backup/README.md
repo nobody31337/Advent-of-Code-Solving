@@ -1,4 +1,4 @@
-# The puzzle of [2015 day 20](https://adventofcode.com/2015/day/20)
+# The Advent of Code on [2015 day 20](https://adventofcode.com/2015/day/20)
 
 --- Day 20: Infinite Elves and Infinite Houses ---
 
