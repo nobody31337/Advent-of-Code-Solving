@@ -1,5 +1,6 @@
 import requests
 import json
+import re
 
 with open('data.json', 'r') as js:
     data = json.load(js)
@@ -26,5 +27,5 @@ for word in words:
         naughty += 1
         break
     else:
-        if sum(v in word for v in vowels) > 2:
+        if sum(v in word for v in vowels) > 2 and re.search(r'[a-z]{2}', word):
             print(word)
