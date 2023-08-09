@@ -1,4 +1,4 @@
-# The puzzle of [2017 day 05](https://adventofcode.com/2017/day/5)
+# The Advent of Code on [2017 day 05](https://adventofcode.com/2017/day/5)
 
 --- Day 5: A Maze of Twisty Trampolines, All Alike ---
 
