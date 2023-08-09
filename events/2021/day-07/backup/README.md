@@ -1,4 +1,4 @@
-# The puzzle of [2021 day 07](https://adventofcode.com/2021/day/7)
+# The Advent of Code on [2021 day 07](https://adventofcode.com/2021/day/7)
 
 --- Day 7: The Treachery of Whales ---
 
