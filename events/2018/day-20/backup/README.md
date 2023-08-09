@@ -1,4 +1,4 @@
-# The puzzle of [2018 day 20](https://adventofcode.com/2018/day/20)
+# The Advent of Code on [2018 day 20](https://adventofcode.com/2018/day/20)
 
 --- Day 20: A Regular Map ---
 
