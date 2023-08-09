@@ -16,7 +16,8 @@ if response.status_code != 200:
 
 inst = response.text.split('\n')
 
-grid = [False for _ in range(999*999)]
+partone = [False for _ in range(999*999)]
+parttwo = [0 for _ in range(999*999)]
 
 for step in inst[:-1]:
     fx, fy = map(int, step.split()[-3].split(','))
@@ -25,16 +26,20 @@ for step in inst[:-1]:
     if step.startswith('turn on'):
         for i in range(fx, tx+1):
             for j in range(fy, ty+1):
-                grid[i*999 + j] = True
+                partone[i*999 + j] = True
+                parttwo[i*999 + j] = 1
     
     if step.startswith('turn off'):
         for i in range(fx, tx+1):
             for j in range(fy, ty+1):
-                grid[i*999 + j] = False
+                partone[i*999 + j] = False
+                parttwo[i*999 + j] = 0
     
     if step.startswith('toggle'):
         for i in range(fx, tx+1):
             for j in range(fy, ty+1):
-                grid[i*999 + j] = not grid[i*999 + j]
+                partone[i*999 + j] = not partone[i*999 + j]
+                partone[i*999 + j] = 2
 
-print(sum(grid))
+print(sum(partone))
+print(sum(parttwo))
