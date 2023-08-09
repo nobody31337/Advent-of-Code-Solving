@@ -1,4 +1,4 @@
-# The puzzle of [2018 day 24](https://adventofcode.com/2018/day/24)
+# The Advent of Code on [2018 day 24](https://adventofcode.com/2018/day/24)
 
 --- Day 24: Immune System Simulator 20XX ---
 
