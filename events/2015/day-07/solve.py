@@ -49,6 +49,8 @@ def get(x: str):
                         
                         case _:
                             ret = None
+            
+            print(f'{x} == {ret}')
             memo[x] = ret
         else:
             ret = memo[x]
