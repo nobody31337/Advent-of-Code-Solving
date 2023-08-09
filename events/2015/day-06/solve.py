@@ -39,7 +39,7 @@ for step in inst[:-1]:
         for i in range(fx, tx+1):
             for j in range(fy, ty+1):
                 partone[i*999 + j] = not partone[i*999 + j]
-                partone[i*999 + j] = 2
+                parttwo[i*999 + j] = 2
 
 print(sum(partone))
 print(sum(parttwo))
