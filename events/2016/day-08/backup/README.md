@@ -1,4 +1,4 @@
-# The puzzle of [2016 day 08](https://adventofcode.com/2016/day/8)
+# The Advent of Code on [2016 day 08](https://adventofcode.com/2016/day/8)
 
 --- Day 8: Two-Factor Authentication ---
 
