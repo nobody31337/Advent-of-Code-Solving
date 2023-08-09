@@ -50,8 +50,8 @@ print('Part One: In little Bobby\'s kit\'s instructions booklet (provided as you
 partone = get('a')
 print('The answer:', partone)
 
-memo = {}
 circuit['b'] = str(partone)
+memo = {}
 
 print('\nPart Two: What new signal is ultimately provided to wire a?')
 
