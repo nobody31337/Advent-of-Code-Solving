@@ -36,7 +36,10 @@ def get(x: str):
                 case 'AND':
                     return get(lop) & get(rop)
                 case 'OR':
-                    return get(lop) | get(rop)
+                    try:
+                        return get(lop) | get(rop)
+                    except:
+                        print('Wrong, try again:', lop, rop)
                 case 'RSHIFT':
                     get(lop) >> get(rop)
                 case 'LSHIFT':
