@@ -1,4 +1,4 @@
-# The puzzle of [2019 day 11](https://adventofcode.com/2019/day/11)
+# The Advent of Code on [2019 day 11](https://adventofcode.com/2019/day/11)
 
 --- Day 11: Space Police ---
 
