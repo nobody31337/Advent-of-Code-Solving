@@ -43,5 +43,8 @@ for d in directions:
     odd_or_even += 1
     odd_or_even %= 2
 
-print(len(path))
-print(len(path1))
+print('Part One: How many houses receive at least one present?')
+print('The answer:', len(path))
+
+print('\nPart Two: This year, how many houses receive at least one present?')
+print('The answer:', len(path1))
