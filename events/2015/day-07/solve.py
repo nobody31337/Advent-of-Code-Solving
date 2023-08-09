@@ -52,6 +52,9 @@ def get(x: str):
 
 partone = get('a')
 
+print('Part One: In little Bobby\'s kit\'s instructions booklet (provided as your puzzle input), what signal is ultimately provided to wire a?')
+print('The answer:', partone)
+
 for i in range(len(circuit)):
     left, right = circuit[i].split(' -> ')
     if right == 'b':
@@ -61,9 +64,6 @@ for i in range(len(circuit)):
 memo = {}
 
 parttwo = get('a')
-
-print('Part One: In little Bobby\'s kit\'s instructions booklet (provided as your puzzle input), what signal is ultimately provided to wire a?')
-print('The answer:', partone)
 
 print('\nPart Two: What new signal is ultimately provided to wire a?')
 print('The answer:', parttwo)
