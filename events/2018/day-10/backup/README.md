@@ -1,4 +1,4 @@
-# The puzzle of [2018 day 10](https://adventofcode.com/2018/day/10)
+# The Advent of Code on [2018 day 10](https://adventofcode.com/2018/day/10)
 
 --- Day 10: The Stars Align ---
 
