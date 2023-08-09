@@ -1,4 +1,4 @@
-# The puzzle of [2019 day 25](https://adventofcode.com/2019/day/25)
+# The Advent of Code on [2019 day 25](https://adventofcode.com/2019/day/25)
 
 --- Day 25: Cryostasis ---
 
