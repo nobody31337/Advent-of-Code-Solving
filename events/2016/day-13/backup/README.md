@@ -1,4 +1,4 @@
-# The puzzle of [2016 day 13](https://adventofcode.com/2016/day/13)
+# The Advent of Code on [2016 day 13](https://adventofcode.com/2016/day/13)
 
 --- Day 13: A Maze of Twisty Little Cubicles ---
 
