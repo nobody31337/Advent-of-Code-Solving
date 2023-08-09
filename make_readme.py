@@ -35,20 +35,18 @@ for year in range(2015, 2023):
 
         articles = soup.main.find_all('article')
 
-        '''
         with open(path + '/solve.py', 'w') as solvepy:
             solvepy.write(solvepy_template.format(year, day))
 
         with open(path + '/README.md', 'w') as readme:
             readme.write(f'# Solving [{year} day {day:02}]({url})\n')
+
+        if not os.path.exists(path + '/backup'):
+            os.mkdir(path + '/backup')
         
         with open(path + '/backup/input.txt', 'wb') as inp_text:
             response = requests.get(url + '/input', cookies=cookies)
             inp_text.write(response.content)
-        '''
-
-        if not os.path.exists(path + '/backup'):
-            os.mkdir(path + '/backup')
 
         with open(path + '/backup/README.md', 'w') as readme:
             readme.write(f'# The Advent of Code on [{year} day {day:02}]({url})')
