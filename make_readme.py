@@ -51,7 +51,7 @@ for year in range(2015, 2023):
             os.mkdir(path + '/backup')
 
         with open(path + '/backup/README.md', 'w') as readme:
-            readme.write(f'# The puzzle of [{year} day {day:02}]({url})')
+            readme.write(f'# The Advent of Code on [{year} day {day:02}]({url})')
 
             for article in articles:
                 for content in article.contents:
