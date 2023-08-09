@@ -20,9 +20,9 @@ grid = [[False for j in range(999)] for i in range(999)]
 
 def print_grid():
     for line in grid:
-        for lamp in line:
-            print('#' if lamp else ' ')
+        print(*['#' if lamp else ' ' for lamp in line], sep='')
         print('')
+
 
 print_grid()
 
