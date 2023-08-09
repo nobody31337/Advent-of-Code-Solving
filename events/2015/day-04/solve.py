@@ -17,6 +17,8 @@ if response.status_code != 200:
 
 content = response.content.strip()
 
+print('Given key:', content.decode())
+
 i=0
 five = 0
 six = 0
