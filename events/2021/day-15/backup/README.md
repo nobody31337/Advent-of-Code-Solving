@@ -1,4 +1,4 @@
-# The puzzle of [2021 day 15](https://adventofcode.com/2021/day/15)
+# The Advent of Code on [2021 day 15](https://adventofcode.com/2021/day/15)
 
 --- Day 15: Chiton ---
 
