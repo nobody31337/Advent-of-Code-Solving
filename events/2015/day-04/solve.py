@@ -16,8 +16,8 @@ if response.status_code != 200:
     exit(0)
 
 content = response.content.strip()
-
 i=1
 
 while True:
     print(hashlib.md5(content + str(i).encode()).hexdigest())
+    i+=1
