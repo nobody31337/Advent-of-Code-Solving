@@ -1,4 +1,4 @@
-# The puzzle of [2018 day 03](https://adventofcode.com/2018/day/3)
+# The Advent of Code on [2018 day 03](https://adventofcode.com/2018/day/3)
 
 --- Day 3: No Matter How You Slice It ---
 
