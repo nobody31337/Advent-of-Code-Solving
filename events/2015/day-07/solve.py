@@ -57,11 +57,7 @@ print('The answer:', partone)
 
 memo = {}
 
-for i in range(len(circuit)):
-    left, right = circuit[i].split(' -> ')
-    if right == 'b':
-        circuit[i] = f'{partone} -> b'
-        break
+circuit['b'] = str(partone)
 
 print('\nPart Two: What new signal is ultimately provided to wire a?')
 
