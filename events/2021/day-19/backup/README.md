@@ -1,4 +1,4 @@
-# The puzzle of [2021 day 19](https://adventofcode.com/2021/day/19)
+# The Advent of Code on [2021 day 19](https://adventofcode.com/2021/day/19)
 
 --- Day 19: Beacon Scanner ---
 
