@@ -27,5 +27,5 @@ for word in words:
         naughty += 1
         break
     else:
-        if sum(v in word for v in vowels) > 2 and re.search(r'[a-z]{2}', word):
+        if sum(v in word for v in vowels) > 2 and re.search(r'([a-z])\1', word):
             print(word)
