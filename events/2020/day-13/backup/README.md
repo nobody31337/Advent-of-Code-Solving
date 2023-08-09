@@ -1,4 +1,4 @@
-# The puzzle of [2020 day 13](https://adventofcode.com/2020/day/13)
+# The Advent of Code on [2020 day 13](https://adventofcode.com/2020/day/13)
 
 --- Day 13: Shuttle Search ---
 
