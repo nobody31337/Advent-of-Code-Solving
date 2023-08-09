@@ -1,4 +1,4 @@
-# The puzzle of [2021 day 04](https://adventofcode.com/2021/day/4)
+# The Advent of Code on [2021 day 04](https://adventofcode.com/2021/day/4)
 
 --- Day 4: Giant Squid ---
 
