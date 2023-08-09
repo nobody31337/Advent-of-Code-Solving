@@ -17,7 +17,7 @@ if response.status_code != 200:
 directions = response.text
 
 cur = [0, 0]
-path = [[*cur]]
+santa = [[*cur]]
 
 for d in directions:
     match d:
@@ -29,7 +29,10 @@ for d in directions:
             cur[1] += 1
         case 'v':
             cur[1] -= 1
-    if cur not in path:
-        path.append([*cur])
+    if cur not in santa:
+        santa.append([*cur])
 
-print(len(path))
+print(len(santa))
+
+for d,b in directions:
+    print(d,b)
