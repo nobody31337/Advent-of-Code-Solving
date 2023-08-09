@@ -1,4 +1,4 @@
-# The puzzle of [2018 day 04](https://adventofcode.com/2018/day/4)
+# The Advent of Code on [2018 day 04](https://adventofcode.com/2018/day/4)
 
 --- Day 4: Repose Record ---
 
