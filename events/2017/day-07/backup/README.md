@@ -1,4 +1,4 @@
-# The puzzle of [2017 day 07](https://adventofcode.com/2017/day/7)
+# The Advent of Code on [2017 day 07](https://adventofcode.com/2017/day/7)
 
 --- Day 7: Recursive Circus ---
 
