@@ -1,4 +1,4 @@
-# The puzzle of [2016 day 15](https://adventofcode.com/2016/day/15)
+# The Advent of Code on [2016 day 15](https://adventofcode.com/2016/day/15)
 
 --- Day 15: Timing is Everything ---
 
