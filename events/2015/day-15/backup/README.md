@@ -1,4 +1,4 @@
-# The puzzle of [2015 day 15](https://adventofcode.com/2015/day/15)
+# The Advent of Code on [2015 day 15](https://adventofcode.com/2015/day/15)
 
 --- Day 15: Science for Hungry People ---
 
