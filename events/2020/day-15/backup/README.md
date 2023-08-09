@@ -1,4 +1,4 @@
-# The puzzle of [2020 day 15](https://adventofcode.com/2020/day/15)
+# The Advent of Code on [2020 day 15](https://adventofcode.com/2020/day/15)
 
 --- Day 15: Rambunctious Recitation ---
 
