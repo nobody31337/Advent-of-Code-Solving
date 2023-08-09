@@ -18,14 +18,15 @@ if response.status_code != 200:
 content = response.content.strip()
 
 i=0
-five = True
-six = True
+five = 0
+six = 0
 
-while five or six:
+while five == 0 or six == 0:
     i+=1
-    if hashlib.md5(content + str(i).encode()).hexdigest().startswith('00000'):
-        print('Starting with 5 zeros:', i)
-        five = False
-    elif hashlib.md5(content + str(i).encode()).hexdigest().startswith('000000'):
-        print('Starting with 6 zeros:', i)
-        six = False
+    if five == 0 and hashlib.md5(content + str(i).encode()).hexdigest().startswith('00000'):
+        five = i
+    if six == 0 and hashlib.md5(content + str(i).encode()).hexdigest().startswith('000000'):
+        six = i
+
+print('Starting with 5 zeros:', five)
+print('Starting with 6 zeros:', six)
