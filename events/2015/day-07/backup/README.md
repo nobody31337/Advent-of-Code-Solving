@@ -1,4 +1,4 @@
-# The puzzle of [2015 day 07](https://adventofcode.com/2015/day/7)
+# The Advent of Code on [2015 day 07](https://adventofcode.com/2015/day/7)
 
 --- Day 7: Some Assembly Required ---
 
