@@ -1,4 +1,4 @@
-# The puzzle of [2016 day 09](https://adventofcode.com/2016/day/9)
+# The Advent of Code on [2016 day 09](https://adventofcode.com/2016/day/9)
 
 --- Day 9: Explosives in Cyberspace ---
 
