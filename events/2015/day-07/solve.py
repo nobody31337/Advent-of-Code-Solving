@@ -57,7 +57,7 @@ def get(x: str):
     
         return ret
 
-print(get('a'))
+partone = get('a')
 
 for i in range(len(circuit)):
     left, right = circuit[i].split(' -> ')
@@ -67,4 +67,10 @@ for i in range(len(circuit)):
 
 memo = {}
 
-get('a')
+parttwo = get('a')
+
+print('Part One: In little Bobby\'s kit\'s instructions booklet (provided as your puzzle input), what signal is ultimately provided to wire a?')
+print('The answer:', partone)
+
+print('\nPart Two: What new signal is ultimately provided to wire a?')
+print('The answer:', parttwo)
