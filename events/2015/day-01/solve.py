@@ -16,11 +16,16 @@ if response.status_code != 200:
 
 inst = response.text
 
-print('Part One: To what floor do the instructions take Santa?')
-print('The answer:', inst.count('(') - inst.count(')'))
+partone=0
 
-print('Part Two: What is the position of the character that causes Santa to first enter the basement?')
+parttwo = 0
 for i in range(len(inst)):
-    if inst[:i+1].count('(') - inst[:i+1].count(')') == -1:
-        print('The answer:', i+1)
-        break
+    partone += 1 if inst[i] == '(' else -1
+    if parttwo == 0 and partone == -1:
+        parttwo = i+1
+
+print('Part One: To what floor do the instructions take Santa?')
+print('The answer:', partone)
+
+print('\nPart Two: What is the position of the character that causes Santa to first enter the basement?')
+print('The answer:', parttwo)
