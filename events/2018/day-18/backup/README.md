@@ -1,4 +1,4 @@
-# The puzzle of [2018 day 18](https://adventofcode.com/2018/day/18)
+# The Advent of Code on [2018 day 18](https://adventofcode.com/2018/day/18)
 
 --- Day 18: Settlers of The North Pole ---
 
