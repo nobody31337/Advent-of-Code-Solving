@@ -15,6 +15,6 @@ if response.status_code != 200:
     print('wrong cookies')
     exit(0)
 
-text = response.text.strip()
+text = response.content.strip()
 
 print(text)
