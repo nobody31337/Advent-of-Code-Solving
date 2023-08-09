@@ -1,4 +1,4 @@
-# The puzzle of [2022 day 15](https://adventofcode.com/2022/day/15)
+# The Advent of Code on [2022 day 15](https://adventofcode.com/2022/day/15)
 
 --- Day 15: Beacon Exclusion Zone ---
 
