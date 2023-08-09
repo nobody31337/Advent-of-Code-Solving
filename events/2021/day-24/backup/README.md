@@ -1,4 +1,4 @@
-# The puzzle of [2021 day 24](https://adventofcode.com/2021/day/24)
+# The Advent of Code on [2021 day 24](https://adventofcode.com/2021/day/24)
 
 --- Day 24: Arithmetic Logic Unit ---
 
