@@ -1,4 +1,4 @@
-# The puzzle of [2018 day 08](https://adventofcode.com/2018/day/8)
+# The Advent of Code on [2018 day 08](https://adventofcode.com/2018/day/8)
 
 --- Day 8: Memory Maneuver ---
 
