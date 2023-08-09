@@ -27,7 +27,7 @@ def get(x: str):
         match len(x.split()):
             case 1:
                 try:
-                    ret = int(x)
+                    return int(x)
                 except:
                     for gate in circuit:
                         lop, rop = gate.split(' -> ')
