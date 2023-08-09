@@ -1,4 +1,4 @@
-# The puzzle of [2019 day 24](https://adventofcode.com/2019/day/24)
+# The Advent of Code on [2019 day 24](https://adventofcode.com/2019/day/24)
 
 --- Day 24: Planet of Discord ---
 
