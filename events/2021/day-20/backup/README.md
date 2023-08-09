@@ -1,4 +1,4 @@
-# The puzzle of [2021 day 20](https://adventofcode.com/2021/day/20)
+# The Advent of Code on [2021 day 20](https://adventofcode.com/2021/day/20)
 
 --- Day 20: Trench Map ---
 
