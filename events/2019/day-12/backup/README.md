@@ -1,4 +1,4 @@
-# The puzzle of [2019 day 12](https://adventofcode.com/2019/day/12)
+# The Advent of Code on [2019 day 12](https://adventofcode.com/2019/day/12)
 
 --- Day 12: The N-Body Problem ---
 
