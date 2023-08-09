@@ -1,4 +1,4 @@
-# The puzzle of [2022 day 12](https://adventofcode.com/2022/day/12)
+# The Advent of Code on [2022 day 12](https://adventofcode.com/2022/day/12)
 
 --- Day 12: Hill Climbing Algorithm ---
 
