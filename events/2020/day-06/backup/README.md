@@ -1,4 +1,4 @@
-# The puzzle of [2020 day 06](https://adventofcode.com/2020/day/6)
+# The Advent of Code on [2020 day 06](https://adventofcode.com/2020/day/6)
 
 --- Day 6: Custom Customs ---
 
