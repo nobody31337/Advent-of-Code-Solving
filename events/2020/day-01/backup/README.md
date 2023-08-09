@@ -1,4 +1,4 @@
-# The puzzle of [2020 day 01](https://adventofcode.com/2020/day/1)
+# The Advent of Code on [2020 day 01](https://adventofcode.com/2020/day/1)
 
 --- Day 1: Report Repair ---
 
