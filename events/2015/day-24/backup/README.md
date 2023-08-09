@@ -1,4 +1,4 @@
-# The puzzle of [2015 day 24](https://adventofcode.com/2015/day/24)
+# The Advent of Code on [2015 day 24](https://adventofcode.com/2015/day/24)
 
 --- Day 24: It Hangs in the Balance ---
 
