@@ -1,4 +1,4 @@
-# The puzzle of [2022 day 18](https://adventofcode.com/2022/day/18)
+# The Advent of Code on [2022 day 18](https://adventofcode.com/2022/day/18)
 
 --- Day 18: Boiling Boulders ---
 
