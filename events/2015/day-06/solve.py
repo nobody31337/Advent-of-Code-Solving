@@ -16,12 +16,20 @@ if response.status_code != 200:
 
 inst = response.text.split('\n')
 
+grid = [[False for j in range(999)] for i in range(999)]
+
+def print_grid():
+    for line in grid:
+        for lamp in line:
+            print('#' if lamp else ' ')
+        print('')
+
+print_grid()
+
 for step in inst[:-1]:
     fx, fy = map(int, step.split()[-3].split(','))
     
     tx, ty = map(int, step.split()[-1].split(','))
-
-    print(fx, fy, tx, ty)
 
     if step.startswith('turn on'):
         pass
