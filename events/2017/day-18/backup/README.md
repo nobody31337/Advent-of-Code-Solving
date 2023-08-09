@@ -1,4 +1,4 @@
-# The puzzle of [2017 day 18](https://adventofcode.com/2017/day/18)
+# The Advent of Code on [2017 day 18](https://adventofcode.com/2017/day/18)
 
 --- Day 18: Duet ---
 
