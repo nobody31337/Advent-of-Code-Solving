@@ -19,6 +19,6 @@ content = response.content.strip()
 
 i=1
 
-text = content + i
+text = content + str(i)
 
 print(text)
