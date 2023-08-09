@@ -19,7 +19,9 @@ sizes = response.text
 total = 0
 
 for size in sizes.split():
-    dim = list(map(int,size.split('x')))
-    total += dim[0] * dim[1] + dim[1] * dim[2] + dim[0] * dim[2]
+    dim = list(map(int, size.split('x')))
+    total += 2 * (dim[0] * dim[1] + dim[1] * dim[2] + dim[0] * dim[2])
+    dim.remove(max(dim))
+    total += dim[0] * dim[1]
 
-print(total * 2)
+print(total)
