@@ -1,4 +1,4 @@
-# The puzzle of [2018 day 05](https://adventofcode.com/2018/day/5)
+# The Advent of Code on [2018 day 05](https://adventofcode.com/2018/day/5)
 
 --- Day 5: Alchemical Reduction ---
 
