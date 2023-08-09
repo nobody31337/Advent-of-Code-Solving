@@ -21,33 +21,36 @@ def get(x: str):
     try:
         return int(x)
     except:
-        if x not in memo:
-            for gate in circuit:
-                left, right = gate.split(' -> ')
-                if right == x:
-                    match len(left.split()):
-                        case 1:
-                            memo[x] = get(left)
+        if x in memo:
+            return memo[x]
+        
+        for gate in circuit:
+            left, right = gate.split(' -> ')
+            if right == x:
+                break
+        
+        match left.split():
+            case [a]:
+                memo[x] = get(a)
 
-                        case 2:
-                            memo[x] = ~int(get(left.split()[1]))
+            case ["NOT", a]:
+                memo[x] = ~int(get(a))
 
-                        case 3:
-                            lop, op, rop = left.split()
-                            match op:
-                                case 'AND':
-                                    memo[x] = get(lop) & get(rop)
-                                case 'OR':
-                                    memo[x] = get(lop) | get(rop)
-                                case 'RSHIFT':
-                                    memo[x] = get(lop) >> get(rop)
-                                case 'LSHIFT':
-                                    memo[x] = get(lop) << get(rop)
-                        
-                        case _:
-                            memo[x] = None
+            case [lop, op, rop]:
+                match op:
+                    case 'AND':
+                        memo[x] = get(lop) & get(rop)
+                    case 'OR':
+                        memo[x] = get(lop) | get(rop)
+                    case 'RSHIFT':
+                        memo[x] = get(lop) >> get(rop)
+                    case 'LSHIFT':
+                        memo[x] = get(lop) << get(rop)
             
-            memo[x] = memo[x] & 0xffff
+            case _:
+                memo[x] = 0
+            
+        memo[x] = memo[x] & 0xffff
     
         return memo[x]
 
