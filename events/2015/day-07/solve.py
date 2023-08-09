@@ -14,11 +14,9 @@ if response.status_code != 200:
     print('wrong cookies')
     exit(0)
 
-circuit = dict(map(lambda wire: wire.split(' -> ')[::-1], response.text.splitlines()[:-1]))
+circuit = dict(map(lambda wire: wire.split(' -> ')[::-1], response.text.splitlines()))
 memo = {}
 
-print(json.dumps(circuit, indent=4))
-exit()
 def get(x: str):
     if x.isnumeric():
         return int(x)
