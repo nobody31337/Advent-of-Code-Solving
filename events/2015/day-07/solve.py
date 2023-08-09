@@ -19,8 +19,6 @@ circuit = response.text.split('\n')[:-1]
 memo = {}
 
 def get(x: str):
-    ret = 0
-
     try:
         return int(x)
     except:
@@ -30,32 +28,27 @@ def get(x: str):
                 if right == x:
                     match len(left.split()):
                         case 1:
-                            ret = get(left)
+                            memo[x] = get(left)
 
                         case 2:
-                            ret = ~int(get(left.split()[1])) & 0xffff
+                            memo[x] = ~int(get(left.split()[1])) & 0xffff
 
                         case 3:
                             lop, op, rop = left.split()
                             match op:
                                 case 'AND':
-                                    ret = get(lop) & get(rop)
+                                    memo[x] = get(lop) & get(rop)
                                 case 'OR':
-                                    ret = get(lop) | get(rop)
+                                    memo[x] = get(lop) | get(rop)
                                 case 'RSHIFT':
-                                    ret = get(lop) >> get(rop)
+                                    memo[x] = get(lop) >> get(rop)
                                 case 'LSHIFT':
-                                    ret = get(lop) << get(rop)
+                                    memo[x] = get(lop) << get(rop)
                         
                         case _:
-                            ret = None
-            
-            print(f'{x} == {ret}')
-            memo[x] = ret
-        else:
-            ret = memo[x]
+                            memo[x] = None
     
-        return ret
+        return memo[x]
 
 partone = get('a')
 
