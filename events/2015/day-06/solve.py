@@ -16,4 +16,16 @@ if response.status_code != 200:
 
 inst = response.text.split('\n')
 
-print(*inst, sep=', ')
+for step in inst:
+    fx, fy = map(int, step.split()[-3].split(','))
+    
+    tx, ty = map(int, step.split()[-1].split(','))
+
+    print(fx, fy, tx, ty)
+
+    if step.startswith('turn on'):
+        pass
+    if step.startswith('turn off'):
+        pass
+    if step.startswith('toggle'):
+        pass
