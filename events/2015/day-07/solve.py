@@ -16,19 +16,21 @@ if response.status_code != 200:
 
 circuit = response.text.split('\n')[:-1]
 
-def get(x):
-    try:
-        return int(x)
-    except:
-        match len(x.split()):
-            case 1:
+def get(x: str):
+    match len(x.split()):
+        case 1:
+            try:
+                return int(x)
+            except:
                 for gate in circuit:
                     lop, rop = gate.split(' -> ')
                     if rop == x:
                         return get(lop)
-            case 2:
-                return ~int(get(x.split()[1])) & 0xffff
-            case 3:
-                pass
+        case 2:
+            return ~int(get(x.split()[1])) & 0xffff
+        case 3:
+            pass
+    
+        
 
-print(get('NOT 123'))
+print(get('123'))
