@@ -1,4 +1,4 @@
-# The puzzle of [2020 day 08](https://adventofcode.com/2020/day/8)
+# The Advent of Code on [2020 day 08](https://adventofcode.com/2020/day/8)
 
 --- Day 8: Handheld Halting ---
 
