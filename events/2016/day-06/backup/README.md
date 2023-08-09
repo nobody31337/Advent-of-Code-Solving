@@ -1,4 +1,4 @@
-# The puzzle of [2016 day 06](https://adventofcode.com/2016/day/6)
+# The Advent of Code on [2016 day 06](https://adventofcode.com/2016/day/6)
 
 --- Day 6: Signals and Noise ---
 
