@@ -1,4 +1,4 @@
-# The puzzle of [2022 day 10](https://adventofcode.com/2022/day/10)
+# The Advent of Code on [2022 day 10](https://adventofcode.com/2022/day/10)
 
 --- Day 10: Cathode-Ray Tube ---
 
