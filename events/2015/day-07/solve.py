@@ -14,7 +14,7 @@ if response.status_code != 200:
     print('wrong cookies')
     exit(0)
 
-circuit = response.text.strip().split('\n')
+circuit = dict(map(lambda wire: wire.split(' -> '), response.text.strip().split('\n')))
 memo = {}
 
 def get(x: str):
