@@ -1,4 +1,4 @@
-# The puzzle of [2021 day 22](https://adventofcode.com/2021/day/22)
+# The Advent of Code on [2021 day 22](https://adventofcode.com/2021/day/22)
 
 --- Day 22: Reactor Reboot ---
 
