@@ -1,4 +1,4 @@
-# The puzzle of [2018 day 23](https://adventofcode.com/2018/day/23)
+# The Advent of Code on [2018 day 23](https://adventofcode.com/2018/day/23)
 
 --- Day 23: Experimental Emergency Teleportation ---
 
