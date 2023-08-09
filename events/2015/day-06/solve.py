@@ -41,5 +41,8 @@ for step in inst[:-1]:
                 partone[i*999 + j] = not partone[i*999 + j]
                 parttwo[i*999 + j] += 2
 
-print(sum(partone))
-print(sum(parttwo))
+print('Part One: After following the instructions, how many lights are lit?')
+print('The answer:', sum(partone))
+
+print('\nPart Two: What is the total brightness of all lights combined after following Santa\'s instructions?')
+print('The answer:', sum(parttwo))
