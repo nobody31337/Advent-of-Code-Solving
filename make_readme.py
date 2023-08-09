@@ -8,6 +8,22 @@ with open('data.json', 'r') as js:
 
 cookies = data['cookies']
 
+solvepy_template = '''import requests
+import json
+
+with open('data.json', 'r') as js:
+    data = json.load(js)
+
+url = 'https://adventofcode.com/{}/day/{}/input'
+
+cookies = data['cookies']
+
+response = requests.get(url, cookies=cookies)
+
+if response.status_code != 200:
+    print('wrong cookies')
+    exit(0)'''
+
 for year in range(2015, 2023):
     for day in range(1, 26):
         path = f'./events/{year}/day-{day:02}'
@@ -19,13 +35,12 @@ for year in range(2015, 2023):
 
         articles = soup.main.find_all('article')
         
-        with open(path + '/solve.py', 'a'): pass
+        with open(path + '/solve.py', 'w') as solvepy:
+            solvepy.write(solvepy_template.format(year, day))
 
-        '''
         with open(path + '/README.md', 'w') as readme:
             readme.write(f'# Solving [{year} day {day:02}]({url})\n')
-        '''
-        
+
         if not os.path.exists(path + '/backup'):
             os.mkdir(path + '/backup')
 
