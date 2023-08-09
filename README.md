@@ -11,8 +11,5 @@ Solving the puzzles from https://adventofcode.com/
 [Day 03](events/2015/day-03/)\
 [Day 04](events/2015/day-04/)\
 [Day 05](events/2015/day-05/)\
-[Day 06](events/2015/day-06/)
-
-### 2016
-
-[Day 20](events/2016/day-20/)
+[Day 06](events/2015/day-06/)\
+[Day 07](events/2015/day-07/)
