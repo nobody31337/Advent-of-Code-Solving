@@ -1,4 +1,4 @@
-# The puzzle of [2019 day 10](https://adventofcode.com/2019/day/10)
+# The Advent of Code on [2019 day 10](https://adventofcode.com/2019/day/10)
 
 --- Day 10: Monitoring Station ---
 
