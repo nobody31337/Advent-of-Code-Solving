@@ -14,14 +14,14 @@ if response.status_code != 200:
     print('wrong cookies')
     exit(0)
 
-sizes = response.text
+sizes = response.text.split()
 
 partone = 0
 parttwo = 0
 
 tmp = []
 
-for size in sizes.split():
+for size in sizes:
     dim = list(map(int, size.split('x')))
     partone += 2 * (dim[0] * dim[1] + dim[1] * dim[2] + dim[0] * dim[2])
     tmp = [*dim]
