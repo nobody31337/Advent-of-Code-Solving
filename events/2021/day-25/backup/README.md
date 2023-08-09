@@ -1,4 +1,4 @@
-# The puzzle of [2021 day 25](https://adventofcode.com/2021/day/25)
+# The Advent of Code on [2021 day 25](https://adventofcode.com/2021/day/25)
 
 --- Day 25: Sea Cucumber ---
 
