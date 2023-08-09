@@ -1,4 +1,4 @@
-# The puzzle of [2015 day 23](https://adventofcode.com/2015/day/23)
+# The Advent of Code on [2015 day 23](https://adventofcode.com/2015/day/23)
 
 --- Day 23: Opening the Turing Lock ---
 
