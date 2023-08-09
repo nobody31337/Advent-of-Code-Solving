@@ -1,4 +1,4 @@
-# The puzzle of [2019 day 01](https://adventofcode.com/2019/day/1)
+# The Advent of Code on [2019 day 01](https://adventofcode.com/2019/day/1)
 
 --- Day 1: The Tyranny of the Rocket Equation ---
 
