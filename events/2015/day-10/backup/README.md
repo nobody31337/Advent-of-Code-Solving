@@ -1,4 +1,4 @@
-# The puzzle of [2015 day 10](https://adventofcode.com/2015/day/10)
+# The Advent of Code on [2015 day 10](https://adventofcode.com/2015/day/10)
 
 --- Day 10: Elves Look, Elves Say ---
 
