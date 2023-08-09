@@ -28,4 +28,7 @@ for word in words:
         break
     else:
         if sum(v in word for v in vowels) > 2 and re.search(r'([a-z])\1', word):
-            print(word)
+            nice += 1
+
+print('Nice words:', nice)
+print('Naughty words:', naughty)
