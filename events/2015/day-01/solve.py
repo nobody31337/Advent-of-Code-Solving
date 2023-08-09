@@ -20,7 +20,7 @@ partone=0
 
 parttwo = 0
 for i in range(len(inst)):
-    partone += 1 if inst[i] == '(' else -1
+    partone += 1 if inst[i] == '(' else -1 if inst[i] == ')' else 0
     if parttwo == 0 and partone == -1:
         parttwo = i+1
 
