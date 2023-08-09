@@ -1,6 +1,5 @@
 import requests
 import json
-import time
 
 with open('data.json', 'r') as js:
     data = json.load(js)
