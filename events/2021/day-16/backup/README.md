@@ -1,4 +1,4 @@
-# The puzzle of [2021 day 16](https://adventofcode.com/2021/day/16)
+# The Advent of Code on [2021 day 16](https://adventofcode.com/2021/day/16)
 
 --- Day 16: Packet Decoder ---
 
