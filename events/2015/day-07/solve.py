@@ -1,5 +1,6 @@
 import requests
 import json
+import time
 
 with open('data.json', 'r') as js:
     data = json.load(js)
@@ -18,6 +19,7 @@ circuit = response.text.split('\n')[:-1]
 
 def get(x: str):
     print(x)
+    time.sleep(0.2)
     match len(x.split()):
         case 1:
             try:
