@@ -1,4 +1,4 @@
-# The puzzle of [2016 day 12](https://adventofcode.com/2016/day/12)
+# The Advent of Code on [2016 day 12](https://adventofcode.com/2016/day/12)
 
 --- Day 12: Leonardo's Monorail ---
 
