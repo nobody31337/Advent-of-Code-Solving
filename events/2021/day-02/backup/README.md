@@ -1,4 +1,4 @@
-# The puzzle of [2021 day 02](https://adventofcode.com/2021/day/2)
+# The Advent of Code on [2021 day 02](https://adventofcode.com/2021/day/2)
 
 --- Day 2: Dive! ---
 
