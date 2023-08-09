@@ -1,4 +1,4 @@
-# The puzzle of [2015 day 13](https://adventofcode.com/2015/day/13)
+# The Advent of Code on [2015 day 13](https://adventofcode.com/2015/day/13)
 
 --- Day 13: Knights of the Dinner Table ---
 
