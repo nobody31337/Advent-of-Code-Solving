@@ -1,4 +1,4 @@
-# The puzzle of [2017 day 24](https://adventofcode.com/2017/day/24)
+# The Advent of Code on [2017 day 24](https://adventofcode.com/2017/day/24)
 
 --- Day 24: Electromagnetic Moat ---
 
