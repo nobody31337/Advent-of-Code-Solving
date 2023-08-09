@@ -1,4 +1,4 @@
-# The puzzle of [2019 day 19](https://adventofcode.com/2019/day/19)
+# The Advent of Code on [2019 day 19](https://adventofcode.com/2019/day/19)
 
 --- Day 19: Tractor Beam ---
 
