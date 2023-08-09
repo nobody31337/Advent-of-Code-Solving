@@ -1,4 +1,4 @@
-# The puzzle of [2022 day 02](https://adventofcode.com/2022/day/2)
+# The Advent of Code on [2022 day 02](https://adventofcode.com/2022/day/2)
 
 --- Day 2: Rock Paper Scissors ---
 
