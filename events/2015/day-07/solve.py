@@ -20,6 +20,7 @@ memo = {}
 
 def get(x: str):
     print(f'Getting {x}')
+    time.sleep(0.2)
     ret = 0
 
     if x not in memo:
@@ -56,7 +57,7 @@ def get(x: str):
         ret = memo[x]
     
     print(f'{x} == {ret}')
-    
+
     return ret
 
 print(get('a'))
