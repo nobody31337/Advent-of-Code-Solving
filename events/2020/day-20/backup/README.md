@@ -1,4 +1,4 @@
-# The puzzle of [2020 day 20](https://adventofcode.com/2020/day/20)
+# The Advent of Code on [2020 day 20](https://adventofcode.com/2020/day/20)
 
 --- Day 20: Jurassic Jigsaw ---
 
