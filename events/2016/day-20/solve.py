@@ -1,9 +1,6 @@
 import requests
 import json
 
-SMST = 0
-BGST = 2 ** 32 - 1
-
 with open('data.json', 'r') as js:
     data = json.load(js)
 
@@ -16,6 +13,9 @@ response = requests.get(url, cookies=cookies)
 if response.status_code != 200:
     print('wrong cookies')
     exit(0)
+
+SMST = 0
+BGST = 2 ** 32 - 1
 
 blacklist: list[tuple[int]] = list(map(lambda x: tuple(map(int, x.decode().split('-'))), response.iter_lines()))
 
