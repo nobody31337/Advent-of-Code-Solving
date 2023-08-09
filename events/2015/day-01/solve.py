@@ -16,9 +16,9 @@ if response.status_code != 200:
 
 inst = response.text
 
-partone=0
-
+partone = 0
 parttwo = 0
+
 for i in range(len(inst)):
     partone += 1 if inst[i] == '(' else -1 if inst[i] == ')' else 0
     if parttwo == 0 and partone == -1:
