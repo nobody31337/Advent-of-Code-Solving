@@ -17,6 +17,7 @@ if response.status_code != 200:
 circuit = response.text.split('\n')[:-1]
 
 def get(x: str):
+    print(x)
     match len(x.split()):
         case 1:
             try:
@@ -36,14 +37,11 @@ def get(x: str):
                 case 'AND':
                     return get(lop) & get(rop)
                 case 'OR':
-                    try:
-                        return get(lop) | get(rop)
-                    except:
-                        print('Wrong, try again:', lop, rop)
+                    return get(lop) | get(rop)
                 case 'RSHIFT':
-                    get(lop) >> get(rop)
+                    return get(lop) >> get(rop)
                 case 'LSHIFT':
-                    get(lop) << get(rop)
+                    return get(lop) << get(rop)
         
         case _:
             return None
