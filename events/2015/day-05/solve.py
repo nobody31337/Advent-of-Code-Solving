@@ -23,14 +23,12 @@ nice = 0
 naughty = 0
 
 for word in words:
-    if 'ab' in word or 'cd' in word or 'pq' in word or 'xy' in word:
-        naughty += 1
-        break
+    if sum(word.count(v) for v in vowels) > 2 and re.search(r'([a-z])\1', word) and not ('ab' in word or 'cd' in word or 'pq' in word or 'xy' in word):
+        print('Noice', word)
+        nice += 1
     else:
-        if sum(word.count(v) for v in vowels) > 2 and re.search(r'([a-z])\1', word):
-            nice += 1
-        else:
-            naughty += 1
+        print('Bathds', word)
+        naughty += 1
 
 print('Nice words:', nice)
 print('Naughty words:', naughty)
