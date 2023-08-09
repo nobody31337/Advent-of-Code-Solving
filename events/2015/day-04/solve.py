@@ -19,5 +19,8 @@ content = response.content.strip()
 i=1
 
 while True:
-    print(hashlib.md5(content + str(i).encode()).hexdigest())
+    if hashlib.md5(content + str(i).encode()).hexdigest().startswith('00000'):
+        break
     i+=1
+
+print(content + str(i).encode())
