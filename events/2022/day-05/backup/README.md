@@ -1,4 +1,4 @@
-# The puzzle of [2022 day 05](https://adventofcode.com/2022/day/5)
+# The Advent of Code on [2022 day 05](https://adventofcode.com/2022/day/5)
 
 --- Day 5: Supply Stacks ---
 
