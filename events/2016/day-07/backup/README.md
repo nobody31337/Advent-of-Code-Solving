@@ -1,4 +1,4 @@
-# The puzzle of [2016 day 07](https://adventofcode.com/2016/day/7)
+# The Advent of Code on [2016 day 07](https://adventofcode.com/2016/day/7)
 
 --- Day 7: Internet Protocol Version 7 ---
 
