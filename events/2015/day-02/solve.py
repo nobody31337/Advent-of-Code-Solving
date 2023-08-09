@@ -16,12 +16,16 @@ if response.status_code != 200:
 
 sizes = response.text
 
-total = 0
+partone = 0
+parttwo = 0
 
 for size in sizes.split():
     dim = list(map(int, size.split('x')))
-    total += 2 * (dim[0] * dim[1] + dim[1] * dim[2] + dim[0] * dim[2])
+    partone += 2 * (dim[0] * dim[1] + dim[1] * dim[2] + dim[0] * dim[2])
     dim.remove(max(dim))
-    total += dim[0] * dim[1]
+    partone += dim[0] * dim[1]
+    parttwo += 2 * (dim[0] + dim[1])
 
-print(total)
+
+print(partone)
+print(parttwo)
