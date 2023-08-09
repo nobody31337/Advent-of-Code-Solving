@@ -17,30 +17,24 @@ if response.status_code != 200:
 circuit = dict(map(lambda wire: wire.split(' -> ')[::-1], response.text.splitlines()))
 memo = {}
 
-def get(x: str):
-    if x.isnumeric():
-        return int(x)
+ops = dict(AND='&', OR='|', RSHIFT='>>', LSHIFT='<<')
+
+def get(wire: str):
+    if wire.isnumeric():
+        return int(wire)
     
-    if x not in memo:
-        match circuit[x].split():
+    if wire not in memo:
+        match circuit[wire].split():
             case [a]:
-                memo[x] = get(a)
+                memo[wire] = get(a)
             case ["NOT", a]:
-                memo[x] = ~int(get(a))
+                memo[wire] = ~int(get(a))
             case [lop, op, rop]:
-                match op:
-                    case 'AND':
-                        memo[x] = get(lop) & get(rop)
-                    case 'OR':
-                        memo[x] = get(lop) | get(rop)
-                    case 'RSHIFT':
-                        memo[x] = get(lop) >> get(rop)
-                    case 'LSHIFT':
-                        memo[x] = get(lop) << get(rop)
+                exec('memo[wire] = get(lop) ' + ops[op] + ' get(rop)')
             case _:
-                memo[x] = 0
-        memo[x] &= 0xffff
-    return memo[x]
+                memo[wire] = 0
+        memo[wire] &= 0xffff
+    return memo[wire]
 
 
 print('Part One: In little Bobby\'s kit\'s instructions booklet (provided as your puzzle input), what signal is ultimately provided to wire a?')
