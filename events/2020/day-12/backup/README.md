@@ -1,4 +1,4 @@
-# The puzzle of [2020 day 12](https://adventofcode.com/2020/day/12)
+# The Advent of Code on [2020 day 12](https://adventofcode.com/2020/day/12)
 
 --- Day 12: Rain Risk ---
 
