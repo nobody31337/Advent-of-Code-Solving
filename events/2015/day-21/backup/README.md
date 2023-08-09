@@ -1,4 +1,4 @@
-# The puzzle of [2015 day 21](https://adventofcode.com/2015/day/21)
+# The Advent of Code on [2015 day 21](https://adventofcode.com/2015/day/21)
 
 --- Day 21: RPG Simulator 20XX ---
 
