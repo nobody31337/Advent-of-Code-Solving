@@ -14,45 +14,44 @@ if response.status_code != 200:
     print('wrong cookies')
     exit(0)
 
-circuit = dict(map(lambda wire: wire.split(' -> '), response.text.strip().split('\n')))
+circuit = dict(map(lambda wire: wire.split(' -> ')[::-1], response.text.splitlines()))
 memo = {}
 
 def get(x: str):
-    try:
+    if x.isnumeric():
         return int(x)
-    except:
-        if x in memo:
-            return memo[x]
-        
-        for gate in circuit:
-            left, right = gate.split(' -> ')
-            if right == x:
-                break
-        
-        match left.split():
-            case [a]:
-                memo[x] = get(a)
-
-            case ["NOT", a]:
-                memo[x] = ~int(get(a))
-
-            case [lop, op, rop]:
-                match op:
-                    case 'AND':
-                        memo[x] = get(lop) & get(rop)
-                    case 'OR':
-                        memo[x] = get(lop) | get(rop)
-                    case 'RSHIFT':
-                        memo[x] = get(lop) >> get(rop)
-                    case 'LSHIFT':
-                        memo[x] = get(lop) << get(rop)
-            
-            case _:
-                memo[x] = 0
-            
-        memo[x] = memo[x] & 0xffff
-    
+    elif x in memo:
         return memo[x]
+    
+    for gate in circuit:
+        left, right = gate.split(' -> ')
+        if right == x:
+            break
+    
+    match left.split():
+        case [a]:
+            memo[x] = get(a)
+
+        case ["NOT", a]:
+            memo[x] = ~int(get(a))
+
+        case [lop, op, rop]:
+            match op:
+                case 'AND':
+                    memo[x] = get(lop) & get(rop)
+                case 'OR':
+                    memo[x] = get(lop) | get(rop)
+                case 'RSHIFT':
+                    memo[x] = get(lop) >> get(rop)
+                case 'LSHIFT':
+                    memo[x] = get(lop) << get(rop)
+        
+        case _:
+            memo[x] = 0
+        
+    memo[x] = memo[x] & 0xffff
+
+    return memo[x]
 
 
 print('Part One: In little Bobby\'s kit\'s instructions booklet (provided as your puzzle input), what signal is ultimately provided to wire a?')
