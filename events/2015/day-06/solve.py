@@ -16,23 +16,25 @@ if response.status_code != 200:
 
 inst = response.text.split('\n')
 
-grid = [[True for j in range(999)] for i in range(999)]
-
-def print_grid():
-    for line in grid:
-        print(*['#' if lamp else ' ' for lamp in line], sep='')
-
-
-print_grid()
+grid = [False for _ in range(999*999)]
 
 for step in inst[:-1]:
     fx, fy = map(int, step.split()[-3].split(','))
-    
     tx, ty = map(int, step.split()[-1].split(','))
 
     if step.startswith('turn on'):
-        pass
+        for i in range(fx, tx+1):
+            for j in range(fy, ty+1):
+                grid[i*999 + j] = True
+    
     if step.startswith('turn off'):
-        pass
+        for i in range(fx, tx+1):
+            for j in range(fy, ty+1):
+                grid[i*999 + j] = False
+    
     if step.startswith('toggle'):
-        pass
+        for i in range(fx, tx+1):
+            for j in range(fy, ty+1):
+                grid[i*999 + j] = not grid[i*999 + j]
+
+print(sum(grid))
