@@ -1,4 +1,4 @@
-# The puzzle of [2018 day 11](https://adventofcode.com/2018/day/11)
+# The Advent of Code on [2018 day 11](https://adventofcode.com/2018/day/11)
 
 --- Day 11: Chronal Charge ---
 
