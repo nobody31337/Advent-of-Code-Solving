@@ -1,4 +1,4 @@
-# The puzzle of [2021 day 05](https://adventofcode.com/2021/day/5)
+# The Advent of Code on [2021 day 05](https://adventofcode.com/2021/day/5)
 
 --- Day 5: Hydrothermal Venture ---
 
