@@ -30,7 +30,7 @@ def get(x: str):
                             memo[x] = get(left)
 
                         case 2:
-                            memo[x] = ~int(get(left.split()[1])) & 0xffff
+                            memo[x] = ~int(get(left.split()[1]))
 
                         case 3:
                             lop, op, rop = left.split()
@@ -42,10 +42,12 @@ def get(x: str):
                                 case 'RSHIFT':
                                     memo[x] = get(lop) >> get(rop)
                                 case 'LSHIFT':
-                                    memo[x] = (get(lop) << get(rop)) & 0xffff
+                                    memo[x] = get(lop) << get(rop)
                         
                         case _:
                             memo[x] = None
+            
+            memo[x] = memo[x] & 0xffff
     
         return memo[x]
 
