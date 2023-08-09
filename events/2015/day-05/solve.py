@@ -30,7 +30,7 @@ print('Nice words part 1:', nice)
 nice = 0
 
 for word in words:
-    if re.search(r'([a-z]{2})[a-z]?\1', word) and re.search(r'([a-z])[a-z]\1', word):
+    if re.search(r'([a-z]{2})[a-z]*\1', word) and re.search(r'([a-z])[a-z]\1', word):
         nice += 1
 
 print('Nice words part 2:', nice)
