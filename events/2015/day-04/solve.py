@@ -19,12 +19,12 @@ content = response.content.strip()
 
 print('Given key:', content.decode())
 
-i=0
+i = 0
 five = 0
 six = 0
 
 while five == 0 or six == 0:
-    i+=1
+    i += 1
     if five == 0 and hashlib.md5(content + str(i).encode()).hexdigest().startswith('00000'):
         five = i
         print('Part One, starting with 5 zeros:', five)
