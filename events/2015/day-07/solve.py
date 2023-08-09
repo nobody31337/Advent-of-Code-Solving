@@ -42,7 +42,7 @@ def get(x: str):
                                 case 'RSHIFT':
                                     memo[x] = get(lop) >> get(rop)
                                 case 'LSHIFT':
-                                    memo[x] = get(lop) << get(rop)
+                                    memo[x] = (get(lop) << get(rop)) & 0xffff
                         
                         case _:
                             memo[x] = None
