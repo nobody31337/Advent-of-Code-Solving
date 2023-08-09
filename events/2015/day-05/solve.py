@@ -13,3 +13,18 @@ response = requests.get(url, cookies=cookies)
 if response.status_code != 200:
     print('wrong cookies')
     exit(0)
+
+words = response.text.split()
+
+vowels = 'aeiou'
+
+nice = 0
+naughty = 0
+
+for word in words:
+    if 'ab' in word or 'cd' in word or 'pq' in word or 'xy' in word:
+        naughty += 1
+        break
+    else:
+        if sum(v in word for v in vowels) > 2:
+            print(word)
