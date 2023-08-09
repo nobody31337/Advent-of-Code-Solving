@@ -50,20 +50,21 @@ def get(x: str):
     
         return memo[x]
 
-partone = get('a')
 
 print('Part One: In little Bobby\'s kit\'s instructions booklet (provided as your puzzle input), what signal is ultimately provided to wire a?')
+
+partone = get('a')
 print('The answer:', partone)
+
+memo = {}
 
 for i in range(len(circuit)):
     left, right = circuit[i].split(' -> ')
     if right == 'b':
-        circuit[i] = '3176 -> b'
+        circuit[i] = f'{partone} -> b'
         break
 
-memo = {}
+print('\nPart Two: What new signal is ultimately provided to wire a?')
 
 parttwo = get('a')
-
-print('\nPart Two: What new signal is ultimately provided to wire a?')
 print('The answer:', parttwo)
