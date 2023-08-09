@@ -26,11 +26,24 @@ def get(x: str):
                     lop, rop = gate.split(' -> ')
                     if rop == x:
                         return get(lop)
+
         case 2:
             return ~int(get(x.split()[1])) & 0xffff
-        case 3:
-            pass
-    
-        
 
-print(get('123'))
+        case 3:
+            lop, op, rop = x.split()
+            match op:
+                case 'AND':
+                    return get(lop) & get(rop)
+                case 'OR':
+                    return get(lop) | get(rop)
+                case 'RSHIFT':
+                    get(lop) >> get(rop)
+                case 'LSHIFT':
+                    get(lop) << get(rop)
+        
+        case _:
+            return None
+    
+
+print(get('a'))
