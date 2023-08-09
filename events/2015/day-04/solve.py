@@ -25,7 +25,7 @@ while five == 0 or six == 0:
     i+=1
     if five == 0 and hashlib.md5(content + str(i).encode()).hexdigest().startswith('00000'):
         five = i
-        print('Part One: Starting with 5 zeros:', five)
+        print('Part One, starting with 5 zeros:', five)
     if six == 0 and hashlib.md5(content + str(i).encode()).hexdigest().startswith('000000'):
         six = i
-        print('Part Two: Starting with 6 zeros:', six)
+        print('Part Two, starting with 6 zeros:', six)
