@@ -16,23 +16,32 @@ if response.status_code != 200:
 
 directions = response.text
 
+m = {'>': (0, 1), '<': (0, -1), '^': (1, 1), 'v': (1, -1)}
+
 cur = [0, 0]
-santa = [[*cur]]
+cur1 = [0, 0]
+cur2 = [0, 0]
+path = [[*cur]]
+path1 = [[*cur1]]
+
+odd_or_even = 0
 
 for d in directions:
-    match d:
-        case '>':
-            cur[0] += 1
-        case '<':
-            cur[0] -= 1
-        case '^':
-            cur[1] += 1
-        case 'v':
-            cur[1] -= 1
-    if cur not in santa:
-        santa.append([*cur])
+    cur[m[d][0]] += m[d][1]
+    if cur not in path:
+        path.append([*cur])
 
-print(len(santa))
+    if odd_or_even == 0:
+        cur1[m[d][0]] += m[d][1]
+        if cur1 not in path1:
+            path1.append([*cur1])
+    else:
+        cur2[m[d][0]] += m[d][1]
+        if cur2 not in path1:
+            path1.append([*cur2])
 
-for i in range(0, len(directions), 2):
-    print(directions[i], directions[i+1])
+    odd_or_even += 1
+    odd_or_even %= 2
+
+print(len(path))
+print(len(path1))
