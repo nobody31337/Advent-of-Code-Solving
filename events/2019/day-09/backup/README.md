@@ -1,4 +1,4 @@
-# The puzzle of [2019 day 09](https://adventofcode.com/2019/day/9)
+# The Advent of Code on [2019 day 09](https://adventofcode.com/2019/day/9)
 
 --- Day 9: Sensor Boost ---
 
