@@ -1,4 +1,4 @@
-# The puzzle of [2019 day 07](https://adventofcode.com/2019/day/7)
+# The Advent of Code on [2019 day 07](https://adventofcode.com/2019/day/7)
 
 --- Day 7: Amplification Circuit ---
 
