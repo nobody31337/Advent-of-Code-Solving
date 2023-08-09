@@ -1,4 +1,4 @@
-# The puzzle of [2017 day 21](https://adventofcode.com/2017/day/21)
+# The Advent of Code on [2017 day 21](https://adventofcode.com/2017/day/21)
 
 --- Day 21: Fractal Art ---
 
