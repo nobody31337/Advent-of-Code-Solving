@@ -39,7 +39,7 @@ def get(x: str):
                         memo[x] = get(lop) << get(rop)
             case _:
                 memo[x] = 0
-        memo[x] = memo[x] & 0xffff
+        memo[x] &= 0xffff
     return memo[x]
 
 
