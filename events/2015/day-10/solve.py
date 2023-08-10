@@ -16,23 +16,19 @@ if response.status_code != 200:
 
 digits = response.text.strip()
 
-def look_and_say(inp, time: int = 1):
-    if not isinstance(inp, str):
-        inp = str(inp)
-    
-    if time <= 0:
-         return inp
-    
-    digit = inp[0]
+run = digits
+
+for i in range(10):
+    digit = run[0]
     ret = ''
     count = 0
-    for n in inp:
+    for n in run:
         if digit != n:
             ret += str(count) + digit
             digit = n
             count = 0
         count += 1
     ret += str(count) + digit
-    return look_and_say(ret, time-1)
+    run = ret
 
-print(len(look_and_say(digits, 50)))
+print(run)
