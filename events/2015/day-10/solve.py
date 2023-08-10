@@ -21,7 +21,6 @@ def look_and_say(inp, time: int = 1):
         if not isinstance(inp, str):
             inp = str(inp)
         
-        print(inp)
         digit = inp[0]
         ret = ''
         count = 0
@@ -31,6 +30,7 @@ def look_and_say(inp, time: int = 1):
                 digit = n
                 count = 0
             count += 1
+        ret += str(count) + digit
         print(ret)
         look_and_say(ret, time-1)
 
