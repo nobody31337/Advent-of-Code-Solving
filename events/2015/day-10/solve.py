@@ -16,18 +16,20 @@ if response.status_code != 200:
 
 digits = list(map(int, response.text.strip()))
 
-print(digits)
+print(''.join(digits))
 
 run = digits[::-1]
 
-for i in range(50):
-    ret = [run[0]]
-    count = 0
-    for n in run:
-        if ret[-1] != n:
-            ret += [count, n]
-            count = 0
-        count += 1
-    run = ret + [count]
+def look_and_say(repeat):
+    for _ in range(repeat):
+        ret = [run[0]]
+        count = 0
+        for n in run:
+            if ret[-1] != n:
+                ret += [count, n]
+                count = 0
+            count += 1
+        run = ret + [count]
+    return run
 
 print(len(run))
