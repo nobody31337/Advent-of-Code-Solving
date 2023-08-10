@@ -16,7 +16,7 @@ if response.status_code != 200:
 
 digits = list(map(int, response.text.strip()))
 
-print(''.join(digits))
+print(''.join(map(str, digits)))
 
 run = digits[::-1]
 
