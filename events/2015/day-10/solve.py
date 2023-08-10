@@ -25,7 +25,7 @@ def look_and_say(run, repeat):
         ret = [run[0]]
         count = 0
         for n in run:
-            if ret[-1] != n:
+            if n != ret[-1]:
                 ret += [count, n]
                 count = 0
             count += 1
