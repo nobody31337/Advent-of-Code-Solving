@@ -43,11 +43,24 @@ def search(loc = None, next_loc = None):
         visited.remove(loc)
         return ret
     
+    return graph[loc][next_loc] + (search(next_loc) if len(set(graph[next_loc]) - set(visited)) else 0)
+
+
+def search_(loc = None, next_loc = None, len = 0):
+    if loc is None:
+        return min(search_(x) for x in graph)
+
+    if next_loc is None:
+        visited.append(loc)
+        ret = min(search_(loc, x, len) for x in graph[loc] if x not in visited)
+        visited.remove(loc)
+        return ret
+    
     if len(set(graph[next_loc]) - set(visited)):
-        return graph[loc][next_loc] + search(next_loc)
+        search_(next_loc, len=graph[loc][next_loc])
     else:
-        print(*visited, next_loc)
+        print(*visited, next_loc, len)
         return graph[loc][next_loc]
 
 
-print(search())
+print(search_())
