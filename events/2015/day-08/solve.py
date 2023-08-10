@@ -21,9 +21,9 @@ parttwo = 0
 
 for string in strings:
     lit_len = len(string)
-    esc_len = len(string[1:-1].encode().decode('unicode_escape'))
+    esc_len = len(eval(string))
     partone += lit_len - esc_len
-    parttwo += len('"' + string.replace('\\', '\\\\').replace('"', '\\"') + '"') - lit_len
+    parttwo += len(string) + string.count('"') + string.count('\\') + 2 - lit_len
 
 print('Part One: What is the given data length minus unescaped string data length?')
 print(partone)
