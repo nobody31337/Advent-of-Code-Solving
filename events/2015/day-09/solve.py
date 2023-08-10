@@ -63,8 +63,13 @@ def search_max(loc = None, next_loc = None):
 partone = search_min()
 parttwo = search_max()
 
-print(partone, parttwo)
+print('Part One: What is the distance of the shortest route?')
+print('The answer:', partone)
 
+print('\nPart Two: What is the distance of the longest route?')
+print('The answer:', parttwo)
+
+print('\nJust for fun')
 
 def search_(loc = None, next_loc = None, length = 0):
     if loc is None:
