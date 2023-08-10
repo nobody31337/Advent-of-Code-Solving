@@ -23,6 +23,7 @@ for string in strings:
     lit_len = len(string)
     esc_len = len(string[1:-1].encode().decode('unicode_escape'))
     partone += lit_len - esc_len
+    print(string.encode())
     parttwo += len(string.replace('"', '\\"').replace('\\', '\\\\')) - lit_len
 
 print(partone)
