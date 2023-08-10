@@ -16,17 +16,27 @@ if response.status_code != 200:
 
 graph = response.text.splitlines()
 
-dijkstra: dict[dict] = {}
+graph: dict[dict] = {}
 
 for route in graph:
     left, right = route.split(' to ')
     right, dist = right.split(' = ')
-    if left not in dijkstra:
-        dijkstra[left] = {}
-    if right not in dijkstra:
-        dijkstra[right] = {}
+    if left not in graph:
+        graph[left] = {}
+    if right not in graph:
+        graph[right] = {}
     
-    dijkstra[left][right] = int(dist)
-    dijkstra[right][left] = int(dist)
+    graph[left][right] = int(dist)
+    graph[right][left] = int(dist)
 
-print(json.dumps(dijkstra, indent=4))
+visited = []
+
+def search(loc = None, next_loc = None):
+    if loc is None:
+        return min(search(x) for x in graph)
+    elif next_loc is None:
+        return min(search(loc, x) for x in graph[loc])
+    
+    return graph[loc][next_loc] + search(next_loc)
+
+print(search())
