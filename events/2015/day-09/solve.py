@@ -43,7 +43,20 @@ def search_min(loc = None, next_loc = None):
         visited.remove(loc)
         return ret
     
-    return graph[loc][next_loc] + (search_min(next_loc) if len(set(graph[next_loc]) - set(visited)) else 0)
+    return graph[loc][next_loc] + (search_min(next_loc) if len(set(graph[next_loc])-set(visited)) else 0)
+
+
+def search_max(loc = None, next_loc = None):
+    if loc is None:
+        return max(search_max(x) for x in graph)
+
+    if next_loc is None:
+        visited.append(loc)
+        ret = max(search_max(loc, x) for x in graph[loc] if x not in visited)
+        visited.remove(loc)
+        return ret
+    
+    return graph[loc][next_loc] + (search_max(next_loc) if len(set(graph[next_loc])-set(visited)) else 0)
 
 
 def search_(loc = None, next_loc = None, length = 0):
@@ -61,10 +74,10 @@ def search_(loc = None, next_loc = None, length = 0):
         return
     
     length += graph[loc][next_loc]
-    if len(set(graph[next_loc]) - set(visited)):
+    if len(set(graph[next_loc])-set(visited)):
         search_(next_loc, length=length)
-    elif length:
+    elif length == 141 or length == 736:
         print(*visited, next_loc, length)
 
-
 search_()
+print(search_min(), search_max())
