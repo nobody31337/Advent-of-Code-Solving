@@ -116,6 +116,6 @@ def search_(loc = None, next_loc = None, length = 0):
         print(*visited, next_loc, length)
 
 
-print('\nJust for fun')
+print('\nJust for fun:')
 
 search_()
