@@ -56,10 +56,11 @@ def search_(loc = None, next_loc = None, length = 0):
         visited.remove(loc)
         return ret
     
+    length += graph[loc][next_loc]
     if len(set(graph[next_loc]) - set(visited)):
-        return graph[loc][next_loc] + search_(next_loc, length=length+graph[loc][next_loc])
+        return graph[loc][next_loc] + search_(next_loc, length=length)
     else:
-        print(*visited, next_loc, length)
+        if length == 141:print(*visited, next_loc, length)
         return graph[loc][next_loc]
 
 
