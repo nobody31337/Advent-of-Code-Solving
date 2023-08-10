@@ -72,9 +72,9 @@ print('The answer:', parttwo)
 
 print('\n\n(Using functools.cache)\n')
 
-print('Part One: In little Bobby\'s kit\'s instructions booklet (provided as your puzzle input), what signal is ultimately provided to wire a?')
-
 circuit['b'] = b_backup
+
+print('Part One: In little Bobby\'s kit\'s instructions booklet (provided as your puzzle input), what signal is ultimately provided to wire a?')
 
 partone = cache_get('a')
 print('The answer:', partone)
