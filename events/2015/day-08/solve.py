@@ -17,9 +17,12 @@ if response.status_code != 200:
 strings = response.text.splitlines()
 
 partone = 0
+parttwo = 
 
 for string in strings:
-    partone += len(string) - len(string[1:-1].encode().decode('unicode_escape'))
-    print(string.encode('unicode_escape'))
+    lit_len = len(string)
+    esc_len = len(string[1:-1].encode().decode('unicode_escape'))
+    partone += lit_len - esc_len
+    print(string.encode('unicode_unescape'))
 
 print(partone)
