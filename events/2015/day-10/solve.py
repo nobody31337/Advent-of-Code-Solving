@@ -1,6 +1,5 @@
 import requests
 import json
-import re
 
 with open('data.json', 'r') as js:
     data = json.load(js)
@@ -32,12 +31,6 @@ def look_and_say(run, repeat):
             count += 1
         run = ret + [count]
     return run
-
-result = response.text.strip()
-
-for _ in range(50):
-    result = ''.join(str(len(part)) + digit for part, digit in re.findall(r"((.)\2*)", result))
-print(len(result))
 
 print('\nPart One: What is the length of the result after 40 times of the process?')
 print('The answer:', len(look_and_say(digits, 40)))
