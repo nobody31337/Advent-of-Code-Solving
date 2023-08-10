@@ -29,8 +29,6 @@ for route in data:
     graph[left][right] = int(dist)
     graph[right][left] = int(dist)
 
-print(json.dumps(graph, indent=4))
-
 visited = []
 
 def search_min(loc = None, next_loc = None):
@@ -81,3 +79,4 @@ def search_(loc = None, next_loc = None, length = 0):
 
 search_()
 print(search_min(), search_max())
+print(visited)
