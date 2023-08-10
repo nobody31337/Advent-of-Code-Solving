@@ -13,3 +13,11 @@ response = requests.get(url, cookies=cookies)
 if response.status_code != 200:
     print('wrong cookies')
     exit(0)
+
+strings = response.text.splitlines()
+
+partone = 0
+
+for string in strings:
+    partone += len(string)
+    print(string.decode('string_escape'))
