@@ -16,9 +16,10 @@ if response.status_code != 200:
     exit(0)
 
 circuit = dict(map(lambda wire: wire.split(' -> ')[::-1], response.text.splitlines()))
-memo = {}
 
 ops = dict(AND='&', OR='|', RSHIFT='>>', LSHIFT='<<')
+
+memo = {}
 
 def memo_get(wire: str):
     if wire.isnumeric():
