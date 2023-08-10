@@ -29,4 +29,4 @@ for route in graph:
     dijkstra[left][right] = int(dist)
     dijkstra[right][left] = int(dist)
 
-print(dijkstra)
+print(json.dumps(dijkstra, indent=4))
