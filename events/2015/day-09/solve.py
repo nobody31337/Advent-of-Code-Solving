@@ -14,11 +14,11 @@ if response.status_code != 200:
     print('wrong cookies')
     exit(0)
 
-graph = response.text.splitlines()
+data = response.text.splitlines()
 
 graph: dict[dict] = {}
 
-for route in graph:
+for route in data:
     left, right = route.split(' to ')
     right, dist = right.split(' = ')
     if left not in graph:
@@ -34,9 +34,11 @@ visited = []
 def search(loc = None, next_loc = None):
     if loc is None:
         return min(search(x) for x in graph)
-    elif next_loc is None:
-        return min(search(loc, x) for x in graph[loc])
+
+    if next_loc is None:
+        return min(search(loc, x) for x in graph[loc] if x not in visited)
     
+    visited.append(next_loc)
     return graph[loc][next_loc] + search(next_loc)
 
 print(search())
