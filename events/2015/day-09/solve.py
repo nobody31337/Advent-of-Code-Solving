@@ -21,6 +21,11 @@ dijkstra: dict[dict] = {}
 for route in graph:
     left, right = route.split(' to ')
     right, dist = right.split(' = ')
+    if left not in dijkstra:
+        dijkstra[left] = {}
+    if right not in dijkstra:
+        dijkstra[right] = {}
+    
     dijkstra[left][right] = int(dist)
     dijkstra[right][left] = int(dist)
 
