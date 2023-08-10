@@ -60,6 +60,12 @@ def search_max(loc = None, next_loc = None):
     return graph[loc][next_loc] + (search_max(next_loc) if len(set(graph[next_loc])-set(visited)) else 0)
 
 
+partone = search_min()
+parttwo = search_max()
+
+print(partone, parttwo)
+
+
 def search_(loc = None, next_loc = None, length = 0):
     if loc is None:
         for x in graph:
@@ -82,9 +88,4 @@ def search_(loc = None, next_loc = None, length = 0):
         print(*visited, next_loc, length)
 
 
-partone = search_min()
-parttwo = search_max()
-
 search_()
-
-print(partone, parttwo)
