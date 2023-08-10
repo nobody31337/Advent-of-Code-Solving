@@ -1,5 +1,6 @@
 import requests
 import json
+from functools import cache
 
 with open('data.json', 'r') as js:
     data = json.load(js)
@@ -37,16 +38,46 @@ def get(wire: str):
         
     return memo[wire]
 
+@cache
+def cache_get(wire: str):
+    if wire.isnumeric():
+        return int(wire)
+    
+    match circuit[wire].split():
+        case [a]:
+            return cache_get(a)
+        case ["NOT", a]:
+            return ~cache_get(a) & 0xffff
+        case [lop, op, rop]:
+            return eval(f'{cache_get(lop)} {ops[op]} {cache_get(rop)}') & 0xffff
+
 
 print('Part One: In little Bobby\'s kit\'s instructions booklet (provided as your puzzle input), what signal is ultimately provided to wire a?')
 
 partone = get('a')
 print('The answer:', partone)
 
+b_backup = circuit['b']
 circuit['b'] = str(partone)
 memo = {}
 
 print('\nPart Two: What new signal is ultimately provided to wire a?')
 
 parttwo = get('a')
+print('The answer:', parttwo)
+
+
+print('\n\n(Now do it with functools.cache)\n')
+
+print('Part One: In little Bobby\'s kit\'s instructions booklet (provided as your puzzle input), what signal is ultimately provided to wire a?')
+
+circuit['b'] = b_backup
+partone = cache_get('a')
+print('The answer:', partone)
+
+circuit['b'] = str(partone)
+
+print('\nPart Two: What new signal is ultimately provided to wire a?')
+
+parttwo = cache_get('a')
 print('The answer:', parttwo)
