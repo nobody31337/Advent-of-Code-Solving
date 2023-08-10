@@ -16,19 +16,17 @@ if response.status_code != 200:
 
 digits = response.text.strip()
 
-run = digits
+run = digits[::-1]
 
 for i in range(50):
-    digit = run[0]
-    ret = ''
+    ret = run[0]
     count = 0
     for n in run:
-        if digit != n:
-            ret += str(count) + digit
-            digit = n
+        if ret[-1] != n:
+            ret += str(count) + n
             count = 0
         count += 1
-    ret += str(count) + digit
+    ret += str(count)
     run = ret
 
 print(len(run))
