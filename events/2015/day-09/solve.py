@@ -34,11 +34,12 @@ visited = []
 def search(loc = None, next_loc = None):
     if loc is None:
         return min(search(x) for x in graph)
+    
+    visited.append(loc)
 
     if next_loc is None:
         return min(search(loc, x) for x in graph[loc] if x not in visited)
     
-    visited.append(next_loc)
-    return graph[loc][next_loc] + search(next_loc)
+    return graph[loc][next_loc] + (search(next_loc) if next_loc not in visited else 0)
 
 print(search())
