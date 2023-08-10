@@ -16,11 +16,11 @@ if response.status_code != 200:
 
 digits = list(map(int, response.text.strip()))
 
-print(''.join(map(str, digits)))
+print('The input:', ''.join(map(str, digits)))
 
-run = digits[::-1]
+digits = digits[::-1]
 
-def look_and_say(repeat):
+def look_and_say(run, repeat):
     for _ in range(repeat):
         ret = [run[0]]
         count = 0
@@ -32,4 +32,8 @@ def look_and_say(repeat):
         run = ret + [count]
     return run
 
-print(len(run))
+print('\nPart One: What is the length of the result after 40 times of the process?')
+print('The answer:', len(look_and_say(digits, 40)))
+
+print('\nPart Two: What is the length of the new result after 50 times of the process?')
+print('The answer:', len(look_and_say(digits, 50)))
