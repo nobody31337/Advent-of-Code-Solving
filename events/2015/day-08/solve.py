@@ -22,6 +22,7 @@ parttwo = 0
 for string in strings:
     lit_len = len(string)
     esc_len = len(eval(string))
+    
     partone += lit_len - esc_len
     parttwo += len(string) + string.count('"') + string.count('\\') + 2 - lit_len
 
