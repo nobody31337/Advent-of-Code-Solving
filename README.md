@@ -12,7 +12,10 @@ Solving the puzzles from https://adventofcode.com/
 [Day 04](events/2015/day-04/)\
 [Day 05](events/2015/day-05/)\
 [Day 06](events/2015/day-06/)\
-[Day 07](events/2015/day-07/)
+[Day 07](events/2015/day-07/)\
+[Day 08](events/2015/day-08/)\
+[Day 09](events/2015/day-09/)\
+[Day 10](events/2015/day-10/)
 
 ### 2016
 
