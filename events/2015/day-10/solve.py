@@ -21,8 +21,9 @@ def look_and_say(inp, time: int = 1):
         if not isinstance(inp, str):
             inp = str(inp)
         
-        ret = ''
+        print(inp)
         digit = inp[0]
+        ret = ''
         count = 0
         for n in inp:
             if digit != n:
