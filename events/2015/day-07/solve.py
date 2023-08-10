@@ -20,18 +20,18 @@ memo = {}
 
 ops = dict(AND='&', OR='|', RSHIFT='>>', LSHIFT='<<')
 
-def get(wire: str):
+def memo_get(wire: str):
     if wire.isnumeric():
         return int(wire)
     
     if wire not in memo:
         match circuit[wire].split():
             case [a]:
-                memo[wire] = get(a)
+                memo[wire] = memo_get(a)
             case ["NOT", a]:
-                memo[wire] = ~get(a)
+                memo[wire] = ~memo_get(a)
             case [lop, op, rop]:
-                memo[wire] = eval(f'{get(lop)} {ops[op]} {get(rop)}')
+                memo[wire] = eval(f'{memo_get(lop)} {ops[op]} {memo_get(rop)}')
             case _:
                 memo[wire] = 0
         memo[wire] &= 0xffff
@@ -52,11 +52,11 @@ def cache_get(wire: str):
             return eval(f'{cache_get(lop)} {ops[op]} {cache_get(rop)}') & 0xffff
 
 
-print('\n(using memoization)\n')
+print('\n(Using memoization)\n')
 
 print('Part One: In little Bobby\'s kit\'s instructions booklet (provided as your puzzle input), what signal is ultimately provided to wire a?')
 
-partone = get('a')
+partone = memo_get('a')
 print('The answer:', partone)
 
 b_backup = circuit['b']
@@ -65,11 +65,11 @@ memo = {}
 
 print('\nPart Two: What new signal is ultimately provided to wire a?')
 
-parttwo = get('a')
+parttwo = memo_get('a')
 print('The answer:', parttwo)
 
 
-print('\n\n(using functools.cache)\n')
+print('\n\n(Using functools.cache)\n')
 
 print('Part One: In little Bobby\'s kit\'s instructions booklet (provided as your puzzle input), what signal is ultimately provided to wire a?')
 
