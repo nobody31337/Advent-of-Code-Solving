@@ -65,13 +65,12 @@ def search_min(loc = None):
         return min(search_min(x) for x in graph)
 
     visited.append(loc)
-    try:
-        dist, next_loc = min((graph[loc][x], x) for x in graph[loc] if x not in visited)
-    except:
-        print(visited, loc, graph[loc], sep='\n')
-        raise
+    dist, next_loc = min((graph[loc][x], x) for x in graph[loc] if x not in visited)
+    print(loc, end=' ')
     if len(set(graph[next_loc])-set(visited)):
         dist += search_min(next_loc)
+    else:
+        print(next_loc)
     visited.remove(loc)
     return dist
 
