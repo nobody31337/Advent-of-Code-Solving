@@ -28,19 +28,17 @@ odd_or_even = 0
 
 for d in directions:
     cur[m[d][0]] += m[d][1]
+    if cur not in path:
+        path.append([*cur])
 
     if odd_or_even == 0:
         cur1[m[d][0]] += m[d][1]
+        if cur1 not in path1:
+            path1.append([*cur1])
     else:
         cur2[m[d][0]] += m[d][1]
-    
-    if cur not in path:
-        path.append([*cur])
-    
-    if cur1 not in path1:
-        path1.append([*cur1])
-    elif cur2 not in path1:
-        path1.append([*cur2])
+        if cur2 not in path1:
+            path1.append([*cur2])
 
     odd_or_even += 1
     odd_or_even %= 2
