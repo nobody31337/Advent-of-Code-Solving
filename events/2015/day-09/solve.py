@@ -126,4 +126,3 @@ def search_(loc = None, next_loc = None, length = 0):
 
 
 search_()
-'''
