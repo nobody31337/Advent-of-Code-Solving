@@ -21,14 +21,13 @@ print(digits)
 run = digits[::-1]
 
 for i in range(50):
-    ret = run[0]
+    ret = [run[0]]
     count = 0
     for n in run:
         if ret[-1] != n:
-            ret += str(count) + n
+            ret += [count, n]
             count = 0
         count += 1
-    ret += str(count)
-    run = ret
+    run = ret + [count]
 
 print(len(run))
