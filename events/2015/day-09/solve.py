@@ -34,26 +34,26 @@ visited = []
 partone = 0
 parttwo = 0
 
-def search_min_old(loc = None):
+def search_min_dfs(loc = None):
     if loc is None:
-        return min(search_min_old(x) for x in graph)
+        return min(search_min_dfs(x) for x in graph)
 
     visited.append(loc)
     ret = 0
     if len(set(graph[loc])-set(visited)):
-        ret += min(graph[loc][x] + search_min_old(x) for x in graph[loc] if x not in visited)
+        ret += min(graph[loc][x] + search_min_dfs(x) for x in graph[loc] if x not in visited)
     visited.remove(loc)
     return ret
 
 
-def search_max_old(loc = None):
+def search_max_dfs(loc = None):
     if loc is None:
-        return max(search_max_old(x) for x in graph)
+        return max(search_max_dfs(x) for x in graph)
 
     visited.append(loc)
     ret = 0
     if len(set(graph[loc])-set(visited)):
-        ret += max(graph[loc][x] + search_max_old(x) for x in graph[loc] if x not in visited)
+        ret += max(graph[loc][x] + search_max_dfs(x) for x in graph[loc] if x not in visited)
     visited.remove(loc)
     return ret
 
