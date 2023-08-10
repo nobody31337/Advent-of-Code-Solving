@@ -34,4 +34,4 @@ def look_and_say(inp, time: int = 1):
         print(ret)
         look_and_say(ret, time-1)
 
-look_and_say(1, 10)
+look_and_say(digits, 5)
