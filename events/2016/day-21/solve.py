@@ -14,4 +14,4 @@ if response.status_code != 200:
     print('wrong cookies')
     exit(0)
 
-print(response.text)
+print(response.text.splitlines())
