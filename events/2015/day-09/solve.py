@@ -43,7 +43,10 @@ def search(loc = None, next_loc = None):
         visited.remove(loc)
         return ret
     
-    return graph[loc][next_loc] + (search(next_loc) if len(set(graph[next_loc]) - set(visited)) else 0)
+    if len(set(graph[next_loc]) - set(visited)):
+        return graph[loc][next_loc] + search(next_loc)
+    else:
+        print(next_loc, end=' ')
 
 
 print(search())
