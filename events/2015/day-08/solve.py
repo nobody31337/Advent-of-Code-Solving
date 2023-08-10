@@ -25,5 +25,8 @@ for string in strings:
     partone += lit_len - esc_len
     parttwo += len('"' + string.replace('\\', '\\\\').replace('"', '\\"') + '"') - lit_len
 
+print('Part One: Disregarding the whitespace in the file, '
+      + 'what is the number of characters of code for string literals minus '
+      + 'the number of characters in memory for the values of the strings in total for the entire file?')
 print(partone)
 print(parttwo)
