@@ -29,7 +29,7 @@ for route in data:
     graph[left][right] = int(dist)
     graph[right][left] = int(dist)
 
-print(graph)
+print(json.dumps(graph, indent=4))
 
 visited = []
 
