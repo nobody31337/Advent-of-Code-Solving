@@ -33,35 +33,36 @@ print(json.dumps(graph, indent=4))
 
 visited = []
 
-def search(loc = None, next_loc = None):
+def search_min(loc = None, next_loc = None):
     if loc is None:
-        return min(search(x) for x in graph)
+        return min(search_min(x) for x in graph)
 
     if next_loc is None:
         visited.append(loc)
-        ret = min(search(loc, x) for x in graph[loc] if x not in visited)
+        ret = min(search_min(loc, x) for x in graph[loc] if x not in visited)
         visited.remove(loc)
         return ret
     
-    return graph[loc][next_loc] + (search(next_loc) if len(set(graph[next_loc]) - set(visited)) else 0)
+    return graph[loc][next_loc] + (search_min(next_loc) if len(set(graph[next_loc]) - set(visited)) else 0)
 
 
 def search_(loc = None, next_loc = None, length = 0):
     if loc is None:
-        return min(search_(x) for x in graph)
+        for x in graph:
+            search_(x)
 
     if next_loc is None:
         visited.append(loc)
-        ret = min(search_(loc, x, length) for x in graph[loc] if x not in visited)
+        for x in graph[loc]:
+            if x not in visited:
+                search_(loc, x, length)
         visited.remove(loc)
-        return ret
     
     length += graph[loc][next_loc]
     if len(set(graph[next_loc]) - set(visited)):
-        return graph[loc][next_loc] + search_(next_loc, length=length)
-    else:
-        if length == 141:print(*visited, next_loc, length)
-        return graph[loc][next_loc]
+        search_(next_loc, length=length)
+    elif length:
+        print(*visited, next_loc, length)
 
 
-print(search_())
+search_()
