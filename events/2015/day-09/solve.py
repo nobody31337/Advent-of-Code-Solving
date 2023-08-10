@@ -72,8 +72,8 @@ def search_min(loc = None, next_loc = None):
     
     return graph[loc][next_loc] + (search_min_old(next_loc) if len(set(graph[next_loc])-set(visited)) else 0)
 
-print((x, graph['Arbre'][x]) for x in graph['Arbre'] if x not in visited)
-print(min((x, graph['Arbre'][x]) for x in graph['Arbre'] if x not in visited))
+print(graph['Arbre'])
+print(min((graph['Arbre'][x], x) for x in graph['Arbre'] if x not in visited))
 
 partone = search_min()
 parttwo = search_max()
