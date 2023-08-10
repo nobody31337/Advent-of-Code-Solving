@@ -52,6 +52,8 @@ def cache_get(wire: str):
             return eval(f'{cache_get(lop)} {ops[op]} {cache_get(rop)}') & 0xffff
 
 
+print('\n(using memoization)\n')
+
 print('Part One: In little Bobby\'s kit\'s instructions booklet (provided as your puzzle input), what signal is ultimately provided to wire a?')
 
 partone = get('a')
@@ -67,7 +69,7 @@ parttwo = get('a')
 print('The answer:', parttwo)
 
 
-print('\n\n(Now do it with functools.cache)\n')
+print('\n\n(using functools.cache)\n')
 
 print('Part One: In little Bobby\'s kit\'s instructions booklet (provided as your puzzle input), what signal is ultimately provided to wire a?')
 
