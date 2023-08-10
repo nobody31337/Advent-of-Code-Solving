@@ -14,7 +14,9 @@ if response.status_code != 200:
     print('wrong cookies')
     exit(0)
 
-digits = response.text.strip()
+digits = list(map(int, response.text.strip()))
+
+print(digits)
 
 run = digits[::-1]
 
