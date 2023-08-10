@@ -25,8 +25,7 @@ for string in strings:
     partone += lit_len - esc_len
     parttwo += len('"' + string.replace('\\', '\\\\').replace('"', '\\"') + '"') - lit_len
 
-print('Part One: Disregarding the whitespace in the file, '
-      + 'what is the number of characters of code for string literals minus '
-      + 'the number of characters in memory for the values of the strings in total for the entire file?')
+print('Part One: What is the given data length minus unescaped string data length?')
 print(partone)
+print('\nPart Two: What is the length of the escaped string of the given data minus given data length?')
 print(parttwo)
