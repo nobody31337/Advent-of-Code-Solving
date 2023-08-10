@@ -13,3 +13,7 @@ response = requests.get(url, cookies=cookies)
 if response.status_code != 200:
     print('wrong cookies')
     exit(0)
+
+digits = response.text.strip()
+
+print(digits)
