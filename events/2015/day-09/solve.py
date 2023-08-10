@@ -13,3 +13,15 @@ response = requests.get(url, cookies=cookies)
 if response.status_code != 200:
     print('wrong cookies')
     exit(0)
+
+graph = response.text.splitlines()
+
+dijkstra: dict[dict] = {}
+
+for route in graph:
+    left, right = route.split(' to ')
+    right, dist = right.split(' = ')
+    dijkstra[left][right] = int(dist)
+    dijkstra[right][left] = int(dist)
+
+print(dijkstra)
