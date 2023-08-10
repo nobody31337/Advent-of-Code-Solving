@@ -35,4 +35,4 @@ def look_and_say(inp, time: int = 1):
     ret += str(count) + digit
     return look_and_say(ret, time-1)
 
-print(len(look_and_say(digits, 40)))
+print(len(look_and_say(digits, 50)))
