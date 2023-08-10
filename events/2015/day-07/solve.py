@@ -72,10 +72,12 @@ print('\n\n(Now do it with functools.cache)\n')
 print('Part One: In little Bobby\'s kit\'s instructions booklet (provided as your puzzle input), what signal is ultimately provided to wire a?')
 
 circuit['b'] = b_backup
+
 partone = cache_get('a')
 print('The answer:', partone)
 
 circuit['b'] = str(partone)
+cache_get.cache_clear()
 
 print('\nPart Two: What new signal is ultimately provided to wire a?')
 
