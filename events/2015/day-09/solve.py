@@ -34,17 +34,16 @@ visited = []
 partone = 0
 parttwo = 0
 
-def search_min_old(loc = None, next_loc = None):
+def search_min_old(loc = None):
     if loc is None:
         return min(search_min_old(x) for x in graph)
 
-    if next_loc is None:
-        visited.append(loc)
-        ret = min(search_min_old(loc, x) for x in graph[loc] if x not in visited)
-        visited.remove(loc)
-        return ret
-    
-    return graph[loc][next_loc] + (search_min_old(next_loc) if len(set(graph[next_loc])-set(visited)) else 0)
+    visited.append(loc)
+    ret = 0
+    if len(set(graph[loc])-set(visited)):
+        ret += min(graph[loc][x] + search_min_old(x) for x in graph[loc] if x not in visited)
+    visited.remove(loc)
+    return ret
 
 
 def search_max_old(loc = None, next_loc = None):
@@ -83,6 +82,7 @@ def search_max(loc = None):
     visited.remove(loc)
     return dist
 
+print(search_min_old())
 
 partone = search_min()
 
