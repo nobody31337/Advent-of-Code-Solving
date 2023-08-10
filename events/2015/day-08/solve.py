@@ -27,5 +27,6 @@ for string in strings:
 
 print('Part One: What is the given data length minus unescaped string data length?')
 print(partone)
+
 print('\nPart Two: What is the length of the escaped string of the given data minus given data length?')
 print(parttwo)
