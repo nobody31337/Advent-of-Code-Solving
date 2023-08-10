@@ -62,7 +62,7 @@ def search_max_old(loc = None, next_loc = None):
 
 def search_min(loc = None):
     if loc is None:
-        return (print(search_min(x)) for x in graph)
+        return [print(search_min(x)) for x in graph]
 
     visited.append(loc)
     dist, next_loc = min((graph[loc][x], x) for x in graph[loc] if x not in visited)
