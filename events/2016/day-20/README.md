@@ -1,5 +1,7 @@
 # Solving [2016 day 20](https://adventofcode.com/2016/day/20)
 
+[View Code](./solve.py)
+
 ## How does this code work?
 
 ### The fundamentals
