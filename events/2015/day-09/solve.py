@@ -92,11 +92,6 @@ def search_max(loc = None):
     return dist
 
 
-# print(min((graph['AlphaCentauri'][x], x) for x in graph['AlphaCentauri'] if x not in visited))
-
-print(search_min())
-print(search_max())
-'''
 partone = search_min()
 parttwo = search_max()
 
