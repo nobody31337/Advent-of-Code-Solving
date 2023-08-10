@@ -31,6 +31,9 @@ for route in data:
 
 visited = []
 
+partone = 0
+parttwo = 0
+
 def search_min(loc = None, next_loc = None):
     if loc is None:
         return min(search_min(x) for x in graph)
@@ -72,11 +75,16 @@ def search_(loc = None, next_loc = None, length = 0):
         return
     
     length += graph[loc][next_loc]
+
     if len(set(graph[next_loc])-set(visited)):
         search_(next_loc, length=length)
-    elif length == 141 or length == 736:
+    elif length in (partone, parttwo):
         print(*visited, next_loc, length)
 
+
+partone = search_min()
+parttwo = search_max()
+
 search_()
-print(search_min(), search_max())
-print(visited)
+
+print(partone, parttwo)
