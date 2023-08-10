@@ -20,4 +20,4 @@ partone = 0
 
 for string in strings:
     partone += len(string)
-    print(bytes(string).decode('unicode_escape'))
+    print(string.encode('unicode_escape'))
