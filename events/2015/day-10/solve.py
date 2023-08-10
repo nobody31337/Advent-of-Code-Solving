@@ -18,7 +18,7 @@ digits = response.text.strip()
 
 run = digits
 
-for i in range(10):
+for i in range(50):
     digit = run[0]
     ret = ''
     count = 0
@@ -31,4 +31,4 @@ for i in range(10):
     ret += str(count) + digit
     run = ret
 
-print(run)
+print(len(run))
