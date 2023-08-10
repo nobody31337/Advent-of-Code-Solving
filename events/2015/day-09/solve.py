@@ -46,7 +46,8 @@ def search(loc = None, next_loc = None):
     if len(set(graph[next_loc]) - set(visited)):
         return graph[loc][next_loc] + search(next_loc)
     else:
-        print(next_loc, end=' ')
+        print(*visited)
+        return graph[loc][next_loc]
 
 
 print(search())
