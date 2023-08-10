@@ -50,6 +50,7 @@ def search_(loc = None, next_loc = None, length = 0):
     if loc is None:
         for x in graph:
             search_(x)
+        return
 
     if next_loc is None:
         visited.append(loc)
@@ -57,6 +58,7 @@ def search_(loc = None, next_loc = None, length = 0):
             if x not in visited:
                 search_(loc, x, length)
         visited.remove(loc)
+        return
     
     length += graph[loc][next_loc]
     if len(set(graph[next_loc]) - set(visited)):
