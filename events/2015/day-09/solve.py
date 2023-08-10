@@ -111,7 +111,7 @@ def search_(loc = None, next_loc = None, length = 0):
     if len(set(graph[next_loc])-set(visited)):
         search_(next_loc, length=length)
     elif length in (partone, parttwo):
-        print(*visited, next_loc, length)
+        print(' -> '.join([*visited, next_loc]), length)
 
 
 print('\nJust for fun:')
