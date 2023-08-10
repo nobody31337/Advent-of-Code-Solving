@@ -67,9 +67,9 @@ print('The answer:', sum(j - i + 1 for i, j in whitelist))
 
 def int_to_ip(ip: int):
     ip1 = ip >> 24
-    ip2 = (ip >> 16) % 256
-    ip3 = (ip >> 8) % 256
-    ip4 = ip % 256
+    ip2 = (ip >> 16) & 0xff
+    ip3 = (ip >> 8) & 0xff
+    ip4 = ip & 0xff
     
     return f'{ip1}.{ip2}.{ip3}.{ip4}'
 
