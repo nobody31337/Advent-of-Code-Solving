@@ -40,7 +40,8 @@ def search(loc = None, next_loc = None):
         return min(search(loc, x) for x in graph[loc])
     
     if next_loc not in visited:
-        print(set(graph[next_loc]) - set(visited))
+        print(len(set(graph[next_loc]) - set(visited)))
+
         return graph[loc][next_loc] + search(next_loc)
 
 print(search())
