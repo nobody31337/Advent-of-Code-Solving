@@ -29,6 +29,8 @@ for route in data:
     graph[left][right] = int(dist)
     graph[right][left] = int(dist)
 
+print(graph)
+
 visited = []
 
 def search(loc = None, next_loc = None):
@@ -41,7 +43,7 @@ def search(loc = None, next_loc = None):
         visited.remove(loc)
         return ret
     
-    return graph[loc][next_loc] + search(next_loc) if len(set(graph[next_loc]) - set(visited)) else 0
+    return graph[loc][next_loc] + (search(next_loc) if len(set(graph[next_loc]) - set(visited)) else 0)
 
 
 print(search())
