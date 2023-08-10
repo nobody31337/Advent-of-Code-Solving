@@ -14,4 +14,17 @@ if response.status_code != 200:
     print('wrong cookies')
     exit(0)
 
-print(response.text.splitlines())
+word = list('abcdefgh')
+
+print(word)
+
+for step in response.text.splitlines():
+    match step:
+        case ['swap', 'position', a, _, _, b]: # swap position 1 with position 2
+            pass
+        case ['swap', 'letter', a, _, _, b]: # swap letter a with letter b
+            pass
+        case ['reverse', _, a, _, b]: # reverse positions 0 through 3
+            pass
+        case ['rotate', direction, a, _]: # rotate right 2 steps
+            pass
