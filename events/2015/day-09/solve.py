@@ -69,6 +69,7 @@ def search_min(loc = None):
         dist, next_loc = min((graph[loc][x], x) for x in graph[loc] if x not in visited)
     except:
         print(graph[loc])
+        raise
     if len(set(graph[loc])-set(visited)):
         dist += search_min(next_loc)
     visited.remove(loc)
