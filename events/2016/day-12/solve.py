@@ -14,4 +14,17 @@ if response.status_code != 200:
     print('wrong cookies')
     exit(0)
 
-print(response.text.splitlines())
+assembunny = response.text.splitlines()
+
+regs = {}
+
+for i in range(len(assembunny)):
+    match assembunny[i].split():
+        case ['cpy', x, y]:
+            regs[y] = int(x) if x.isnumeric() else regs[x]
+        case ['inc', x]:
+            regs[x] += 1
+        case ['dec', x]:
+            
+        case ['jnz', x, y]:
+            pass
