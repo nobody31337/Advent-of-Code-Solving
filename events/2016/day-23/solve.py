@@ -50,7 +50,8 @@ def run(regs: dict[str, int], steps: list[str]):
         except MatchBreak:
             pass
         except:
-            print(*map(lambda step: ' '.join(step), steps))
+            print(*map(lambda step: ' '.join(step), steps), sep='\n')
+            return
         i += offset
 
 
