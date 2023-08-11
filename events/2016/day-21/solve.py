@@ -29,16 +29,18 @@ for step in response.text.splitlines():
         case ['reverse', _, x, _, y]: # reverse positions X through Y
             x = int(x)
             y = int(y) + 1
-            word = word[0:x] + word[x:y][::-1] + word[y:]
+            word = word[:x] + word[x:y][::-1] + word[y:]
         case ['rotate', 'based', _, _, _, _, x]: # rotate based on position of letter X
             idx = word.index(x)
             shift = ((idx > 3) + idx + 1) % len(word)
-            print(word, x, idx, shift)
-            print(word[-shift:] + word[:-shift])
+            word = word[-shift:] + word[:-shift]
         case ['rotate', direction, x, _]: # rotate left/right X steps
-            pass
+            if direction == 'left':
+                word = word[int(x):] + word[:int(x)]
+            else:
+                word = word[-int(x):] + word[:-int(x)]
         case ['move', 'position', x, _, _, y]: # move position X to position Y
-            pass
+            word.insert(int(y), word.pop(int(x)))
 
 print(''.join(word))
 print(word[0:0])
