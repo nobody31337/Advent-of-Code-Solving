@@ -31,9 +31,9 @@ def run(regs: dict[str, int], steps: list[str]):
                 case ['cpy', x, y]:
                     regs[y] = regs[x] if x in regs else int(x)
                 case ['inc', x]:
-                    regs[x] = 1 if regs[x] == 0 else regs[x] * 2
+                    regs[x] += 1
                 case ['dec', x]:
-                    regs[x] //= 2
+                    regs[x] -= 1
                 case ['jnz', x, y]:
                     x = regs[x] if x in regs else int(x)
                     y = regs[y] if y in regs else int(y)
@@ -55,7 +55,7 @@ partone = dict(a=7, b=0, c=0, d=0)
 parttwo = dict(a=12, b=0, c=0, d=0)
 
 print('Part One: What value should be sent to the safe?')
-# run(partone, [*assembunny])
+run(partone, [*assembunny])
 print('The answer:', partone['a'], partone)
 print('\nPart Two: Anyway, what value should actually be sent to the safe?')
 run(parttwo, [*assembunny])
