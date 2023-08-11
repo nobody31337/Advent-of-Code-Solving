@@ -57,6 +57,7 @@ print('Part One: What value should be sent to the safe?')
 run(partone, assembunny)
 print('The answer:', partone['a'])
 
+partone['a'] = 12
 print('\nPart Two: Anyway, what value should actually be sent to the safe?')
-run(parttwo, assembunny)
-print('The answer:', parttwo['a'])
+run(partone, assembunny)
+print('The answer:', partone['a'])
