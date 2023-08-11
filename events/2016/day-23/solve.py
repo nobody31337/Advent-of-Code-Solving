@@ -24,7 +24,7 @@ dblarg = ('jnz', 'cpy')
 def run(regs: dict[str, int], steps: list[str]):
     steps = list(map(lambda line: line.split(), steps))
     i = 0
-    while i < len(steps):
+    while 0 <= i < len(steps):
         offset = 1
         try:
             match steps[i]:
@@ -40,7 +40,7 @@ def run(regs: dict[str, int], steps: list[str]):
                     offset = y if x else 1
                 case ['tgl', x]:
                     x = regs[x] if x in regs else int(x)
-                    if i + x >= len(steps):
+                    if i + x >= len(steps) or i + x < 0:
                         raise MatchBreak()
                     if steps[i+x][0] in sglarg:
                         steps[i+x][0] = 'dec' if steps[i+x][0] == 'inc' else 'inc'
@@ -52,7 +52,7 @@ def run(regs: dict[str, int], steps: list[str]):
 
 
 partone = dict(a=7, b=0, c=0, d=0)
-parttwo = dict(a=84, b=0, c=0, d=0)
+parttwo = dict(a=12, b=0, c=0, d=0)
 
 i = 6
 while 0:
