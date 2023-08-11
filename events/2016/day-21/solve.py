@@ -32,8 +32,8 @@ for step in response.text.splitlines():
             word = word[0:x] + word[x:y][::-1] + word[y:]
         case ['rotate', 'based', _, _, _, _, x]: # rotate based on position of letter X
             idx = word.index(x)
-            shift = idx >= 4 + idx + 1
-            print(word, x, idx)
+            shift = (idx > 3) + idx + 1
+            print(word, x, idx, shift)
         case ['rotate', direction, x, _]: # rotate left/right X steps
             pass
         case ['move', 'position', x, _, _, y]: # move position X to position Y
