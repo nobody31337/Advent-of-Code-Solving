@@ -51,12 +51,12 @@ def run(regs: dict[str, int], steps: list[list[str]]):
 
 
 partone = dict(a=7, b=0, c=0, d=0)
-parttwo = dict(a=0, b=0, c=1, d=0)
+parttwo = dict(a=12, b=0, c=0, d=0)
 
 print('Part One: What value should be sent to the safe?')
 run(partone, assembunny)
 print('The answer:', partone['a'])
 
-print('\nPart Two: ')
-# run(parttwo, assembunny)
-# print('The answer:', parttwo['a'])
+print('\nPart Two: Anyway, what value should actually be sent to the safe?')
+run(parttwo, assembunny)
+print('The answer:', parttwo['a'])
