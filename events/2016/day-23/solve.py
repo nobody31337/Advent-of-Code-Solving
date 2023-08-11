@@ -25,7 +25,6 @@ def run(regs: dict[str, int], steps: list[list[str]]):
     i = 0
     while i < len(steps):
         offset = 1
-        print(' '.join(steps[i]))
         try:
             match steps[i]:
                 case ['cpy', x, y]:
