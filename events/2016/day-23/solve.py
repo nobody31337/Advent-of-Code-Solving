@@ -14,14 +14,15 @@ if response.status_code != 200:
     print('wrong cookies')
     exit(0)
 
-assembunny = list(map(lambda line: line.split(), response.text.splitlines()))
+assembunny = response.text.splitlines()
 
 class MatchBreak(Exception): pass
 
 sglarg = ('inc', 'dec', 'tgl')
 dblarg = ('jnz', 'cpy')
 
-def run(regs: dict[str, int], steps: list[list[str]]):
+def run(regs: dict[str, int], steps: list[str]):
+    steps = list(map(lambda line: line.split(), steps))
     i = 0
     while i < len(steps):
         offset = 1
@@ -54,10 +55,9 @@ partone = dict(a=7, b=0, c=0, d=0)
 parttwo = dict(a=12, b=0, c=0, d=0)
 
 print('Part One: What value should be sent to the safe?')
-run(partone, list(map(lambda step: [*step], assembunny)))
+run(partone, [*assembunny])
 print('The answer:', partone['a'], partone)
 
-partone['a'] = 12
 print('\nPart Two: Anyway, what value should actually be sent to the safe?')
-run(partone, list(map(lambda step: [*step], assembunny)))
-print('The answer:', partone['a'], partone)
+run(parttwo, [*assembunny])
+print('The answer:', parttwo['a'], parttwo)
