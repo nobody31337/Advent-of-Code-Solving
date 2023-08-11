@@ -15,8 +15,8 @@ if response.status_code != 200:
     exit(0)
 
 steps = response.text.splitlines()
-partone = list('abcdefgh')
-parttwo = list('fbgdceah')
+partone = 'abcdefgh'
+parttwo = 'fbgdceah'
 
 def scramble(password: str, steps):
     password = list(password)
@@ -50,7 +50,7 @@ def scramble(password: str, steps):
 
 def reverse_scramble(password: str, steps):
     password = list(password)
-    for step in steps[::-1]:
+    for step in reversed(steps):
         match step.split():
             case ['swap', 'position', x, _, _, y]: # swap position X with position Y
                 x = int(x)
