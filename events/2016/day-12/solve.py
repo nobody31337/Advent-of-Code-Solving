@@ -15,13 +15,13 @@ if response.status_code != 200:
     print('wrong cookies')
     exit(0)
 
-assembunny = response.text.splitlines()
+assembunny = list(map(lambda line: line.split(), response.text.splitlines()))
 
-def run(regs: dict[str, int], steps: list[str]):
+def run(regs: dict[str, int], steps: list[list[str]]):
     i = 0
     while i < len(steps):
         offset = 1
-        match steps[i].split():
+        match steps[i]:
             case ['cpy', x, y]:
                 regs[y] = regs[x] if x in regs else int(x)
             case ['inc', x]:
