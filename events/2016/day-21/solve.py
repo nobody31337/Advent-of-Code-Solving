@@ -77,6 +77,8 @@ def reverse_scramble(password: str, steps):
     
     return ''.join(password)
 
+print('Part One: What is the result of scrambling abcdefgh?')
+print('The answer:', scramble(partone, steps))
 
-print(scramble(partone, steps))
-print(reverse_scramble(parttwo, steps))
+print('\nPart Two: What is the un-scrambled version of the scrambled password fbgdceah?')
+print('The answer:', reverse_scramble(parttwo, steps))
