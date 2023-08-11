@@ -25,9 +25,9 @@ def run(regs: dict[str, int], steps: list[str]):
     steps = list(map(lambda line: line.split(), steps))
     i = 0
     while i < len(steps):
-        print(regs)
-        offset = 1
         try:
+            print(regs)
+            offset = 1
             match steps[i]:
                 case ['cpy', x, y]:
                     regs[y] = regs[x] if x in regs else int(x)
@@ -57,11 +57,9 @@ def run(regs: dict[str, int], steps: list[str]):
 partone = dict(a=7, b=0, c=0, d=0)
 parttwo = dict(a=12, b=0, c=0, d=0)
 
-__import__('time').sleep(5)
 print('Part One: What value should be sent to the safe?')
 run(partone, [*assembunny])
 print('The answer:', partone['a'], partone)
-__import__('time').sleep(5)
 print('\nPart Two: Anyway, what value should actually be sent to the safe?')
 run(parttwo, [*assembunny])
 print('The answer:', parttwo['a'], parttwo)
