@@ -22,6 +22,7 @@ i = 0
 
 while i < len(assembunny):
     offset = 1
+    print(assembunny[i], regs, sep='\n', end='\n\n')
     match assembunny[i].split():
         case ['cpy', x, y]:
             regs[y] = regs[x] if x in regs else int(x)
