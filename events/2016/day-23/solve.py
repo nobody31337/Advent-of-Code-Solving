@@ -25,6 +25,7 @@ def run(regs: dict[str, int], steps: list[str]):
     steps = list(map(lambda line: line.split(), steps))
     i = 0
     while i < len(steps):
+        print(' '.join(regs))
         offset = 1
         try:
             match steps[i]:
