@@ -16,32 +16,34 @@ if response.status_code != 200:
 
 word = list('abcdefgh')
 
-def scramble(password):
-    for step in response.text.splitlines():
-        # print(step, word, sep='\n', end='\n\n')
+def scramble(password, steps):
+    for step in steps:
+        # print(step, password, sep='\n', end='\n\n')
         match step.split():
             case ['swap', 'position', x, _, _, y]: # swap position X with position Y
                 x = int(x)
                 y = int(y)
-                word[x], word[y] = word[y], word[x]
+                password[x], password[y] = password[y], password[x]
             case ['swap', 'letter', x, _, _, y]: # swap letter X with letter Y
-                for i in range(len(word)):
-                    word[i] = y if word[i] == x else x if word[i] == y else word[i]
+                for i in range(len(password)):
+                    password[i] = y if password[i] == x else x if password[i] == y else password[i]
             case ['reverse', _, x, _, y]: # reverse positions X through Y
                 x = int(x)
                 y = int(y) + 1
-                word = word[:x] + word[x:y][::-1] + word[y:]
+                password = password[:x] + password[x:y][::-1] + password[y:]
             case ['rotate', 'based', _, _, _, _, x]: # rotate based on position of letter X
-                idx = word.index(x)
-                shift = ((idx > 3) + idx + 1) % len(word)
-                word = word[-shift:] + word[:-shift]
+                idx = password.index(x)
+                shift = ((idx > 3) + idx + 1) % len(password)
+                password = password[-shift:] + password[:-shift]
             case ['rotate', direction, x, _]: # rotate left/right X steps
                 if direction == 'left':
-                    word = word[int(x):] + word[:int(x)]
+                    password = password[int(x):] + password[:int(x)]
                 else:
-                    word = word[-int(x):] + word[:-int(x)]
+                    password = password[-int(x):] + password[:-int(x)]
             case ['move', 'position', x, _, _, y]: # move position X to position Y
-                word.insert(int(y), word.pop(int(x)))
+                password.insert(int(y), password.pop(int(x)))
+    
+    return password
 
 
-print(''.join(word))
+print(''.join(scramble(word, response.text.splitlines())))
