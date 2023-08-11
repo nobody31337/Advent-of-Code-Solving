@@ -16,15 +16,19 @@ if response.status_code != 200:
 
 word = list('abcdefgh')
 
-print(word)
-
 for step in response.text.splitlines():
     match step:
-        case ['swap', 'position', a, _, _, b]: # swap position 1 with position 2
+        case ['swap', 'position', x, _, _, y]: # swap position X with position Y
+            word[x], word[y] = word[y], word[x]
+        case ['swap', 'letter', x, _, _, y]: # swap letter X with letter Y
             pass
-        case ['swap', 'letter', a, _, _, b]: # swap letter a with letter b
+        case ['reverse', _, x, _, y]: # reverse positions X through Y
             pass
-        case ['reverse', _, a, _, b]: # reverse positions 0 through 3
+        case ['rotate', 'based', _, _, _, _, x]: # rotate based on position of letter X
             pass
-        case ['rotate', direction, a, _]: # rotate right 2 steps
+        case ['rotate', direction, x, _]: # rotate left/right X steps
             pass
+        case ['move', 'position', x, _, _, y]: # move position X to position Y
+            pass
+
+print(''.join(word))
