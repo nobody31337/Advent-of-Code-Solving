@@ -35,7 +35,7 @@ while i < len(assembunny):
             y = regs[y] if y in regs else int(y)
             offset = y if x else 1
     i += offset
-    print(assembunny[i], offset, regs, sep='\n', end='\n\n')
-    time.sleep(.1)
+    print(i, assembunny[i], regs, sep='\n', end='\n\n')
+    time.sleep(.2)
 
 print(json.dumps(regs, indent=4))
