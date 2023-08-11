@@ -19,6 +19,8 @@ word = list('abcdefgh')
 for step in response.text.splitlines():
     match step:
         case ['swap', 'position', x, _, _, y]: # swap position X with position Y
+            x = int(x)
+            y = int(y)
             word[x], word[y] = word[y], word[x]
         case ['swap', 'letter', x, _, _, y]: # swap letter X with letter Y
             pass
