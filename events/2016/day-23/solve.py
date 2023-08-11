@@ -52,10 +52,10 @@ def run(regs: dict[str, int], steps: list[str]):
 
 
 partone = dict(a=7, b=0, c=0, d=0)
-parttwo = dict(a=144, b=0, c=0, d=0)
+parttwo = dict(a=12, b=12, c=12, d=12)
 
 i = 6
-while True:
+while 0:
     tmp = dict(a=i, b=0, c=0, d=0)
     run(tmp, assembunny)
     print(i, tmp)
