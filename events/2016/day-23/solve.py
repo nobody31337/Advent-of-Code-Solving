@@ -27,7 +27,6 @@ def run(regs: dict[str, int], steps: list[str]):
     while 0 <= i < len(steps):
         offset = 1
         try:
-            print(i)
             match steps[i]:
                 case ['cpy', x, y]:
                     regs[y] = regs[x] if x in regs else int(x)
@@ -53,7 +52,7 @@ def run(regs: dict[str, int], steps: list[str]):
 
 
 partone = dict(a=7, b=0, c=0, d=0)
-parttwo = dict(a=12, b=0, c=0, d=0)
+parttwo = dict(a=13, b=0, c=0, d=0)
 
 i = 6
 while 0:
