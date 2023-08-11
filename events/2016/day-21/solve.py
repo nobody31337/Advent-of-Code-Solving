@@ -35,4 +35,4 @@ for step in response.text.splitlines():
             pass
 
 print(''.join(word))
-print(word[:len(word)-1])
+print(word[len(word):])
