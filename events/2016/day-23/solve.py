@@ -43,6 +43,7 @@ def run(regs: dict[str, int], steps: list[list[str]]):
                 elif steps[i+x][0] in dblarg:
                     steps[i+x][0] = 'cpy' if steps[i+x][0] == 'jnz' else 'jnz'
         i += offset
+        print(' '.join(steps[i]))
 
 
 partone = dict(a=7, b=0, c=0, d=0)
