@@ -27,6 +27,7 @@ def run(regs: dict[str, int], steps: list[str]):
     while 0 <= i < len(steps):
         offset = 1
         try:
+            print(i)
             match steps[i]:
                 case ['cpy', x, y]:
                     regs[y] = regs[x] if x in regs else int(x)
