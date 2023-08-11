@@ -16,6 +16,8 @@ if response.status_code != 200:
 
 assembunny = list(map(lambda line: line.split(), response.text.splitlines()))
 
+class MatchBreak(Exception): pass
+
 sglarg = ('inc', 'dec', 'tgl')
 dblarg = ('jnz', 'cpy')
 
@@ -24,25 +26,28 @@ def run(regs: dict[str, int], steps: list[list[str]]):
     while i < len(steps):
         offset = 1
         print(' '.join(steps[i]))
-        match steps[i]:
-            case ['cpy', x, y]:
-                regs[y] = regs[x] if x in regs else int(x)
-            case ['inc', x]:
-                regs[x] += 1
-            case ['dec', x]:
-                regs[x] -= 1
-            case ['jnz', x, y]:
-                x = regs[x] if x in regs else int(x)
-                y = regs[y] if y in regs else int(y)
-                offset = y if x else 1
-            case ['tgl', x]:
-                x = regs[x] if x in regs else int(x)
-                if i + x >= len(steps):
-                    continue
-                if steps[i+x][0] in sglarg:
-                    steps[i+x][0] = 'dec' if steps[i+x][0] == 'inc' else 'inc'
-                elif steps[i+x][0] in dblarg:
-                    steps[i+x][0] = 'cpy' if steps[i+x][0] == 'jnz' else 'jnz'
+        try:
+            match steps[i]:
+                case ['cpy', x, y]:
+                    regs[y] = regs[x] if x in regs else int(x)
+                case ['inc', x]:
+                    regs[x] += 1
+                case ['dec', x]:
+                    regs[x] -= 1
+                case ['jnz', x, y]:
+                    x = regs[x] if x in regs else int(x)
+                    y = regs[y] if y in regs else int(y)
+                    offset = y if x else 1
+                case ['tgl', x]:
+                    x = regs[x] if x in regs else int(x)
+                    if i + x >= len(steps):
+                        raise MatchBreak()
+                    if steps[i+x][0] in sglarg:
+                        steps[i+x][0] = 'dec' if steps[i+x][0] == 'inc' else 'inc'
+                    elif steps[i+x][0] in dblarg:
+                        steps[i+x][0] = 'cpy' if steps[i+x][0] == 'jnz' else 'jnz'
+        except MatchBreak:
+            pass
         i += offset
 
 
