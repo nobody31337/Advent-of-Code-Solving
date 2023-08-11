@@ -17,23 +17,28 @@ if response.status_code != 200:
 
 assembunny = response.text.splitlines()
 
-regs = dict(a=0, b=0, c=0, d=0)
+def run(regs: dict[str, int], steps: list[str]):
+    i = 0
+    while i < len(steps):
+        offset = 1
+        match steps[i].split():
+            case ['cpy', x, y]:
+                regs[y] = regs[x] if x in regs else int(x)
+            case ['inc', x]:
+                regs[x] += 1
+            case ['dec', x]:
+                regs[x] -= 1
+            case ['jnz', x, y]:
+                x = regs[x] if x in regs else int(x)
+                y = regs[y] if y in regs else int(y)
+                offset = y if x else 1
+        i += offset
 
-i = 0
 
-while i < len(assembunny):
-    offset = 1
-    match assembunny[i].split():
-        case ['cpy', x, y]:
-            regs[y] = regs[x] if x in regs else int(x)
-        case ['inc', x]:
-            regs[x] += 1
-        case ['dec', x]:
-            regs[x] -= 1
-        case ['jnz', x, y]:
-            x = regs[x] if x in regs else int(x)
-            y = regs[y] if y in regs else int(y)
-            offset = y if x else 1
-    i += offset
+partone = dict(a=0, b=0, c=0, d=0)
+parttwo = dict(a=0, b=0, c=1, d=0)
 
-print(json.dumps(regs, indent=4))
+run(partone, assembunny)
+print(partone['a'])
+run(parttwo, assembunny)
+print(parttwo['a'])
