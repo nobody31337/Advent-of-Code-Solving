@@ -33,7 +33,7 @@ def run(regs: dict[str, int], steps: list[str]):
                 case ['inc', x]:
                     regs[x] **= 2
                 case ['dec', x]:
-                    regs[x] **= 0.5
+                    regs[x] -= 1
                 case ['jnz', x, y]:
                     x = regs[x] if x in regs else int(x)
                     y = regs[y] if y in regs else int(y)
