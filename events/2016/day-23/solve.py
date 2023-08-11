@@ -52,7 +52,7 @@ def run(regs: dict[str, int], steps: list[str]):
 
 
 partone = dict(a=7, b=0, c=0, d=0)
-parttwo = dict(a=24, b=0, c=0, d=0)
+parttwo = dict(a=144, b=0, c=0, d=0)
 
 print('Part One: What value should be sent to the safe?')
 run(partone, assembunny)
