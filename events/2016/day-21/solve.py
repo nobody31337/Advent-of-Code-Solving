@@ -17,7 +17,7 @@ if response.status_code != 200:
 word = list('abcdefgh')
 
 for step in response.text.splitlines():
-    match step:
+    match step.split():
         case ['swap', 'position', x, _, _, y]: # swap position X with position Y
             x = int(x)
             y = int(y)
