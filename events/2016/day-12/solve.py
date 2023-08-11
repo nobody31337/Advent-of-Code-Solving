@@ -36,6 +36,5 @@ while i < len(assembunny):
             offset = y if x else 1
     i += offset
     print(f'{i:3} {assembunny[i].ljust(15)} {regs}')
-    time.sleep(.2)
 
 print(json.dumps(regs, indent=4))
