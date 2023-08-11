@@ -54,10 +54,10 @@ partone = dict(a=7, b=0, c=0, d=0)
 parttwo = dict(a=12, b=0, c=0, d=0)
 
 print('Part One: What value should be sent to the safe?')
-run(partone, [*assembunny])
+run(partone, list(map(lambda step: [*step], assembunny)))
 print('The answer:', partone['a'], partone)
 
 partone['a'] = 12
 print('\nPart Two: Anyway, what value should actually be sent to the safe?')
-run(partone, [*assembunny])
+run(partone, list(map(lambda step: [*step], assembunny)))
 print('The answer:', partone['a'], partone)
