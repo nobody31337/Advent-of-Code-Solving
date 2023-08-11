@@ -23,6 +23,7 @@ def run(regs: dict[str, int], steps: list[list[str]]):
     i = 0
     while i < len(steps):
         offset = 1
+        print(' '.join(steps[i]))
         match steps[i]:
             case ['cpy', x, y]:
                 regs[y] = regs[x] if x in regs else int(x)
@@ -43,7 +44,6 @@ def run(regs: dict[str, int], steps: list[list[str]]):
                 elif steps[i+x][0] in dblarg:
                     steps[i+x][0] = 'cpy' if steps[i+x][0] == 'jnz' else 'jnz'
         i += offset
-        print(' '.join(steps[i]))
 
 
 partone = dict(a=7, b=0, c=0, d=0)
