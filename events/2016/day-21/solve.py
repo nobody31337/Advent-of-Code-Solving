@@ -17,7 +17,8 @@ if response.status_code != 200:
 partone = list('abcdefgh')
 parttwo = list('fbgdceah')
 
-def scramble(password, steps):
+def scramble(password: str, steps):
+    password = list(password)
     for step in steps:
         # print(step, password, sep='\n', end='\n\n')
         match step.split():
@@ -44,8 +45,8 @@ def scramble(password, steps):
             case ['move', 'position', x, _, _, y]: # move position X to position Y
                 password.insert(int(y), password.pop(int(x)))
     
-    return password
+    return ''.join(password)
 
 
-print(''.join(scramble(partone, response.text.splitlines())))
-print(''.join(scramble(parttwo, response.text.splitlines()[::-1])))
+print(scramble(partone, response.text.splitlines()))
+print(scramble(parttwo, response.text.splitlines()[::-1]))
