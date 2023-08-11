@@ -18,13 +18,21 @@ assembunny = response.text.splitlines()
 
 regs = {}
 
-for i in range(len(assembunny)):
+i = 0
+
+while i < len(assembunny):
+    offset = 1
     match assembunny[i].split():
         case ['cpy', x, y]:
             regs[y] = int(x) if x.isnumeric() else regs[x]
         case ['inc', x]:
             regs[x] += 1
         case ['dec', x]:
-            
+            regs[x] -= 1
         case ['jnz', x, y]:
-            pass
+            x = int(x) if x.isnumeric() else regs[x]
+            y = int(y) if y.isnumeric() else regs[y]
+            offset = y if x else 1
+    i += offset
+
+print(json.dumps(regs, indent=4))
