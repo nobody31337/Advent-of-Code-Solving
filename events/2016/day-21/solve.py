@@ -14,7 +14,8 @@ if response.status_code != 200:
     print('wrong cookies')
     exit(0)
 
-word = list('abcdefgh')
+partone = list('abcdefgh')
+parttwo = list('fbgdceah')
 
 def scramble(password, steps):
     for step in steps:
@@ -46,4 +47,5 @@ def scramble(password, steps):
     return password
 
 
-print(''.join(scramble(word, response.text.splitlines())))
+print(''.join(scramble(partone, response.text.splitlines())))
+print(''.join(scramble(parttwo, response.text.splitlines()[::-1])))
