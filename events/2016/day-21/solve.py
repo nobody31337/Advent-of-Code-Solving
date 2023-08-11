@@ -17,7 +17,7 @@ if response.status_code != 200:
 word = list('abcdefgh')
 
 for step in response.text.splitlines():
-    print(step, word, sep='\n', end='\n\n')
+    # print(step, word, sep='\n', end='\n\n')
     match step.split():
         case ['swap', 'position', x, _, _, y]: # swap position X with position Y
             x = int(x)
@@ -31,7 +31,9 @@ for step in response.text.splitlines():
             y = int(y) + 1
             word = word[0:x] + word[x:y][::-1] + word[y:]
         case ['rotate', 'based', _, _, _, _, x]: # rotate based on position of letter X
-            pass
+            idx = word.index(x)
+            shift = idx >= 4 + idx + 1
+            print(word, x, idx)
         case ['rotate', direction, x, _]: # rotate left/right X steps
             pass
         case ['move', 'position', x, _, _, y]: # move position X to position Y
