@@ -26,7 +26,6 @@ def run(regs: dict[str, int], steps: list[str]):
     i = 0
     while i < len(steps):
         try:
-            print(regs)
             offset = 1
             match steps[i]:
                 case ['cpy', x, y]:
@@ -59,7 +58,7 @@ partone = dict(a=7, b=0, c=0, d=0)
 parttwo = dict(a=12, b=0, c=0, d=0)
 
 print('Part One: What value should be sent to the safe?')
-run(partone, [*assembunny])
+#run(partone, [*assembunny])
 print('The answer:', partone['a'], partone)
 print('\nPart Two: Anyway, what value should actually be sent to the safe?')
 run(parttwo, [*assembunny])
