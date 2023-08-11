@@ -29,11 +29,14 @@ def run(regs: dict[str, int], steps: list[str]):
         try:
             match steps[i]:
                 case ['cpy', x, y]:
-                    regs[y] = regs[x] if x in regs else int(x)
+                    if y in regs:
+                        regs[y] = regs[x] if x in regs else int(x)
                 case ['inc', x]:
-                    regs[x] += 1
+                    if x in regs:
+                        regs[x] += 1
                 case ['dec', x]:
-                    regs[x] -= 1
+                    if x in regs:
+                        regs[x] -= 1
                 case ['jnz', x, y]:
                     x = regs[x] if x in regs else int(x)
                     y = regs[y] if y in regs else int(y)
@@ -52,14 +55,7 @@ def run(regs: dict[str, int], steps: list[str]):
 
 
 partone = dict(a=7, b=0, c=0, d=0)
-parttwo = dict(a=13, b=0, c=0, d=0)
-
-i = 6
-while 0:
-    tmp = dict(a=i, b=0, c=0, d=0)
-    run(tmp, assembunny)
-    print(i, tmp)
-    i += 1
+parttwo = dict(a=12, b=0, c=0, d=0)
 
 print('Part One: What value should be sent to the safe?')
 run(partone, assembunny)
