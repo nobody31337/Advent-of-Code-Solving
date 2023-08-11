@@ -23,7 +23,8 @@ for step in response.text.splitlines():
             y = int(y)
             word[x], word[y] = word[y], word[x]
         case ['swap', 'letter', x, _, _, y]: # swap letter X with letter Y
-            pass
+            for i in range(len(word)):
+                word[i] = y if word[i] == x else x if word[i] == y else word[i]
         case ['reverse', _, x, _, y]: # reverse positions X through Y
             pass
         case ['rotate', 'based', _, _, _, _, x]: # rotate based on position of letter X
