@@ -47,6 +47,6 @@ def scramble(password: str, steps):
     
     return ''.join(password)
 
-
+print(response.text.splitlines())
 print(scramble(partone, response.text.splitlines()))
 print(scramble(parttwo, response.text.splitlines()[::-1]))
