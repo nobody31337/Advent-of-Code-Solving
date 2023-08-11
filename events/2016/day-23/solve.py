@@ -49,6 +49,8 @@ def run(regs: dict[str, int], steps: list[str]):
                         steps[i+x][0] = 'cpy' if steps[i+x][0] == 'jnz' else 'jnz'
         except MatchBreak:
             pass
+        except:
+            print(*map(lambda step: ' '.join(step), steps))
         i += offset
 
 
