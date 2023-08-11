@@ -1,5 +1,6 @@
 import requests
 import json
+import time
 
 with open('data.json', 'r') as js:
     data = json.load(js)
@@ -22,7 +23,6 @@ i = 0
 
 while i < len(assembunny):
     offset = 1
-    print(assembunny[i], regs, sep='\n', end='\n\n')
     match assembunny[i].split():
         case ['cpy', x, y]:
             regs[y] = regs[x] if x in regs else int(x)
@@ -35,5 +35,7 @@ while i < len(assembunny):
             y = regs[y] if y in regs else int(y)
             offset = y if x else 1
     i += offset
+    print(assembunny[i], offset, regs, sep='\n', end='\n\n')
+    time.sleep(.1)
 
 print(json.dumps(regs, indent=4))
