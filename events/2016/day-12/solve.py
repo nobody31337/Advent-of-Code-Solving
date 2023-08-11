@@ -38,7 +38,10 @@ def run(regs: dict[str, int], steps: list[list[str]]):
 partone = dict(a=0, b=0, c=0, d=0)
 parttwo = dict(a=0, b=0, c=1, d=0)
 
+print('Part One: After executing the assembunny code in your puzzle input, what value is left in register a?')
 run(partone, assembunny)
-print(partone['a'])
+print('The answer:', partone['a'])
+
+print('\nPart Two: If you instead initialize register c to be 1, what value is now left in register a?')
 run(parttwo, assembunny)
-print(parttwo['a'])
+print('The answer:', parttwo['a'])
