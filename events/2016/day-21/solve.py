@@ -29,7 +29,7 @@ for step in response.text.splitlines():
         case ['reverse', _, x, _, y]: # reverse positions X through Y
             x = int(x)
             y = int(y) + 1
-            word = word[0:x] + word[x:y:-1] + word[y:]
+            word = word[0:x] + word[x:y][::-1] + word[y:]
         case ['rotate', 'based', _, _, _, _, x]: # rotate based on position of letter X
             pass
         case ['rotate', direction, x, _]: # rotate left/right X steps
