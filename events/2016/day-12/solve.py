@@ -24,14 +24,14 @@ while i < len(assembunny):
     offset = 1
     match assembunny[i].split():
         case ['cpy', x, y]:
-            regs[y] = int(x) if x.isnumeric() else regs[x]
+            regs[y] = regs[x] if x in regs else int(x)
         case ['inc', x]:
             regs[x] += 1
         case ['dec', x]:
             regs[x] -= 1
         case ['jnz', x, y]:
-            x = int(x) if x.isnumeric() else regs[x]
-            y = int(y) if y.isnumeric() else regs[y]
+            x = regs[x] if x in regs else int(x)
+            y = regs[y] if y in regs else int(y)
             offset = y if x else 1
     i += offset
 
