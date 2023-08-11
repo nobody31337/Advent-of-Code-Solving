@@ -60,4 +60,4 @@ print('The answer:', partone['a'], partone)
 partone['a'] = 12
 print('\nPart Two: Anyway, what value should actually be sent to the safe?')
 run(partone, assembunny)
-print('The answer:', partone['a'])
+print('The answer:', partone['a'], partone)
