@@ -32,7 +32,7 @@ def run(regs: dict[str, int], steps: list[str]):
                 case ['cpy', x, y]:
                     regs[y] = regs[x] if x in regs else int(x)
                 case ['inc', x]:
-                    regs[x] += 1
+                    regs[x] = 1 if regs[x] == 0 else regs[x] * 2
                 case ['dec', x]:
                     regs[x] -= 1
                 case ['jnz', x, y]:
