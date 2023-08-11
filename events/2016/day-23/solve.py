@@ -58,7 +58,7 @@ parttwo = dict(a=12, b=0, c=0, d=0)
 print('Part One: What value should be sent to the safe?')
 run(partone, [*assembunny])
 print('The answer:', partone['a'], partone)
-
+__import__('time').sleep(5)
 print('\nPart Two: Anyway, what value should actually be sent to the safe?')
 run(parttwo, [*assembunny])
 print('The answer:', parttwo['a'], parttwo)
