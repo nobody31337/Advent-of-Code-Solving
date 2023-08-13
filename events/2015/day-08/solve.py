@@ -17,10 +17,10 @@ if response.status_code != 200:
 
 strings = response.text.splitlines()
 
+start = timer()
+
 partone = 0
 parttwo = 0
-
-start = timer()
 
 for string in strings:
     lit_len = len(string)
