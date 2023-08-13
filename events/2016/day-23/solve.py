@@ -33,6 +33,12 @@ def run(regs: dict[str, int], steps: list[str]):
                         regs[y] = regs[x] if x in regs else int(x)
                 case ['inc', x]:
                     if x in regs:
+                        match steps[i:i+3]:
+                            case [['inc', x], ['dec', y], ['jnz', y, -2]]:
+                                regs[x] = regs[y]
+                                regs[y] = 0
+                                offset = 3
+                                raise MatchBreak
                         regs[x] += 1
                 case ['dec', x]:
                     if x in regs:
