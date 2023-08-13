@@ -70,7 +70,7 @@ def run(regs: dict[str, int], steps: list[str]):
                 case ['out', x]:
                     print(regs[x] if x in regs else x)
                     if regs in trace:
-                        print(trace)
+                        print(trace, regs)
                         return True
                     trace.append(regs)
         except MatchBreak:
