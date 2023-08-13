@@ -24,7 +24,13 @@ dblarg = ('jnz', 'cpy')
 def run(regs: dict[str, int], steps: list[str]):
     steps = list(map(lambda line: line.split(), steps))
     i = 0
+    heartbeat = True
+    trace = []
     while 0 <= i < len(steps):
+        if [i, steps[i]] in trace:
+            print(trace)
+            return True
+        trace.append([i, steps[i]])
         offset = 1
         try:
             match steps[i]:
