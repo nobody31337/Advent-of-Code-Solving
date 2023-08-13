@@ -22,9 +22,9 @@ dblarg = ('jnz', 'cpy')
 def run(regs: dict[str, int], steps: list[str]):
     steps = list(map(lambda line: line.split(), steps))
     i = 0
-    output = []
+    recent = None
     trace = []
-    
+
     while 0 <= i < len(steps):
         offset = 1
 
@@ -71,21 +71,21 @@ def run(regs: dict[str, int], steps: list[str]):
                 elif steps[i+x][0] in dblarg:
                     steps[i+x][0] = 'cpy' if steps[i+x][0] == 'jnz' else 'jnz'
             case ['out', x]:
-                output.append(regs[x])
-
-                if len(output) > 1 and output[-1] == output[-2]:
-                        break
+                output = regs[x] if x in regs else int(x)
+                
+                if output == recent:
+                    return False
+                recent = output
 
                 if regs in trace:
                     return True
                 trace.append(regs.copy())
+                
         i += offset
-    
-    return False
+
 
 x = 0
 while not run(dict(a=x, b=0, c=0, d=0), assembunny):
-    #print('')
     x += 1
 
 print(x)
