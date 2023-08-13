@@ -68,18 +68,18 @@ def run(regs: dict[str, int], steps: list[str]):
                     elif steps[i+x][0] in dblarg:
                         steps[i+x][0] = 'cpy' if steps[i+x][0] == 'jnz' else 'jnz'
                 case ['out', x]:
-                    print(regs[x] if x in regs else x, regs, regs[x] ^ heartbeat)
+                    # print(regs[x] if x in regs else x, regs, regs[x] ^ heartbeat)
 
                     if len(trace) > 0:
                         if not (regs[x] ^ heartbeat):
                             return False
                     heartbeat = regs[x]
 
-                    if regs['a'] in trace:
+                    if regs in trace:
                         return True
-                    trace.append(regs['a'])
+                    trace.append(regs)
         except MatchBreak:
             pass
         i += offset
 
-run(dict(a=1, b=0, c=0, d=0), assembunny)
+for 
