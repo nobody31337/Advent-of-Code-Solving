@@ -83,7 +83,7 @@ def search_max_greedy(loc = None):
     return dist
 
 
-print('\n( using greedy search )\n')
+print('\n( Using greedy search )\n')
 
 start = timer()
 partone = search_min_greedy()
@@ -101,7 +101,7 @@ print('\nPart Two: What is the distance of the longest route?')
 print('The answer:', parttwo)
 print(f'Process time: {round(end*1000, 6)} ms')
 
-print('\n( using DFS )\n')
+print('\n( Using DFS )\n')
 
 start = timer()
 partone = search_min_dfs()
