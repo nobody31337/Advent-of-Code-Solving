@@ -1,5 +1,6 @@
 import requests
 import json
+import time
 
 with open('data.json', 'r') as js:
     data = json.load(js)
@@ -86,8 +87,14 @@ def run(regs: dict[str, int], steps: list[str]):
 
 print('Part One: What is the lowest positive integer that can be used to initialize register a and cause the code to output a clock signal of 0, 1, 0, 1... repeating forever?')
 
+start = time.time()
+
 partone = 0
 while not run(dict(a=partone, b=0, c=0, d=0), assembunny):
     partone += 1
 
+end = start - time.time()
+
 print('The answer:', partone)
+
+print('\nProcess time:', end)
