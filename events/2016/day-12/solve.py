@@ -1,6 +1,5 @@
 import requests
 import json
-import time
 from timeit import default_timer as timer
 
 with open('data.json', 'r') as js:
@@ -68,11 +67,11 @@ start = timer()
 run(partone, assembunny)
 end = timer() - start
 print('The answer:', partone['a'])
-print(f'Process time: {end} seconds')
+print(f'Process time: {round(end, 6)} seconds')
 
 print('\nPart Two: If you instead initialize register c to be 1, what value is now left in register a?')
 start = timer()
 run(parttwo, assembunny)
 end = timer() - start
 print('The answer:', parttwo['a'])
-print(f'Process time: {end} seconds')
+print(f'Process time: {round(end, 6)} seconds')
