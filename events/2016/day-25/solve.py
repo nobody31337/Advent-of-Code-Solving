@@ -69,12 +69,11 @@ def run(regs: dict[str, int], steps: list[str]):
                         steps[i+x][0] = 'cpy' if steps[i+x][0] == 'jnz' else 'jnz'
                 case ['out', x]:
                     print(regs[x] if x in regs else x, regs)
+                    if regs['a'] in trace:
+                        return
+                    trace += regs['a']
         except MatchBreak:
             pass
         i += offset
-        # if [i, regs] in trace:
-        #     print(trace, [i, regs])
-        #     return True
-        # trace.append([i, regs])
 
 run(dict(a=1, b=0, c=0, d=0), assembunny)
