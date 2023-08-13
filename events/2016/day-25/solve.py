@@ -27,10 +27,6 @@ def run(regs: dict[str, int], steps: list[str]):
     heartbeat = True
     trace = []
     while 0 <= i < len(steps):
-        if [i, steps[i]] in trace:
-            print(trace)
-            return True
-        trace.append([i, steps[i]])
         offset = 1
         try:
             match steps[i]:
@@ -73,6 +69,10 @@ def run(regs: dict[str, int], steps: list[str]):
                         steps[i+x][0] = 'cpy' if steps[i+x][0] == 'jnz' else 'jnz'
                 case ['out', x]:
                     print(regs[x] if x in regs else x)
+                    if regs in trace:
+                        print(trace)
+                        return True
+                    trace.append(regs)
         except MatchBreak:
             pass
         i += offset
