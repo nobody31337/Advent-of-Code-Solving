@@ -71,8 +71,7 @@ def run(regs: dict[str, int], steps: list[str]):
                     if len(trace) > 0:
                         if not (regs[x] ^ heartbeat):
                             return False
-                    else:
-                        heartbeat = regs[x] == 1
+                        heartbeat = regs[x]
 
                     print(regs[x] if x in regs else x, regs, regs[x] ^ heartbeat)
                     if regs['a'] in trace:
