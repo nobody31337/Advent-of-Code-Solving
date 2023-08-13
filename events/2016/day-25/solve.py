@@ -71,4 +71,4 @@ def run(regs: dict[str, int], steps: list[str]):
             pass
         i += offset
 
-run(dict(a=0, b=0, c=0, d=0), assembunny)
+run(dict(a=1, b=0, c=0, d=0), assembunny)
