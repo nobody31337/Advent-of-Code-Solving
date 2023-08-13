@@ -17,10 +17,10 @@ if response.status_code != 200:
 
 inst = response.text
 
+start = timer()
+
 partone = 0
 parttwo = 0
-
-start = timer()
 
 for i in range(len(inst)):
     partone += 1 if inst[i] == '(' else -1 if inst[i] == ')' else 0
