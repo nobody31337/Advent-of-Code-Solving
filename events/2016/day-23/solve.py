@@ -76,9 +76,3 @@ print('The answer:', partone['a'])
 print('\nPart Two: Anyway, what value should actually be sent to the safe?')
 run(parttwo, assembunny)
 print('The answer:', parttwo['a'])
-
-print('\nJust for fun:')
-
-for i in range(5, 21):
-    print(i, end=': ')
-    print(f'{run(dict(a=i, b=0, c=0, d=0), assembunny)}')
