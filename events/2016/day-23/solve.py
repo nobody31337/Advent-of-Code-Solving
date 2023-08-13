@@ -1,5 +1,6 @@
 import requests
 import json
+from timeit import default_timer as timer
 
 with open('data.json', 'r') as js:
     data = json.load(js)
@@ -76,8 +77,15 @@ partone = dict(a=7, b=0, c=0, d=0)
 parttwo = dict(a=12, b=0, c=0, d=0)
 
 print('Part One: What value should be sent to the safe?')
+start = timer()
 run(partone, assembunny)
+end = timer() - start
 print('The answer:', partone['a'])
+print(f'Process time: {round(end*1000, 6)} ms')
+
 print('\nPart Two: Anyway, what value should actually be sent to the safe?')
+start = timer()
 run(parttwo, assembunny)
+end = timer() - start
 print('The answer:', parttwo['a'])
+print(f'Process time: {round(end*1000, 6)} ms')
