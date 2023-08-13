@@ -59,34 +59,34 @@ def search_max_dfs(loc = None):
     return ret
 
 
-def search_min(loc = None):
+def search_min_greedy(loc = None):
     if loc is None:
-        return min(search_min(x) for x in graph)
+        return min(search_min_greedy(x) for x in graph)
 
     visited.append(loc)
     dist, next_loc = min((graph[loc][x], x) for x in graph[loc] if x not in visited)
     if len(set(graph[next_loc])-set(visited)):
-        dist += search_min(next_loc)
+        dist += search_min_greedy(next_loc)
+    visited.remove(loc)
+    return dist
+
+
+def search_max_greedy(loc = None):
+    if loc is None:
+        return max(search_max_greedy(x) for x in graph)
+
+    visited.append(loc)
+    dist, next_loc = max((graph[loc][x], x) for x in graph[loc] if x not in visited)
+    if len(set(graph[next_loc])-set(visited)):
+        dist += search_max_greedy(next_loc)
     visited.remove(loc)
     return dist
 
 
 print('\n( using greedy search )\n')
 
-def search_max(loc = None):
-    if loc is None:
-        return max(search_max(x) for x in graph)
-
-    visited.append(loc)
-    dist, next_loc = max((graph[loc][x], x) for x in graph[loc] if x not in visited)
-    if len(set(graph[next_loc])-set(visited)):
-        dist += search_max(next_loc)
-    visited.remove(loc)
-    return dist
-
-
 start = timer()
-partone = search_min()
+partone = search_min_greedy()
 end = timer() - start
 
 print('Part One: What is the distance of the shortest route?')
@@ -94,7 +94,7 @@ print('The answer:', partone)
 print(f'Process time: {round(end*1000, 6)} ms')
 
 start = timer()
-parttwo = search_max()
+parttwo = search_max_greedy()
 end = timer() - start
 
 print('\nPart Two: What is the distance of the longest route?')
