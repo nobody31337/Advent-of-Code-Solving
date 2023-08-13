@@ -37,7 +37,7 @@ def run(regs: dict[str, int], steps: list[str]):
                             case [['inc', x], ['dec', y], ['jnz', z, '-2']]:
                                 if y == z:
                                     print('hey!', steps[i:i+3])
-                                    regs[x] = regs[y]
+                                    regs[x] += regs[y]
                                     regs[y] = 0
                                     offset = 3
                                     raise MatchBreak
