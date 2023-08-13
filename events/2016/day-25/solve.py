@@ -97,4 +97,4 @@ end = time.time() - start
 
 print('The answer:', partone)
 
-print(f'\nProcess time: {round(end, 6)} seconds')
+print(f'Process time: {round(end, 6)} seconds')
