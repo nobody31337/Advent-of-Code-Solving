@@ -107,14 +107,16 @@ start = timer()
 partone = search_min_dfs()
 end = timer() - start
 
-print('Part One:', partone)
+print('Part One: What is the distance of the shortest route?')
+print('The answer:', partone)
 print(f'Process time: {round(end*1000, 6)} ms')
 
 start = timer()
 parttwo = search_max_dfs()
 end = timer() - start
 
-print('\nPart Two:', parttwo)
+print('\nPart Two: What is the distance of the longest route?')
+print('The answer:', parttwo)
 print(f'Process time: {round(end*1000, 6)} ms')
 
 def search_(loc = None, next_loc = None, length = 0):
