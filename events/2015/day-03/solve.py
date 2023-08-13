@@ -1,5 +1,6 @@
 import requests
 import json
+from timeit import default_timer as timer
 
 with open('data.json', 'r') as js:
     data = json.load(js)
@@ -26,6 +27,8 @@ path1 = [[*cur1]]
 
 odd_or_even = 0
 
+start = timer()
+
 for d in directions:
     cur[m[d][0]] += m[d][1]
     if cur not in path:
@@ -43,8 +46,12 @@ for d in directions:
     odd_or_even += 1
     odd_or_even %= 2
 
+end = timer() - start
+
 print('Part One: How many houses receive at least one present?')
 print('The answer:', len(path))
 
 print('\nPart Two: This year, how many houses receive at least one present?')
 print('The answer:', len(path1))
+
+print(f'\nProcess time: {round(end*1000, 6)} ms')
