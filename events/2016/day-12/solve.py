@@ -67,11 +67,11 @@ start = timer()
 run(partone, assembunny)
 end = timer() - start
 print('The answer:', partone['a'])
-print(f'Process time: {round(end/1000, 6)} ms')
+print(f'Process time: {round(end*1000, 6)} ms')
 
 print('\nPart Two: If you instead initialize register c to be 1, what value is now left in register a?')
 start = timer()
 run(parttwo, assembunny)
 end = timer() - start
 print('The answer:', parttwo['a'])
-print(f'Process time: {round(end/1000, 6)} ms')
+print(f'Process time: {round(end*1000, 6)} ms')
