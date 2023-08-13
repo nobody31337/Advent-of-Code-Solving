@@ -26,6 +26,7 @@ def run(regs: dict[str, int], steps: list[str]):
     i = 0
     heartbeat = 0
     trace = []
+
     while 0 <= i < len(steps):
         offset = 1
         try:
@@ -68,11 +69,10 @@ def run(regs: dict[str, int], steps: list[str]):
                     elif steps[i+x][0] in dblarg:
                         steps[i+x][0] = 'cpy' if steps[i+x][0] == 'jnz' else 'jnz'
                 case ['out', x]:
-                    print(regs[x], end=' ')
-                    # print(regs[x] if x in regs else x, regs, regs[x] ^ heartbeat)
+                    # print(regs[x], end=' ')
 
                     if len(trace) > 0 and not (regs[x] ^ heartbeat):
-                            return False
+                            break
                     heartbeat = regs[x]
 
                     if regs in trace:
@@ -81,6 +81,8 @@ def run(regs: dict[str, int], steps: list[str]):
         except MatchBreak:
             pass
         i += offset
+    
+    return False
 
 x = 0
 while not run(dict(a=x, b=0, c=0, d=0), assembunny):
