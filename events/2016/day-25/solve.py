@@ -69,12 +69,12 @@ def run(regs: dict[str, int], steps: list[str]):
                         steps[i+x][0] = 'cpy' if steps[i+x][0] == 'jnz' else 'jnz'
                 case ['out', x]:
                     if len(trace) > 0:
-                        if not (regs[x] or heartbeat):
+                        if not (regs[x] ^ heartbeat):
                             return False
                     else:
                         heartbeat = regs[x] == 1
 
-                    print(regs[x] if x in regs else x, regs)
+                    print(regs[x] if x in regs else x, regs, regs[x] ^ heartbeat)
                     if regs['a'] in trace:
                         return True
                     trace.append(regs['a'])
