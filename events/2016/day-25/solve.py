@@ -68,9 +68,15 @@ def run(regs: dict[str, int], steps: list[str]):
                     elif steps[i+x][0] in dblarg:
                         steps[i+x][0] = 'cpy' if steps[i+x][0] == 'jnz' else 'jnz'
                 case ['out', x]:
+                    if len(trace) > 0:
+                        if not (regs[x] or heartbeat):
+                            return False
+                    else:
+                        heartbeat = regs[x] == 1
+
                     print(regs[x] if x in regs else x, regs)
                     if regs['a'] in trace:
-                        return
+                        return True
                     trace.append(regs['a'])
         except MatchBreak:
             pass
