@@ -1,6 +1,7 @@
 import requests
 import json
 from functools import cache
+from timeit import default_timer as timer
 
 with open('data.json', 'r') as js:
     data = json.load(js)
@@ -57,17 +58,25 @@ print('\n(Using memoization)\n')
 
 print('Part One: In little Bobby\'s kit\'s instructions booklet (provided as your puzzle input), what signal is ultimately provided to wire a?')
 
+start = timer()
 partone = memo_get('a')
-print('The answer:', partone)
+end = timer() - start
 
+print('The answer:', partone)
+print(f'Process time: {round(end*1000, 6)} ms')
+
+print('\nPart Two: What new signal is ultimately provided to wire a?')
+
+start = timer()
 b_backup = circuit['b']
 circuit['b'] = str(partone)
 memo = {}
 
-print('\nPart Two: What new signal is ultimately provided to wire a?')
-
 parttwo = memo_get('a')
+end = timer() - start
+
 print('The answer:', parttwo)
+print(f'Process time: {round(end*1000, 6)} ms')
 
 
 print('\n\n(Using functools.cache)\n')
