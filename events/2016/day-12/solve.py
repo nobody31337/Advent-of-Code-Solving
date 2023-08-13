@@ -26,7 +26,7 @@ def run(regs: dict[str, int], steps: list[str]):
     while 0 <= i < len(steps):
         offset = 1
 
-        # Long codes short
+        # Long steps short -------------------
         match steps[i:i+3]:
             case [['inc', x], ['dec', a], ['jnz', a1, '-2']]:
                 if a == a1:
@@ -43,6 +43,7 @@ def run(regs: dict[str, int], steps: list[str]):
                     regs[b] = 0
                     i += 6
                     continue
+        # ------------------------------------
         
         match steps[i]:
             case ['cpy', x, y]:
