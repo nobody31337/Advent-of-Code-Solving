@@ -27,6 +27,7 @@ def run(regs: dict[str, int], steps: list[str]):
     while 0 <= i < len(steps):
         offset = 1
         try:
+            print(i)
             match steps[i]:
                 case ['cpy', x, y]:
                     if y in regs:
@@ -34,11 +35,12 @@ def run(regs: dict[str, int], steps: list[str]):
                 case ['inc', x]:
                     if x in regs:
                         match steps[i:i+3]:
-                            case [['inc', x], ['dec', y], ['jnz', y, -2]]:
-                                regs[x] = regs[y]
-                                regs[y] = 0
-                                offset = 3
-                                raise MatchBreak
+                            case [['inc', x], ['dec', y], ['jnz', z, -2]]:
+                                if y == z:
+                                    regs[x] = regs[y]
+                                    regs[y] = 0
+                                    offset = 3
+                                    raise MatchBreak
                         regs[x] += 1
                 case ['dec', x]:
                     if x in regs:
