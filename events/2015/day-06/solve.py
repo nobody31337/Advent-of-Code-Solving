@@ -1,5 +1,6 @@
 import requests
 import json
+from timeit import default_timer as timer
 
 with open('data.json', 'r') as js:
     data = json.load(js)
@@ -15,6 +16,8 @@ if response.status_code != 200:
     exit(0)
 
 inst = response.text.splitlines()
+
+start = timer()
 
 partone = [False for _ in range(999*999)]
 parttwo = [0 for _ in range(999*999)]
@@ -41,8 +44,12 @@ for step in inst[:-1]:
                 partone[i*999 + j] = not partone[i*999 + j]
                 parttwo[i*999 + j] += 2
 
+end = timer() - start
+
 print('Part One: After following the instructions, how many lights are lit?')
 print('The answer:', sum(partone))
 
 print('\nPart Two: What is the total brightness of all lights combined after following Santa\'s instructions?')
 print('The answer:', sum(parttwo))
+
+print(f'\nProcess time: {round(end, 6)} seconds')
