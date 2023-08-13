@@ -80,12 +80,13 @@ def run(regs: dict[str, int], steps: list[str]):
                 if regs in trace:
                     return True
                 trace.append(regs.copy())
-                
+
         i += offset
 
 
+print('Part One: What is the lowest positive integer that can be used to initialize register a and cause the code to output a clock signal of 0, 1, 0, 1... repeating forever?')
 x = 0
 while not run(dict(a=x, b=0, c=0, d=0), assembunny):
     x += 1
 
-print(x)
+print('The answer:', x)
