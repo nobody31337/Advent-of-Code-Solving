@@ -24,7 +24,7 @@ dblarg = ('jnz', 'cpy')
 def run(regs: dict[str, int], steps: list[str]):
     steps = list(map(lambda line: line.split(), steps))
     i = 0
-    heartbeat = True
+    heartbeat = 0
     trace = []
     while 0 <= i < len(steps):
         offset = 1
@@ -68,12 +68,13 @@ def run(regs: dict[str, int], steps: list[str]):
                     elif steps[i+x][0] in dblarg:
                         steps[i+x][0] = 'cpy' if steps[i+x][0] == 'jnz' else 'jnz'
                 case ['out', x]:
+                    print(regs[x] if x in regs else x, regs, regs[x] ^ heartbeat)
+
                     if len(trace) > 0:
                         if not (regs[x] ^ heartbeat):
                             return False
-                        heartbeat = regs[x]
+                    heartbeat = regs[x]
 
-                    print(regs[x] if x in regs else x, regs, regs[x] ^ heartbeat)
                     if regs['a'] in trace:
                         return True
                     trace.append(regs['a'])
