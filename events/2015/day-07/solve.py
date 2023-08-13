@@ -76,7 +76,7 @@ memo = {}
 parttwo = memo_get('a')
 end = timer() - start
 
-print('The answer:', partone)
+print('The answer:', parttwo)
 print(f'Process time: {round(end*1000, 6)} ms')
 
 
@@ -104,5 +104,5 @@ parttwo = cache_get('a')
 
 end = timer() - start
 
-print('The answer:', partone)
+print('The answer:', parttwo)
 print(f'Process time: {round(end*1000, 6)} ms')
