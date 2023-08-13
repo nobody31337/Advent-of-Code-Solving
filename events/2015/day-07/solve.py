@@ -56,6 +56,8 @@ def cache_get(wire: str):
 
 print('\n(Using memoization)\n')
 
+b_backup = circuit['b']
+
 print('Part One: In little Bobby\'s kit\'s instructions booklet (provided as your puzzle input), what signal is ultimately provided to wire a?')
 
 start = timer()
@@ -64,8 +66,6 @@ end = timer() - start
 
 print('The answer:', partone)
 print(f'Process time: {round(end*1000, 6)} ms')
-
-b_backup = circuit['b']
 
 print('\nPart Two: What new signal is ultimately provided to wire a?')
 
@@ -84,16 +84,12 @@ print('\n\n(Using functools.cache)\n')
 
 circuit['b'] = b_backup
 
-print('Part One: In little Bobby\'s kit\'s instructions booklet (provided as your puzzle input), what signal is ultimately provided to wire a?')
-
 start = timer()
 partone = cache_get('a')
 end = timer() - start
 
-print('The answer:', partone)
+print('Part One:', partone)
 print(f'Process time: {round(end*1000, 6)} ms')
-
-print('\nPart Two: What new signal is ultimately provided to wire a?')
 
 start = timer()
 circuit['b'] = str(partone)
@@ -102,5 +98,5 @@ cache_get.cache_clear()
 parttwo = cache_get('a')
 end = timer() - start
 
-print('The answer:', parttwo)
+print('\nPart Two:', parttwo)
 print(f'Process time: {round(end*1000, 6)} ms')
