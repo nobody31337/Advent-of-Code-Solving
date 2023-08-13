@@ -1,5 +1,6 @@
 import requests
 import json
+from timeit import default_timer as timer
 
 with open('data.json', 'r') as js:
     data = json.load(js)
@@ -78,7 +79,13 @@ def reverse_scramble(password: str, steps):
     return ''.join(password)
 
 print('Part One: What is the result of scrambling abcdefgh?')
+start = timer()
 print('The answer:', scramble(partone, steps))
+end = timer() - start
+print(f'Process time: {round(end*1000, 6)} ms')
 
 print('\nPart Two: What is the un-scrambled version of the scrambled password fbgdceah?')
+start = timer()
 print('The answer:', reverse_scramble(parttwo, steps))
+end = timer() - start
+print(f'Process time: {round(end*1000, 6)} ms')
