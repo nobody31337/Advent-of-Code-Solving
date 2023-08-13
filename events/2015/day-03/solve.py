@@ -17,6 +17,8 @@ if response.status_code != 200:
 
 directions = response.text
 
+start = timer()
+
 m = {'>': (0, 1), '<': (0, -1), '^': (1, 1), 'v': (1, -1)}
 
 cur = [0, 0]
@@ -26,8 +28,6 @@ path = [[*cur]]
 path1 = [[*cur1]]
 
 odd_or_even = 0
-
-start = timer()
 
 for d in directions:
     cur[m[d][0]] += m[d][1]
