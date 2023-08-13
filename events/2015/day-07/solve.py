@@ -65,10 +65,11 @@ end = timer() - start
 print('The answer:', partone)
 print(f'Process time: {round(end*1000, 6)} ms')
 
+b_backup = circuit['b']
+
 print('\nPart Two: What new signal is ultimately provided to wire a?')
 
 start = timer()
-b_backup = circuit['b']
 circuit['b'] = str(partone)
 memo = {}
 
@@ -85,13 +86,21 @@ circuit['b'] = b_backup
 
 print('Part One: In little Bobby\'s kit\'s instructions booklet (provided as your puzzle input), what signal is ultimately provided to wire a?')
 
+start = timer()
 partone = cache_get('a')
-print('The answer:', partone)
+end = timer() - start
 
-circuit['b'] = str(partone)
-cache_get.cache_clear()
+print('The answer:', partone)
+print(f'Process time: {round(end*1000, 6)} ms')
 
 print('\nPart Two: What new signal is ultimately provided to wire a?')
 
+start = timer()
+circuit['b'] = str(partone)
+cache_get.cache_clear()
+
 parttwo = cache_get('a')
+end = timer() - start
+
 print('The answer:', parttwo)
+print(f'Process time: {round(end*1000, 6)} ms')
