@@ -17,9 +17,6 @@ if response.status_code != 200:
 
 assembunny = response.text.splitlines()
 
-sglarg = ('inc', 'dec', 'tgl')
-dblarg = ('jnz', 'cpy')
-
 def run(regs: dict[str, int], steps: list[str]):
     steps = list(map(lambda line: line.split(), steps))
     i = 0
