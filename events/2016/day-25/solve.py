@@ -93,7 +93,7 @@ partone = 0
 while not run(dict(a=partone, b=0, c=0, d=0), assembunny):
     partone += 1
 
-end = start - time.time()
+end = time.time() - start
 
 print('The answer:', partone)
 
