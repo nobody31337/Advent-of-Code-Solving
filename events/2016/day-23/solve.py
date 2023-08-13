@@ -29,6 +29,7 @@ def run(regs: dict[str, int], steps: list[str]):
         match steps[i]:
             case ['cpy', x, y]:
                 if y in regs:
+                    # Long steps short: multiply ------
                     match steps[i+1:i+6]:
                         case [['inc', a], ['dec', y1], ['jnz', y2, '-2'], ['dec', b], ['jnz', b2, '-5']]:
                             if y == y1 == y2 and b == b2:
@@ -37,9 +38,11 @@ def run(regs: dict[str, int], steps: list[str]):
                                 regs[b] = 0
                                 i += 6
                                 continue
+                    # ---------------------------------
                     regs[y] = regs[x] if x in regs else int(x)
             case ['inc', x]:
                 if x in regs:
+                    # Long steps short: wtf is this ---
                     match steps[i+1:i+3]:
                         case [['dec', a], ['jnz', a1, '-2']]:
                             if a == a1:
@@ -47,6 +50,7 @@ def run(regs: dict[str, int], steps: list[str]):
                                 regs[a] = 0
                                 i += 3
                                 continue
+                    # ---------------------------------
                     regs[x] += 1
             case ['dec', x]:
                 if x in regs:
