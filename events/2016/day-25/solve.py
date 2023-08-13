@@ -68,12 +68,12 @@ def run(regs: dict[str, int], steps: list[str]):
                     elif steps[i+x][0] in dblarg:
                         steps[i+x][0] = 'cpy' if steps[i+x][0] == 'jnz' else 'jnz'
                 case ['out', x]:
-                    print(regs[x] if x in regs else x, end=' ')
+                    print(regs[x] if x in regs else x)
         except MatchBreak:
             pass
         i += offset
         if [i, regs] in trace:
-            print(trace)
+            print(trace, [i, regs])
             return True
         trace.append([i, regs])
 
