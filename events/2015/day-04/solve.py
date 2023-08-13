@@ -26,6 +26,7 @@ five = 0
 six = 0
 
 start = timer()
+
 while five == 0 or six == 0:
     i += 1
     if five == 0 and hashlib.md5(content + str(i).encode()).hexdigest().startswith('00000'):
