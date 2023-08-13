@@ -63,9 +63,15 @@ partone = dict(a=0, b=0, c=0, d=0)
 parttwo = dict(a=0, b=0, c=1, d=0)
 
 print('Part One: After executing the assembunny code in your puzzle input, what value is left in register a?')
+start = time.time()
 run(partone, assembunny)
+end = time.time() - start
 print('The answer:', partone['a'])
+print(f'Process time: {round(end, 6)} seconds')
 
 print('\nPart Two: If you instead initialize register c to be 1, what value is now left in register a?')
+start = time.time()
 run(parttwo, assembunny)
+end = time.time() - start
 print('The answer:', parttwo['a'])
+print(f'Process time: {round(end, 6)} seconds')
