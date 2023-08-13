@@ -79,5 +79,6 @@ print('The answer:', parttwo['a'])
 
 print('\nJust for fun:')
 
-for i in range(21):
-    print(f'{i:2}: {run(dict(a=i, b=0, c=0, d=0), assembunny)}')
+for i in range(1, 21):
+    print(f'{i:2}:', end=' ')
+    print(f'{run(dict(a=i, b=0, c=0, d=0), assembunny)}')
