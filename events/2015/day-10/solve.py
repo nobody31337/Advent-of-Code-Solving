@@ -1,5 +1,6 @@
 import requests
 import json
+from timeit import default_timer as timer
 
 with open('data.json', 'r') as js:
     data = json.load(js)
@@ -33,7 +34,15 @@ def look_and_say(run, repeat):
     return run
 
 print('\nPart One: What is the length of the result after 40 times of the process?')
+
+start = timer()
 print('The answer:', len(look_and_say(digits, 40)))
+end = timer() - start
+print(f'Process time: {round(end*1000, 6)} ms')
 
 print('\nPart Two: What is the length of the new result after 50 times of the process?')
+
+start = timer()
 print('The answer:', len(look_and_say(digits, 50)))
+end = timer() - start
+print(f'Process time: {round(end*1000, 6)} ms')
