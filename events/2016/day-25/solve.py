@@ -97,4 +97,4 @@ end = timer() - start
 
 print('The answer:', partone)
 
-print(f'Process time: {round(end*1000, 6)} ms')
+print(f'Process time: {round(end, 6)} seconds')
