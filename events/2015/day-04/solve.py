@@ -30,9 +30,9 @@ while five == 0 or six == 0:
     i += 1
     if five == 0 and hashlib.md5(content + str(i).encode()).hexdigest().startswith('00000'):
         five = i
-        print('Part One, starting with 5 zeros:', five)
+        print('\nPart One, starting with 5 zeros:', five)
         print(f'Timestamp: {round(timer() - start, 6)} seconds')
     if six == 0 and hashlib.md5(content + str(i).encode()).hexdigest().startswith('000000'):
         six = i
-        print('Part Two, starting with 6 zeros:', six)
+        print('\nPart Two, starting with 6 zeros:', six)
         print(f'Timestamp: {round(timer() - start, 6)} seconds')
