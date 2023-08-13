@@ -84,6 +84,7 @@ def run(regs: dict[str, int], steps: list[str]):
 
 x = 0
 while not run(dict(a=x, b=0, c=0, d=0), assembunny):
+    print('')
     x += 1
 
 print(x)
