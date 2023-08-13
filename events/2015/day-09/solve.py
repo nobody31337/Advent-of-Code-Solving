@@ -71,6 +71,8 @@ def search_min(loc = None):
     return dist
 
 
+print('\n( using greedy search )\n')
+
 def search_max(loc = None):
     if loc is None:
         return max(search_max(x) for x in graph)
@@ -99,7 +101,7 @@ print('\nPart Two: What is the distance of the longest route?')
 print('The answer:', parttwo)
 print(f'Process time: {round(end*1000, 6)} ms')
 
-print('\n( using dfs )\n')
+print('\n( using DFS )\n')
 
 start = timer()
 partone = search_min_dfs()
