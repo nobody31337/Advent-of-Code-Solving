@@ -71,7 +71,7 @@ def run(regs: dict[str, int], steps: list[str]):
                     print(regs[x] if x in regs else x, regs)
                     if regs['a'] in trace:
                         return
-                    trace += regs['a']
+                    trace.append(regs['a'])
         except MatchBreak:
             pass
         i += offset
