@@ -22,6 +22,7 @@ dblarg = ('jnz', 'cpy')
 def run(regs: dict[str, int], steps: list[str]):
     steps = list(map(lambda line: line.split(), steps))
     i = 0
+    
     while 0 <= i < len(steps):
         offset = 1
 
