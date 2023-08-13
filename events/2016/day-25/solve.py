@@ -34,8 +34,8 @@ def run(regs: dict[str, int], steps: list[str]):
                 case ['cpy', x, y]:
                     if y in regs:
                         match steps[i+1:i+6]:
-                            case [['inc', a], ['dec', _1], ['jnz', _2, '-2'], ['dec', b], ['jnz', b2, '-5']]:
-                                if y == _1 == _2 and b == b2:
+                            case [['inc', a], ['dec', y1], ['jnz', y2, '-2'], ['dec', b], ['jnz', b2, '-5']]:
+                                if y == y1 == y2 and b == b2:
                                     regs[y] = 0
                                     regs[a] += regs[b] * (regs[x] if x in regs else int(x))
                                     regs[b] = 0
@@ -45,11 +45,10 @@ def run(regs: dict[str, int], steps: list[str]):
                 case ['inc', x]:
                     if x in regs:
                         match steps[i+1:i+3]:
-                            case [['dec', y], ['jnz', z, '-2']]:
-                                if y == z:
-                                    #print('hey!', steps[i:i+3])
-                                    regs[x] += regs[y]
-                                    regs[y] = 0
+                            case [['dec', a], ['jnz', a1, '-2']]:
+                                if a == a1:
+                                    regs[x] += regs[a]
+                                    regs[a] = 0
                                     offset = 3
                                     raise MatchBreak
                         regs[x] += 1
