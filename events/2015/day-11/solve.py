@@ -61,10 +61,9 @@ def validate(password):
     
     return True
 
-print(validate('abcdffaa'))
+print('Given password:', password)
 
 while not validate(password):
     password = increment(password)
-    print(password)
 
 print(password)
