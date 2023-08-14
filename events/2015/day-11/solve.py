@@ -72,6 +72,8 @@ def get_next(password):
 
 print('Given password:', password)
 
+print(validate('hxbaabcc'))
+
 print('Part One: What should his next password be?')
 
 password = get_next(password)
