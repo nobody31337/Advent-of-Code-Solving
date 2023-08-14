@@ -51,7 +51,7 @@ def validate(password):
     
     # The second requirement
     for letter in password:
-        if letter in (7, 10, 13):
+        if letter in map(ord, 'iol'):
             return False
     
     # The third requirement
