@@ -49,13 +49,13 @@ I will use this blacklist for an example:
 Each row of the blacklist is formed with the lowest number of the range, and the highest number of the range.\
 Let's call each of those `left` and `right`.
 
-**For example:** If a row says `8-12`, then `left` is 8 and `right` is 12.
+**For example:** If a row says `8-12`, then `left` is `8` and `right` is `12`.
 
 Here comes the fun part.
 
 Let `SMST = 0`. This will be the smallest value of the IP range.\
-Let `BGST = 2 ** 4` This will be the biggest value of the IP range.\
-_(I'm using `2 ** 4` for an example because right now I'm supposing that the IP is 4-bit value, but not 32-bit value.)_
+Let `BGST = 2 ** 4 - 1` This will be the biggest value of the IP range.\
+_(I'm using `2 ** 4 - 1` for an example because right now I'm supposing that the IP is 4-bit value, but not 32-bit value.)_
 
 Let `low = left - 1`.\
 If `low >= SMST` and `low` doesn't belong to any range in the blacklist,\
