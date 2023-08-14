@@ -19,7 +19,6 @@ password = response.text.strip()
 def increment(password):
     password = list(map(lambda x: ord(x) - ord('a'), reversed(password)))
     
-    print(password)
     carry = 1
     for i in range(len(password)):
         password[i] += carry
@@ -29,7 +28,9 @@ def increment(password):
             password[i] %= 26
             carry = 1
     
-    print(''.join(map(lambda x: chr(x + ord('a')), reversed(password))))
+    return ''.join(map(lambda x: chr(x + ord('a')), reversed(password)))
     
-
-increment(password)
+print(password)
+for _ in range(100):
+    password = increment(password)
+    print(password)
