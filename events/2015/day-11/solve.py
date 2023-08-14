@@ -20,9 +20,9 @@ def increment(password):
     password = list(map(lambda x: ord(x) - ord('a'), reversed(password)))
     
     print(password)
-    carry = 0
-    for i in len(password):
-        password[i] += 1 + carry
+    carry = 1
+    for i in range(len(password)):
+        password[i] += carry
         if password[i] < 26:
             carry = 0
         else:
