@@ -63,8 +63,16 @@ def validate(password):
 
 print('Given password:', password)
 
+print('Part One: What should his next password be?')
+
 while not validate(password):
     password = increment(password)
-    print(password)
 
-print(password)
+print('The answer:', password)
+
+print('\nPart Two: Santa\'s password expired again. What\'s the next one?')
+
+while not validate(password):
+    password = increment(password)
+
+print('The answer:', password)
