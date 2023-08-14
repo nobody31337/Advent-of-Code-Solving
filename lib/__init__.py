@@ -1,1 +1,3 @@
-from . import time_measure
+import time_measure
+
+__all__ = ['time_measure']
