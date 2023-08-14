@@ -1,7 +1,7 @@
 import requests
 import json
 from timeit import default_timer as timer
-from time_measure import get_time
+from lib.time_measure import get_time
 
 with open('data.json', 'r') as js:
     data = json.load(js)
