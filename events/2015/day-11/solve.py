@@ -61,8 +61,10 @@ def validate(password):
     
     return True
 
+print(validate('abcdffaa'))
 
 while not validate(password):
     password = increment(password)
+    #print(password)
 
 print(password)
