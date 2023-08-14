@@ -1,5 +1,6 @@
 import requests
 import json
+import re
 
 with open('data.json', 'r') as js:
     data = json.load(js)
@@ -17,10 +18,10 @@ if response.status_code != 200:
 password = response.text.strip()
 
 def increment(password):
-    password = list(map(lambda x: ord(x) - ord('a'), reversed(password)))
+    password = list(map(lambda x: ord(x) - ord('a'), password))
     
     carry = 1
-    for i in range(len(password)):
+    for i in reversed(range(len(password))):
         if carry == 0:
             break
         
@@ -29,9 +30,39 @@ def increment(password):
         carry = password[i] // 26
         password[i] %= 26
     
-    return ''.join(map(lambda x: chr(x + ord('a')), reversed(password)))
+    return ''.join(map(lambda x: chr(x + ord('a')), password))
+
+
+def validate(password):
+    password = list(map(lambda x: ord(x) - ord('a'), password))
+
+    # The first requirement
+    inc = []
+    for letter in password:
+        if len(inc) == 3:
+            break
+        if len(inc) == 0 or inc[-1] + 1 == letter:
+            inc.append(letter)
+        else:
+            inc = []
     
-print(password)
-for _ in range(100):
+    if len(inc) < 3:
+        return False
+    
+    # The second requirement
+    for letter in password:
+        if letter in (7, 12, 15):
+            return False
+    
+    # The third requirement
+    password = ''.join(map(lambda x: chr(x + ord('a')), password))
+    if not re.search(r'([a-z])\1[a-z]*([a-z])\2', password):
+        return False
+    
+    return True
+
+
+while not validate(password):
     password = increment(password)
-    print(password)
+
+print(password)
