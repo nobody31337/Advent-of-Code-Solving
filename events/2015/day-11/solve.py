@@ -21,7 +21,15 @@ def increment(password):
     
     print(password)
     carry = 0
-    for i in reversed(range(len(password))):
-        pass
+    for i in len(password):
+        password[i] += 1 + carry
+        if password[i] < 26:
+            carry = 0
+        else:
+            password[i] %= 26
+            carry = 1
+    
+    print(password)
+    
 
 increment(password)
