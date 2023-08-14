@@ -65,6 +65,7 @@ print('The answer:', whitelist[0][0])
 print('\nPart Two: How many IPs are allowed by the blacklist?')
 print('The answer:', sum(j - i + 1 for i, j in whitelist))
 
+'''
 def int_to_ip(ip: int):
     ip1 = ip >> 24
     ip2 = (ip >> 16) & 0xff
@@ -78,3 +79,4 @@ print('\n\nI\'m just gonna print all the IPs in the whitelist for fun.\n')
 for whited_range in whitelist:
     for ip in range(whited_range[0], whited_range[1] + 1):
         print(int_to_ip(ip))
+'''
