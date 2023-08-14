@@ -70,7 +70,7 @@ def reverse_scramble(password: str, steps):
                 password = password[:x] + password[x:y][::-1] + password[y:]
             case ['rotate', 'based', _, _, _, _, x]: # rotate based on position of letter X
                 idx = password.index(x)
-                shift = (idx - next(i for i in range(length) if (i*2+(i>3)+1) % length == idx)) % length
+                shift = (idx - next(i for i in range(length) if (i*2+(i>3)+1)%length==idx)) % length
                 password = password[shift:] + password[:shift]
             case ['rotate', direction, x, _]: # rotate left/right X steps
                 if direction == 'left':
