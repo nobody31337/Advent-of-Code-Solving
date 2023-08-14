@@ -65,6 +65,6 @@ print(validate('abcdffaa'))
 
 while not validate(password):
     password = increment(password)
-    #print(password)
+    print(password)
 
 print(password)
