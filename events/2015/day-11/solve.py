@@ -16,4 +16,6 @@ if response.status_code != 200:
 
 password = response.text.strip()
 
-print(password)
+print(chr(password[0]))
+def increment(password):
+    pass
