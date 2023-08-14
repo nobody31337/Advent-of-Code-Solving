@@ -29,7 +29,7 @@ def increment(password):
             password[i] %= 26
             carry = 1
     
-    print(password)
+    print(''.join(map(lambda x: chr(x + ord('a')), reversed(password))))
     
 
 increment(password)
