@@ -21,6 +21,8 @@ parttwo = 'fbgdceah'
 
 def scramble(password: str, steps):
     password = list(password)
+    length = len(password)
+    
     for step in steps:
         match step.split():
             case ['swap', 'position', x, _, _, y]: # swap position X with position Y
@@ -28,7 +30,7 @@ def scramble(password: str, steps):
                 y = int(y)
                 password[x], password[y] = password[y], password[x]
             case ['swap', 'letter', x, _, _, y]: # swap letter X with letter Y
-                for i in range(len(password)):
+                for i in range(length):
                     password[i] = y if password[i] == x else x if password[i] == y else password[i]
             case ['reverse', _, x, _, y]: # reverse positions X through Y
                 x = int(x)
@@ -36,7 +38,7 @@ def scramble(password: str, steps):
                 password = password[:x] + password[x:y][::-1] + password[y:]
             case ['rotate', 'based', _, _, _, _, x]: # rotate based on position of letter X
                 idx = password.index(x)
-                shift = (idx + (idx > 3) + 1) % len(password)
+                shift = (idx + (idx > 3) + 1) % length
                 password = password[-shift:] + password[:-shift]
             case ['rotate', direction, x, _]: # rotate left/right X steps
                 if direction == 'left':
@@ -51,6 +53,8 @@ def scramble(password: str, steps):
 
 def reverse_scramble(password: str, steps):
     password = list(password)
+    length = len(password)
+
     for step in reversed(steps):
         match step.split():
             case ['swap', 'position', x, _, _, y]: # swap position X with position Y
@@ -58,17 +62,17 @@ def reverse_scramble(password: str, steps):
                 y = int(y)
                 password[x], password[y] = password[y], password[x]
             case ['swap', 'letter', x, _, _, y]: # swap letter X with letter Y
-                for i in range(len(password)):
+                for i in range(length):
                     password[i] = y if password[i] == x else x if password[i] == y else password[i]
             case ['reverse', _, x, _, y]: # reverse positions X through Y
                 x = int(x)
                 y = int(y) + 1
                 password = password[:x] + password[x:y][::-1] + password[y:]
             case ['rotate', 'based', _, _, _, _, x]: # rotate based on position of letter X
-                idx = [1,3,5,7,2,4,6,0].index(password.index(x))
-                shift = (idx + (idx > 3) + 1) % len(password)
+                idx = password.index(x)
+                # shift = (idx + (idx > 3) + 1) % length
+                shift = next(i for i in range(length) if (i * 2 + (i > 3) + 1) % length == idx)
                 password = password[shift:] + password[:shift]
-                print(password.index(x), len(password)-shift)
             case ['rotate', direction, x, _]: # rotate left/right X steps
                 if direction == 'left':
                     password = password[-int(x):] + password[:-int(x)]
