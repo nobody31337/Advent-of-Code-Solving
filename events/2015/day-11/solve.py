@@ -17,9 +17,7 @@ if response.status_code != 200:
 
 password = response.text.strip()
 
-def increment(password):
-    password = list(map(lambda x: ord(x) - ord('a'), password))
-    
+def increment(password: list[int]):
     carry = 1
     for i in reversed(range(len(password))):
         if carry == 0:
@@ -30,12 +28,10 @@ def increment(password):
         carry = password[i] // 26
         password[i] %= 26
     
-    return ''.join(map(lambda x: chr(x + ord('a')), password))
+    return password
 
 
 def validate(password):
-    password = list(map(lambda x: ord(x) - ord('a'), password))
-
     # The first requirement
     inc = []
     for letter in password:
@@ -63,11 +59,12 @@ def validate(password):
 
 
 def get_next(password):
+    password = list(map(lambda x: ord(x) - ord('a'), password))
     while True:
         password = increment(password)
 
         if validate(password):
-            return password
+            return ''.join(map(lambda x: chr(x + ord('a')), password))
 
 
 print('Given password:', password)
