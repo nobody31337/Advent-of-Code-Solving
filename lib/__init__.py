@@ -1,3 +1,3 @@
-import time_measure
+from lib import time_measure
 
 __all__ = ['time_measure']
