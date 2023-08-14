@@ -17,7 +17,11 @@ if response.status_code != 200:
 password = response.text.strip()
 
 def increment(password):
-    password = list(map(lambda x: ord(x) - ord('a'), password))
+    password = list(map(lambda x: ord(x) - ord('a'), password)).reverse()
+    
     print(password)
+    carry = 0
+    for i in reversed(range(len(password))):
+        pass
 
 increment(password)
