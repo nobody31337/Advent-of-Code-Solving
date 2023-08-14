@@ -21,7 +21,11 @@ def increment(password):
     
     carry = 1
     for i in range(len(password)):
+        if carry == 0:
+            break
+        
         password[i] += carry
+        
         if password[i] < 26:
             carry = 0
         else:
