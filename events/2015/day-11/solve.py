@@ -1,6 +1,7 @@
 import requests
 import json
 import re
+from timeit import default_timer as timer
 
 with open('data.json', 'r') as js:
     data = json.load(js)
@@ -71,12 +72,18 @@ print('Given password:', password)
 
 print('\nPart One: What should his next password be?')
 
+start = timer()
 password = get_next(password)
+end = timer() - start
 
 print('The answer:', password)
+print(f'Process time: {round(end*1000, 6)} ms')
 
 print('\nPart Two: Santa\'s password expired again. What\'s the next one?')
 
+start = timer()
 password = get_next(password)
+end = timer() - start
 
 print('The answer:', password)
+print(f'Process time: {round(end, 6)} seconds')
