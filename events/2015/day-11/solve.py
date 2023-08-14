@@ -26,11 +26,8 @@ def increment(password):
         
         password[i] += carry
         
-        if password[i] < 26:
-            carry = 0
-        else:
-            password[i] %= 26
-            carry = 1
+        carry = password[i] // 26
+        password[i] %= 26
     
     return ''.join(map(lambda x: chr(x + ord('a')), reversed(password)))
     
