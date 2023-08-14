@@ -1,1 +1,1 @@
-from time_measure import *
+import time_measure
