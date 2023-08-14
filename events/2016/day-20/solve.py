@@ -1,5 +1,6 @@
 import requests
 import json
+from timeit import default_timer as timer
 
 with open('data.json', 'r') as js:
     data = json.load(js)
@@ -14,10 +15,12 @@ if response.status_code != 200:
     print('wrong cookies')
     exit(0)
 
+blacklist: list[tuple[int]] = list(map(lambda x: tuple(map(int, x.decode().split('-'))), response.iter_lines()))
+
+start = timer()
+
 SMST = 0
 BGST = 2 ** 32 - 1
-
-blacklist: list[tuple[int]] = list(map(lambda x: tuple(map(int, x.decode().split('-'))), response.iter_lines()))
 
 whitelist = []
 keyval = {}
@@ -59,11 +62,15 @@ for i in range(len(keyval)):
     elif keyval[i][1] == 'both':
         whitelist.append((keyval[i][0], keyval[i][0]))
 
+end = timer() - start
+
 print('Part One: What is the lowest-valued IP that is not blocked?')
 print('The answer:', whitelist[0][0])
 
 print('\nPart Two: How many IPs are allowed by the blacklist?')
 print('The answer:', sum(j - i + 1 for i, j in whitelist))
+
+print(f'\nProcess time: {round(end*1000, 6)} ms')
 
 '''
 def int_to_ip(ip: int):
