@@ -61,18 +61,25 @@ def validate(password):
     
     return True
 
+
+def get_next(password):
+    while True:
+        password = increment(password)
+
+        if validate(password):
+            return password
+
+
 print('Given password:', password)
 
 print('Part One: What should his next password be?')
 
-while not validate(password):
-    password = increment(password)
+password = get_next(password)
 
 print('The answer:', password)
 
 print('\nPart Two: Santa\'s password expired again. What\'s the next one?')
 
-while not validate(password):
-    password = increment(password)
+password = get_next(password)
 
 print('The answer:', password)
