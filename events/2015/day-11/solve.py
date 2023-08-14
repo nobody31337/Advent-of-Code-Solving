@@ -51,7 +51,7 @@ def validate(password):
     
     # The second requirement
     for letter in password:
-        if letter in (7, 12, 15):
+        if letter in (7, 10, 13):
             return False
     
     # The third requirement
