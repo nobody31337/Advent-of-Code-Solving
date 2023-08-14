@@ -68,6 +68,7 @@ def reverse_scramble(password: str, steps):
                 idx = [1,3,5,7,2,4,6,0].index(password.index(x))
                 shift = (idx + (idx > 3) + 1) % len(password)
                 password = password[shift:] + password[:shift]
+                print(password.index(x), shift)
             case ['rotate', direction, x, _]: # rotate left/right X steps
                 if direction == 'left':
                     password = password[-int(x):] + password[:-int(x)]
