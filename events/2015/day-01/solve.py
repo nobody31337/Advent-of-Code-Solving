@@ -1,7 +1,6 @@
 import requests
 import json
 from timeit import default_timer as timer
-from lib.time_measure import get_time
 
 with open('data.json', 'r') as js:
     data = json.load(js)
@@ -36,4 +35,4 @@ print('The answer:', partone)
 print('\nPart Two: What is the position of the character that causes Santa to first enter the basement?')
 print('The answer:', parttwo)
 
-print(f'\nProcess time:', get_time(end))
+print(f'\nProcess time: {round(end*1000, 6)} ms')
