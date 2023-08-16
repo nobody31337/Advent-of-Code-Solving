@@ -27,11 +27,24 @@ def run(regs: dict[str, int], steps: list[str]):
         match steps[i]:
             case ['cpy', x, y]:
                 # Long steps short: multiply ------
+                #          : do {
+                # cpy x y  :     y = x;
+                #          :     do {
+                # inc a    :         a += 1;
+                # dec y    :         y -= 1;
+                # jnz y -2 :     } while (y != 0);
+                # dec b    :     b -= 1;
+                # jnz b -5 : } while (b != 0);
+                #
+                # Simple logic ->
+                # a += b * x;
+                # y = 0;
+                # b = 0;
                 match steps[i+1:i+6]:
                     case [['inc', a], ['dec', y1], ['jnz', y2, '-2'], ['dec', b], ['jnz', b2, '-5']]:
                         if y == y1 == y2 and b == b2:
-                            regs[y] = 0
                             regs[a] += regs[b] * (regs[x] if x in regs else int(x))
+                            regs[y] = 0
                             regs[b] = 0
                             i += 6
                             continue
