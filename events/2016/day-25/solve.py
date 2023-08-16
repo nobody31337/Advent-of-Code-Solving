@@ -71,7 +71,7 @@ def run(regs: dict[str, int], steps: list[str]):
                     # Why are you doing this
                     match steps[i+1:i+3]:
                         case [['dec', a], ['jnz', a1, '-2']]:
-                            if a == a1:
+                            if a in regs and a == a1:
                                 regs[x] += regs[a]
                                 regs[a] = 0
                                 i += 3
