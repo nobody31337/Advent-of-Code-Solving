@@ -52,6 +52,16 @@ def run(regs: dict[str, int], steps: list[str]):
                 regs[y] = regs[x] if x in regs else int(x)
             case ['inc', x]:
                 # Long steps short: wtf is this ---
+                #          : do {
+                # inc x    :     x += 1;
+                # dec a    :     a -= 1;
+                # jnz a -2 : } while(a != 0);
+                #
+                # Simple logic ->
+                # x += a
+                # a = 0
+                #
+                # Why are you doing this
                 match steps[i+1:i+3]:
                     case [['dec', a], ['jnz', a1, '-2']]:
                         if a == a1:
