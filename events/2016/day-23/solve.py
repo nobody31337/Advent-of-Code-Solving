@@ -56,7 +56,7 @@ def run(regs: dict[str, int], steps: list[str]):
                     regs[y] = regs[x] if x in regs else int(x)
             case ['inc', x]:
                 if x in regs:
-                    # Long steps short: wtf is this ---
+                    # Long steps short: summation -----
                     #          : do {
                     # inc x    :     x += 1;
                     # dec a    :     a -= 1;
