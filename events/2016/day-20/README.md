@@ -65,7 +65,7 @@ Let `high = right + 1`.\
 If `high <= BGST` and `high` doesn't belong to any range in the blacklist,\
 then `high` will be the `left` value of a whitelist range row.
 
-#### For example: range 14-15
+#### Example 1: range 14-15
 
 14 is `left` and 15 is `right`.\
 `low` is 13 and this doesn't belong to any blacklist range row.\
@@ -77,7 +77,7 @@ WHITELIST
 13 - right
 ```
 
-#### For example: range 0-3
+#### Example 2: range 0-3
 
 0 is `left` and 3 is `right`.\
 `low` is -1 but that's out of IP range.\
@@ -90,7 +90,7 @@ WHITELIST
 4 - left
 ```
 
-#### For example: range 8-12
+#### Example 3: range 8-12
 
 8 is `left` and 12 is `right`.\
 `low` is 7 but that's one of the blocked IPs.\
@@ -105,7 +105,7 @@ WHITELIST
 4 - left
 ```
 
-#### For example: range 7-9
+#### Example 4: range 7-9
 
 7 is `left` and 9 is `right`.\
 `low` is 6 and this doesn't belong to any blacklist range row.\
@@ -142,8 +142,8 @@ Let's solve the problem with this example!
 
 ```
 Part One: What is the lowest-valued IP that is not blocked?
-The answer: 4 it is. Obviously.
+The answer: 4 it is, obviously.
 
 Part Two: How many IPs are allowed by the blacklist?
-The answer: 4 it is. You can count them off using the for statement.
+The answer: 4 it is, as you can count them off using the for statement.
 ```
